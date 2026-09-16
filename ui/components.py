@@ -42,7 +42,8 @@ from experiments.storage import (
     delete_experiment,
     load_experiment,
     export_experiments_to_csv,
-    export_experiments_to_json
+    export_experiments_to_json,
+    get_database_mode_info
 )
 from experiments.validation import validate_lab_experiment
 from experiments.comparison import generate_comparison_matrix, ComparisonMatrix
@@ -765,15 +766,20 @@ def render_lab_experiment_entry_section(
     exp.update_status_automatically()
 
     col_save1, col_save2 = st.columns([1, 3])
+    db_info = get_database_mode_info()
+    is_cloud = db_info.get("mode") == "CLOUD_MODE"
+    btn_label = "💾 Save Record to Supabase" if is_cloud else "💾 Save Record to SQLite"
+    db_target_name = "PostgreSQL / Supabase cloud database" if is_cloud else "local SQLite database"
+
     with col_save1:
-        if st.button("💾 Save Experiment Record to SQLite", use_container_width=True):
+        if st.button(btn_label, use_container_width=True):
             val_rep = validate_lab_experiment(exp)
             if not val_rep.is_valid:
                 for err in val_rep.errors:
                     st.error(f"❌ {err}")
             else:
                 save_experiment(exp)
-                st.success(f"✅ Experiment `{exp.experiment_id}` ({exp.status.value}) saved successfully to local SQLite database!")
+                st.success(f"✅ Experiment `{exp.experiment_id}` ({exp.status.value}) saved successfully to {db_target_name}!")
                 if val_rep.warnings:
                     for warn in val_rep.warnings:
                         st.warning(f"⚠️ {warn}")
@@ -817,12 +823,18 @@ def render_experimental_comparison_section(comp_matrix: ComparisonMatrix):
 
 
 def render_saved_experiments_database_section():
-    """Render interactive SQLite database explorer for viewing, loading, searching, and exporting saved lab experiments."""
+    """Render interactive database explorer for viewing, loading, searching, and exporting saved lab experiments."""
     st.subheader("10. Saved Laboratory Experiments Database")
+
+    db_info = get_database_mode_info()
+    if db_info.get("mode") == "CLOUD_MODE":
+        st.caption("🟢 **CLOUD MODE — PostgreSQL / Supabase** (Shared Persistent Storage)")
+    else:
+        st.caption("🔵 **LOCAL MODE — SQLite** (`data/lab_experiments.db`)")
 
     experiments = list_experiments()
     if not experiments:
-        st.info("ℹ️ No laboratory experiments recorded yet in the local database.")
+        st.info("ℹ️ No laboratory experiments recorded yet in the active database backend.")
         return
 
     st.markdown(f"Total Stored Experiments: **{len(experiments)}** records")

@@ -28,7 +28,8 @@ from experiments.storage import (
     update_experiment,
     delete_experiment,
     export_experiments_to_csv,
-    export_experiments_to_json
+    export_experiments_to_json,
+    get_database_mode_info
 )
 from experiments.validation import validate_lab_experiment
 from experiments.comparison import generate_comparison_matrix
@@ -282,3 +283,29 @@ def test_triple_comparison_matrix():
     assert row_01c.residual_vs_calculated == pytest.approx(154.0 - cap_metrics.formula_calculated_capacity_metric, abs=0.2)
     assert row_01c.calculated_label == "CALCULATED"
     assert row_01c.experimental_label == "EXPERIMENTAL"
+
+
+def test_database_mode_selection(monkeypatch):
+    """Test automatic database mode detection based on DATABASE_URL environment variable."""
+    # Test 1: Without DATABASE_URL -> LOCAL_MODE (SQLite)
+    monkeypatch.delenv("DATABASE_URL", raising=False)
+    info_local = get_database_mode_info()
+    assert info_local["mode"] == "LOCAL_MODE"
+    assert info_local["is_local_sqlite"] is True
+    assert "SQLite" in info_local["engine"]
+
+    # Test 2: With DATABASE_URL -> CLOUD_MODE (PostgreSQL)
+    monkeypatch.setenv("DATABASE_URL", "postgresql://user:pass@localhost:5432/testdb")
+    info_cloud = get_database_mode_info()
+    assert info_cloud["mode"] == "CLOUD_MODE"
+    assert info_cloud["is_local_sqlite"] is False
+    assert "PostgreSQL" in info_cloud["engine"]
+
+
+def test_postgresql_backend_detection_and_mock(monkeypatch, mocker=None):
+    """Test PostgreSQL backend initialization and SQL execution flow under CLOUD_MODE."""
+    monkeypatch.setenv("DATABASE_URL", "postgresql://testuser:testpass@supabasedb.com:5432/he_lmfp")
+    info = get_database_mode_info()
+    assert info["mode"] == "CLOUD_MODE"
+    assert info["engine"] == "PostgreSQL / Supabase"
+

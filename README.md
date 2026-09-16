@@ -172,17 +172,24 @@ streamlit run app.py
   - `ml_metadata.json`
 - **Cross-Validation**: GroupKFold (5-fold) grouped by `Paper_ID` to prevent literature data leakage.
 
-### Database Architecture: Local vs. Cloud
+### Database Architecture: Local vs. Cloud Dual-Backend
+
+The application automatically selects the active database storage engine:
 
 #### LOCAL MODE (Default)
-- **Engine**: Local SQLite database stored at `data/lab_experiments.db`.
+- **Selection**: Active when `DATABASE_URL` is absent from environment variables.
+- **Engine**: Local SQLite database file stored at `data/lab_experiments.db`.
 - **Scope**: Ideal for local testing, single-user research, and offline development.
 - **Persistence**: Automatically initializes table `lab_experiments` and commits changes to disk.
 
 #### CLOUD MODE (Production & Multi-User Deployment)
-- **Engine**: External PostgreSQL or Supabase cloud database.
-- **Configuration**: Set `DATABASE_URL` environment variable in your deployment environment (e.g., Streamlit Community Cloud, AWS App Runner, GCP Cloud Run).
-- **Architecture Notice**: SQLite is a single-file local database suitable for local testing. For multi-user cloud deployments with concurrent writes, set `DATABASE_URL` to connect to a managed PostgreSQL instance.
+- **Selection**: Active when `DATABASE_URL` environment variable is set (e.g., `postgresql://postgres:password@db.supabase.co:5432/postgres`).
+- **Engine**: PostgreSQL / Supabase cloud database via production-compatible `psycopg2-binary` driver.
+- **Scope**: Provides shared, concurrent multi-user persistent experiment storage for team members across different machines.
+- **Schema**: Auto-creates `lab_experiments` table with PostgreSQL `ON CONFLICT (experiment_id) DO UPDATE` UPSERT logic.
+- **Status Notice**: Cloud Mode is fully supported by the storage engine (`DATABASE_URL`). Production multi-user deployment can be enabled by configuring `DATABASE_URL` in your hosting platform.
+
+---
 
 ## Author
 
@@ -190,3 +197,4 @@ streamlit run app.py
 AI/ML Intern, ECMT  
 
 GitHub: [Priyavarshini13](https://github.com/Priyavarshini13)
+
