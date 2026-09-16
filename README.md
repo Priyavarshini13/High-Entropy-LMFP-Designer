@@ -184,3 +184,9 @@ streamlit run app.py
 - **Configuration**: Set `DATABASE_URL` environment variable in your deployment environment (e.g., Streamlit Community Cloud, AWS App Runner, GCP Cloud Run).
 - **Architecture Notice**: SQLite is a single-file local database suitable for local testing. For multi-user cloud deployments with concurrent writes, set `DATABASE_URL` to connect to a managed PostgreSQL instance.
 
+## Author
+
+**Priyavarshini V**  
+AI/ML Intern, ECMT  
+
+GitHub: [Priyavarshini13](https://github.com/Priyavarshini13)
