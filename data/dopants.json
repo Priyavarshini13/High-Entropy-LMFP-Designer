@@ -1,0 +1,103 @@
+{
+  "dopants": {
+    "Mg": {
+      "name": "Magnesium",
+      "atomic_weight": 24.305,
+      "allowed_oxidation_states": [2],
+      "default_oxidation_state": 2,
+      "allowed": true,
+      "exclusion_reason": null,
+      "site": "M2"
+    },
+    "Zn": {
+      "name": "Zinc",
+      "atomic_weight": 65.38,
+      "allowed_oxidation_states": [2],
+      "default_oxidation_state": 2,
+      "allowed": true,
+      "exclusion_reason": null,
+      "site": "M2"
+    },
+    "Ni": {
+      "name": "Nickel",
+      "atomic_weight": 58.6934,
+      "allowed_oxidation_states": [2],
+      "default_oxidation_state": 2,
+      "allowed": true,
+      "exclusion_reason": null,
+      "site": "M2"
+    },
+    "Cu": {
+      "name": "Copper",
+      "atomic_weight": 63.546,
+      "allowed_oxidation_states": [2, 3],
+      "default_oxidation_state": 2,
+      "allowed": true,
+      "exclusion_reason": null,
+      "site": "M2"
+    },
+    "Al": {
+      "name": "Aluminum",
+      "atomic_weight": 26.9815,
+      "allowed_oxidation_states": [3],
+      "default_oxidation_state": 3,
+      "allowed": true,
+      "exclusion_reason": null,
+      "site": "M2"
+    },
+    "Ti": {
+      "name": "Titanium",
+      "atomic_weight": 47.867,
+      "allowed_oxidation_states": [3, 4],
+      "default_oxidation_state": 4,
+      "allowed": true,
+      "exclusion_reason": null,
+      "site": "M2"
+    },
+    "Zr": {
+      "name": "Zirconium",
+      "atomic_weight": 91.224,
+      "allowed_oxidation_states": [4],
+      "default_oxidation_state": 4,
+      "allowed": true,
+      "exclusion_reason": null,
+      "site": "M2"
+    },
+    "Nb": {
+      "name": "Niobium",
+      "atomic_weight": 92.906,
+      "allowed_oxidation_states": [5],
+      "default_oxidation_state": 5,
+      "allowed": true,
+      "exclusion_reason": null,
+      "site": "M2"
+    },
+    "Cr": {
+      "name": "Chromium",
+      "atomic_weight": 51.9961,
+      "allowed_oxidation_states": [3],
+      "default_oxidation_state": 3,
+      "allowed": false,
+      "exclusion_reason": "Cr is strictly excluded from active dopant set",
+      "site": "M2"
+    },
+    "Co": {
+      "name": "Cobalt",
+      "atomic_weight": 58.9332,
+      "allowed_oxidation_states": [2, 3],
+      "default_oxidation_state": 2,
+      "allowed": false,
+      "exclusion_reason": "Co is strictly excluded due to high cost",
+      "site": "M2"
+    }
+  },
+  "host_elements": {
+    "Li": {"atomic_weight": 6.941, "default_oxidation_state": 1},
+    "Mn": {"atomic_weight": 54.938, "default_oxidation_state": 2},
+    "Fe": {"atomic_weight": 55.845, "default_oxidation_state": 2},
+    "P": {"atomic_weight": 30.9738, "default_oxidation_state": 5},
+    "O": {"atomic_weight": 15.999, "default_oxidation_state": -2},
+    "Si": {"atomic_weight": 28.0855, "default_oxidation_state": 4},
+    "F": {"atomic_weight": 18.9984, "default_oxidation_state": -1}
+  }
+}

@@ -1,0 +1,42 @@
+# Python Virtual Environments
+.venv/
+venv/
+env/
+ENV/
+
+# Python Cache & Bytecode
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Testing & Coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Local Environment & Secrets
+.env
+.env.local
+.streamlit/secrets.toml
+
+# SQLite Local Database (Store data locally, do not commit DB binary to git)
+*.db
+*.sqlite
+*.sqlite3
+data/lab_experiments.db
+data/lab_experiments_export.csv
+data/lab_experiments_export.json
+
+# IDE & OS Artifacts
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Temporary Files & Logs
+*.log
+*.tmp
+scratch/
