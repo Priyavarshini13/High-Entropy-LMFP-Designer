@@ -26,7 +26,7 @@ sys.path.insert(0, str(PROJECT_ROOT))
 import pandas as pd
 import numpy as np
 from fastapi import FastAPI, HTTPException, UploadFile, File, Form, Header, Depends
-from fastapi.responses import FileResponse
+from fastapi.responses import FileResponse, Response
 from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
@@ -65,7 +65,13 @@ from models.ml.predictor import predict_composition_performance, load_trained_mo
 from models.ml.evaluator import evaluate_models_against_baseline
 
 # Cloud Storage
-from backend.cloud_storage import save_file, get_storage_status, is_supabase_storage_configured
+from backend.cloud_storage import (
+    save_file,
+    get_storage_status,
+    is_supabase_storage_configured,
+    generate_signed_url,
+    fetch_file_bytes,
+)
 
 # Experiments
 from experiments.storage import (
@@ -297,6 +303,66 @@ def health():
 def storage_status():
     """Report storage backend mode (Supabase persistent bucket or local disk fallback)."""
     return get_storage_status()
+
+
+@app.get("/api/storage/file/{file_path:path}")
+def get_private_storage_file(
+    file_path: str,
+    token: Optional[str] = None,
+    current_user: Optional[Dict[str, Any]] = Depends(get_current_user),
+):
+    """
+    Authenticated access to private micrographs, characterization images, and PDFs.
+    Requires active JWT session (via Authorization Header or 'token' query parameter).
+    Protects proprietary research files from unauthenticated web crawling.
+    """
+    user = current_user
+    if not user and token:
+        try:
+            user = jwt.decode(token, JWT_SECRET, algorithms=["HS256"])
+        except Exception:
+            user = None
+
+    if not user:
+        raise HTTPException(
+            status_code=401,
+            detail="Unauthorized: Research characterization micrographs and PDFs require an authenticated session.",
+        )
+
+    content, media_type = fetch_file_bytes(file_path)
+    if not content:
+        raise HTTPException(status_code=404, detail=f"File '{file_path}' not found in storage.")
+
+    return Response(content=content, media_type=media_type)
+
+
+@app.on_event("startup")
+def verify_environment_and_models_on_startup():
+    """Verify all 4 Random Forest models, literature dataset, and storage configuration on startup."""
+    print("=" * 65)
+    print("ECMT AI — CLOUD STARTUP INTEGRITY CHECK")
+    print("=" * 65)
+    try:
+        models, meta = load_trained_models()
+        print(f"[Startup Gate 1/3] Successfully loaded {len(models)} Random Forest model(s):")
+        for m_name in models.keys():
+            print(f"  • Model '{m_name}': OK")
+
+        test_pred = predict_composition_performance(
+            mn_ratio=0.65,
+            fe_ratio=0.25,
+            dopants=[{"symbol": "Mg", "fraction": 0.05, "oxidation_state": 2}],
+            carbon_wt=2.5,
+            calc_temp=700.0,
+            calc_time=8.0,
+        )
+        print(f"[Startup Gate 2/3] Verified ML predictions operational ({len(test_pred['predictions'])} targets).")
+    except Exception as exc:
+        print(f"[Startup Gate ERROR] ML Model load failure: {exc}")
+
+    storage_info = get_storage_status()
+    print(f"[Startup Gate 3/3] Storage Mode: {storage_info['provider']} (Private: {storage_info.get('is_private', True)})")
+    print("=" * 65)
 
 
 # ---------------------------------------------------------------------------

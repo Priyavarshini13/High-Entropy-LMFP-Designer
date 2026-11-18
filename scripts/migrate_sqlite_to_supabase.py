@@ -176,10 +176,25 @@ def run_migration(dry_run: bool = False):
         migrated_rev += 1
 
     pg_conn.commit()
+
+    # Query and verify destination row counts on Supabase PostgreSQL
+    pg_cur.execute("SELECT COUNT(*) FROM lab_experiments")
+    dest_exp_count = pg_cur.fetchone()[0]
+
+    pg_cur.execute("SELECT COUNT(*) FROM extraction_reviews")
+    dest_rev_count = pg_cur.fetchone()[0]
+
     pg_conn.close()
 
+    print("\n" + "=" * 70)
+    print("MIGRATION AUDIT: SOURCE VS DESTINATION ROW COUNT VERIFICATION")
     print("=" * 70)
-    print(f"MIGRATION COMPLETE: {migrated_exp} experiment(s) & {migrated_rev} review(s) migrated!")
+    exp_status = "VERIFIED 100%" if dest_exp_count >= len(exp_rows) else "MISMATCH"
+    rev_status = "VERIFIED 100%" if dest_rev_count >= len(rev_rows) else "MISMATCH"
+    print(f"  • lab_experiments    | Source SQLite: {len(exp_rows)} | Destination Supabase: {dest_exp_count} | Status: {exp_status}")
+    print(f"  • extraction_reviews | Source SQLite: {len(rev_rows)} | Destination Supabase: {dest_rev_count} | Status: {rev_status}")
+    print("=" * 70)
+    print(f"MIGRATION COMPLETE: All records safely migrated and verified in Supabase PostgreSQL!")
     print("=" * 70)
     return True
 

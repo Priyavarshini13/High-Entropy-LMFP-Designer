@@ -304,7 +304,7 @@ def test_database_mode_selection(monkeypatch):
 
 def test_postgresql_backend_detection_and_mock(monkeypatch, mocker=None):
     """Test PostgreSQL backend initialization and SQL execution flow under CLOUD_MODE."""
-    monkeypatch.setenv("DATABASE_URL", "postgresql://testuser:testpass@supabasedb.com:5432/he_lmfp")
+    monkeypatch.setenv("DATABASE_URL", "postgresql://testuser:testpass@example.supabase.co:5432/he_lmfp")
     info = get_database_mode_info()
     assert info["mode"] == "CLOUD_MODE"
     assert info["engine"] == "PostgreSQL / Supabase"

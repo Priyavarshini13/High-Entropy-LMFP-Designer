@@ -183,7 +183,7 @@ The application automatically selects the active database storage engine:
 - **Persistence**: Automatically initializes table `lab_experiments` and commits changes to disk.
 
 #### CLOUD MODE (Production & Multi-User Deployment)
-- **Selection**: Active when `DATABASE_URL` environment variable is set (e.g., `postgresql://postgres:password@db.supabase.co:5432/postgres`).
+- **Selection**: Active when `DATABASE_URL` environment variable is set (e.g., `postgresql://postgres:[PASSWORD]@[HOST]:5432/postgres?sslmode=require`).
 - **Engine**: PostgreSQL / Supabase cloud database via production-compatible `psycopg2-binary` driver.
 - **Scope**: Provides shared, concurrent multi-user persistent experiment storage for team members across different machines.
 - **Schema**: Auto-creates `lab_experiments` table with PostgreSQL `ON CONFLICT (experiment_id) DO UPDATE` UPSERT logic.
