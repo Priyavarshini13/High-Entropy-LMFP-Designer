@@ -1,0 +1,101 @@
+{
+  "health": {
+    "code": 200,
+    "data": {
+      "status": "healthy",
+      "service": "HE-LMFP-Designer",
+      "backend": "FastAPI"
+    }
+  },
+  "dashboard": {
+    "code": 200,
+    "total_records": 1215
+  },
+  "materials_dopants": {
+    "code": 200,
+    "count": 8
+  },
+  "materials_validate": {
+    "code": 200,
+    "balanced": true,
+    "formula": "Li0.93[Mn0.65Fe0.26Mg0.02Zn0.02Nb0.01Cu0.02Zr0.02]PO4"
+  },
+  "materials_candidates": {
+    "code": 200,
+    "count": 3
+  },
+  "predictions_predict": {
+    "code": 200,
+    "targets": [
+      "0_1C_capacity",
+      "1C_capacity",
+      "5C_capacity",
+      "capacity_retention",
+      "0_05C_capacity",
+      "initial_ice"
+    ]
+  },
+  "predictions_evaluation": {
+    "code": 200,
+    "has_models": false
+  },
+  "literature_reviews": {
+    "code": 200,
+    "count": 35
+  },
+  "literature_review_6": {
+    "code": 200,
+    "status": "pending"
+  },
+  "literature_review_7": {
+    "code": 200,
+    "status": "approved"
+  },
+  "literature_samples": {
+    "code": 200,
+    "count": 18
+  },
+  "export_preview": {
+    "code": 200,
+    "exportable": 0,
+    "blocked": 1
+  },
+  "copilot_chat": {
+    "code": 200,
+    "inference_source": "qwen3:4b_grounded",
+    "has_citations": true,
+    "direct_answer_len": 125
+  },
+  "discovery_trends": {
+    "code": 200,
+    "records": 1215
+  },
+  "discovery_gaps": {
+    "code": 200,
+    "count": 10
+  },
+  "discovery_conflicts": {
+    "code": 200,
+    "count": 4
+  },
+  "discovery_hypotheses": {
+    "code": 200,
+    "count": 6
+  },
+  "discovery_matrices": {
+    "code": 200,
+    "count": 6
+  },
+  "experiments_list": {
+    "code": 200,
+    "count": 0
+  },
+  "experiments_compare": {
+    "code": 200,
+    "has_residuals": true
+  },
+  "spa_root": {
+    "code": 200,
+    "is_html": true
+  }
+}

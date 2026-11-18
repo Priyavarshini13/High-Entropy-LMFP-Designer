@@ -121,6 +121,8 @@ class LabExperiment:
     synthesis_data: Optional[ActualSynthesisData] = None
     characterization_data: Optional[ActualCharacterizationData] = None
     electrochemical_data: Optional[ActualElectrochemicalData] = None
+    # Characterization Images & Micrographs (XRD, SEM, TEM, Electrode photos)
+    characterization_images: List[Dict[str, Any]] = field(default_factory=list)
 
     def update_status_automatically(self):
         """Update experiment status based on recorded data completeness."""
@@ -160,6 +162,7 @@ class LabExperiment:
             "synthesis_data": self.synthesis_data.to_dict() if self.synthesis_data else None,
             "characterization_data": self.characterization_data.to_dict() if self.characterization_data else None,
             "electrochemical_data": self.electrochemical_data.to_dict() if self.electrochemical_data else None,
+            "characterization_images": self.characterization_images or [],
         }
         return d
 
@@ -191,4 +194,5 @@ class LabExperiment:
             synthesis_data=ActualSynthesisData.from_dict(data.get("synthesis_data")),
             characterization_data=ActualCharacterizationData.from_dict(data.get("characterization_data")),
             electrochemical_data=ActualElectrochemicalData.from_dict(data.get("electrochemical_data")),
+            characterization_images=data.get("characterization_images", []),
         )

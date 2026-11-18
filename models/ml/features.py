@@ -29,6 +29,8 @@ def get_feature_names() -> List[str]:
         'Carbon_wt_percent',
         'Calcination_Temp_1_C',
         'Calcination_Time_1_h',
+        'Calcination_Temp_Missing',
+        'Calcination_Time_Missing',
     ]
     dopant_feats = [f"dopant_{el}" for el in TOP_DOPANT_ELEMENTS]
     return base_feats + dopant_feats
@@ -77,6 +79,18 @@ def extract_features_from_dict(
     feat['Carbon_wt_percent'] = float(carbon_wt or 0.0)
     feat['Calcination_Temp_1_C'] = float(calc_temp or 700.0)
     feat['Calcination_Time_1_h'] = float(calc_time or 8.0)
+    feat['Calcination_Temp_Missing'] = int(
+        calc_temp is None or pd.isna(calc_temp)
+    )
+    feat['Calcination_Time_Missing'] = int(
+        calc_time is None or pd.isna(calc_time)
+    )
+    feat['Calcination_Temp_Missing'] = int(
+        calc_temp is None or pd.isna(calc_temp)
+    )
+    feat['Calcination_Time_Missing'] = int(
+        calc_time is None or pd.isna(calc_time)
+    )
     
     return pd.DataFrame([feat])[get_feature_names()]
 
@@ -107,6 +121,13 @@ def extract_features_from_dataframe(df: pd.DataFrame) -> Tuple[pd.DataFrame, np.
         fe = safe_num(row.get('Fe_Ratio'), 0.0)
         d_cnt = safe_num(row.get('Dopant_Count'), 0.0)
         carbon_wt = safe_num(row.get('Carbon_wt_percent'), 0.0)
+        temp_missing = int(
+            pd.isna(pd.to_numeric(row.get('Calcination_Temp_1_C'), errors='coerce'))
+        )
+        time_missing = int(
+            pd.isna(pd.to_numeric(row.get('Calcination_Time_1_h'), errors='coerce'))
+        )
+
         calc_temp = safe_num(row.get('Calcination_Temp_1_C'), 700.0)
         calc_time = safe_num(row.get('Calcination_Time_1_h'), 8.0)
         
@@ -158,6 +179,8 @@ def extract_features_from_dataframe(df: pd.DataFrame) -> Tuple[pd.DataFrame, np.
             'Carbon_wt_percent': carbon_wt,
             'Calcination_Temp_1_C': calc_temp,
             'Calcination_Time_1_h': calc_time,
+            'Calcination_Temp_Missing': temp_missing,
+            'Calcination_Time_Missing': time_missing,
             **top_dopant_ratios
         }
         feat_rows.append(row_feat)

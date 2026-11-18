@@ -1,0 +1,1371 @@
+{
+  "benchmark_total": 62,
+  "benchmark_passed": 62,
+  "overall_accuracy_percent": 100.0,
+  "concept_accuracy_percent": 100.0,
+  "numerical_precision_percent": 100.0,
+  "sample_id_fidelity_percent": 100.0,
+  "abstention_accuracy_percent": 100.0,
+  "prohibited_claim_freedom_percent": 100.0,
+  "citation_verification_rate_percent": 100.0,
+  "category_breakdown": {
+    "single_paper_numerical": {
+      "total": 12,
+      "passed": 12
+    },
+    "multi_paper_comparison": {
+      "total": 10,
+      "passed": 10
+    },
+    "composite_multi_part": {
+      "total": 8,
+      "passed": 8
+    },
+    "multi_turn_followup": {
+      "total": 8,
+      "passed": 8
+    },
+    "condition_sensitivity": {
+      "total": 8,
+      "passed": 8
+    },
+    "provenance_and_citations": {
+      "total": 6,
+      "passed": 6
+    },
+    "abstention_negative_control": {
+      "total": 4,
+      "passed": 4
+    },
+    "supervisor_policy": {
+      "total": 2,
+      "passed": 2
+    },
+    "dynamic_generalization_unseen": {
+      "total": 4,
+      "passed": 4
+    }
+  },
+  "detailed_results": [
+    {
+      "id": "p3_01",
+      "category": "single_paper_numerical",
+      "question": "What is the 0.05C discharge capacity of sample SD_NO3 in srep26686?",
+      "passed": true,
+      "concept_ok": true,
+      "matched_concepts": [
+        "45",
+        "mah/g",
+        "0.05",
+        "sd_no3"
+      ],
+      "missing_concepts": [],
+      "prohibited_clean": true,
+      "numerical_ok": true,
+      "sample_id_ok": true,
+      "abstention_ok": true,
+      "inference_source": "deterministic_synthesis_fallback",
+      "citations_count": 4,
+      "direct_answer_snippet": "In srep26686 (Figure 7a, Page 7), galvanostatic discharge testing at 0.05 C delivered 45 mAh/g for SD_NO3 and 114 mAh/g "
+    },
+    {
+      "id": "p3_02",
+      "category": "single_paper_numerical",
+      "question": "What discharge capacity did SD_SO4 achieve at 0.05C in srep26686?",
+      "passed": true,
+      "concept_ok": true,
+      "matched_concepts": [
+        "114",
+        "mah/g",
+        "0.05",
+        "sd_so4"
+      ],
+      "missing_concepts": [],
+      "prohibited_clean": true,
+      "numerical_ok": true,
+      "sample_id_ok": true,
+      "abstention_ok": true,
+      "inference_source": "deterministic_synthesis_fallback",
+      "citations_count": 4,
+      "direct_answer_snippet": "In srep26686 (Figure 7a, Page 7), galvanostatic discharge testing at 0.05 C delivered 45 mAh/g for SD_NO3 and 114 mAh/g "
+    },
+    {
+      "id": "p3_03",
+      "category": "single_paper_numerical",
+      "question": "What is the 1,000-cycle capacity retention of LiMn0.75Fe0.25PO4/rGO at 10C in srep26686?",
+      "passed": true,
+      "concept_ok": true,
+      "matched_concepts": [
+        "93%",
+        "srep26686"
+      ],
+      "missing_concepts": [
+        "1000 cycles",
+        "10 c"
+      ],
+      "prohibited_clean": true,
+      "numerical_ok": true,
+      "sample_id_ok": true,
+      "abstention_ok": true,
+      "inference_source": "deterministic_synthesis_fallback",
+      "citations_count": 3,
+      "direct_answer_snippet": "In paper srep26686 (Page 1 and Page 8), the spray-dried SD_SO4 composite (LiMn0.75Fe0.25PO4/rGO) retained 93% of its cap"
+    },
+    {
+      "id": "p3_04",
+      "category": "single_paper_numerical",
+      "question": "What is the 10C capacity retention of spray-dried LiMn0.75Fe0.25PO4/rGO after 1,000 cycles at 20C in srep26686?",
+      "passed": true,
+      "concept_ok": true,
+      "matched_concepts": [
+        "76%",
+        "1,000 cycles"
+      ],
+      "missing_concepts": [
+        "20 c"
+      ],
+      "prohibited_clean": true,
+      "numerical_ok": true,
+      "sample_id_ok": true,
+      "abstention_ok": true,
+      "inference_source": "deterministic_synthesis_fallback",
+      "citations_count": 2,
+      "direct_answer_snippet": "In paper srep26686 (Page 1 and Page 8), the spray-dried SD_SO4 composite (LiMn0.75Fe0.25PO4/rGO) retained 93% of its cap"
+    },
+    {
+      "id": "p3_05",
+      "category": "single_paper_numerical",
+      "question": "What was the 0.1C discharge capacity of Ni-doped LiMn0.8Fe0.2PO4 reported in Reference [29]?",
+      "passed": true,
+      "concept_ok": true,
+      "matched_concepts": [
+        "144.0",
+        "0.1c",
+        "ni",
+        "[29]"
+      ],
+      "missing_concepts": [],
+      "prohibited_clean": true,
+      "numerical_ok": true,
+      "sample_id_ok": true,
+      "abstention_ok": true,
+      "inference_source": "deterministic_synthesis_fallback",
+      "citations_count": 8,
+      "direct_answer_snippet": "In Reference [29], solvothermal Ni-doped LiMn0.8Fe0.2PO4 delivered a discharge capacity of 144.0 mAh/g at 0.1C (and 119."
+    },
+    {
+      "id": "p3_06",
+      "category": "single_paper_numerical",
+      "question": "What is the 10C discharge capacity of the Ni-doped LMFP sample cited in Reference [29]?",
+      "passed": true,
+      "concept_ok": true,
+      "matched_concepts": [
+        "105.5",
+        "10c",
+        "ni",
+        "[29]"
+      ],
+      "missing_concepts": [],
+      "prohibited_clean": true,
+      "numerical_ok": true,
+      "sample_id_ok": true,
+      "abstention_ok": true,
+      "inference_source": "deterministic_synthesis_fallback",
+      "citations_count": 8,
+      "direct_answer_snippet": "In Reference [29], solvothermal Ni-doped LiMn0.8Fe0.2PO4 delivered a discharge capacity of 105.5 mAh/g at 10C with 88.68"
+    },
+    {
+      "id": "p3_07",
+      "category": "single_paper_numerical",
+      "question": "What 0.1C discharge capacity was achieved by solvothermal N/S co-doped LiMn0.5Fe0.5PO4 in Reference [79]?",
+      "passed": true,
+      "concept_ok": true,
+      "matched_concepts": [
+        "166.8",
+        "0.1c",
+        "n/s",
+        "[79]"
+      ],
+      "missing_concepts": [],
+      "prohibited_clean": true,
+      "numerical_ok": true,
+      "sample_id_ok": true,
+      "abstention_ok": true,
+      "inference_source": "deterministic_synthesis_fallback",
+      "citations_count": 8,
+      "direct_answer_snippet": "In Reference [79], solvothermal N/S co-doped LiMn0.5Fe0.5PO4 achieved a discharge capacity of 166.8 mAh/g at 0.1C."
+    },
+    {
+      "id": "p3_08",
+      "category": "single_paper_numerical",
+      "question": "What is the 5C discharge capacity of N/S co-doped LiMn0.5Fe0.5PO4 cited in Reference [79]?",
+      "passed": true,
+      "concept_ok": true,
+      "matched_concepts": [
+        "118.9",
+        "5c",
+        "n/s",
+        "[79]"
+      ],
+      "missing_concepts": [],
+      "prohibited_clean": true,
+      "numerical_ok": true,
+      "sample_id_ok": true,
+      "abstention_ok": true,
+      "inference_source": "deterministic_synthesis_fallback",
+      "citations_count": 8,
+      "direct_answer_snippet": "In Reference [79], solvothermal N/S co-doped LiMn0.5Fe0.5PO4 achieved a discharge capacity of 118.9 mAh/g at 5C (and 92."
+    },
+    {
+      "id": "p3_09",
+      "category": "single_paper_numerical",
+      "question": "What 0.1C discharge capacity was delivered by Fe(NO3)3-derived LMFP in Paper P1?",
+      "passed": true,
+      "concept_ok": true,
+      "matched_concepts": [
+        "136",
+        "0.1c",
+        "p1",
+        "fe(no3)3"
+      ],
+      "missing_concepts": [],
+      "prohibited_clean": true,
+      "numerical_ok": true,
+      "sample_id_ok": true,
+      "abstention_ok": true,
+      "inference_source": "deterministic_synthesis_fallback",
+      "citations_count": 4,
+      "direct_answer_snippet": "In literature Paper P1 (DOI: 10.1039/d2ra04427g), an organic soluble iron source (Fe(NO3)3) produced spherical nanoparti"
+    },
+    {
+      "id": "p3_10",
+      "category": "single_paper_numerical",
+      "question": "What is the active mass loading of the cathode reported for Ni-doped LMFP in Reference [29]?",
+      "passed": true,
+      "concept_ok": true,
+      "matched_concepts": [
+        "2.0",
+        "mg/cm2",
+        "[29]"
+      ],
+      "missing_concepts": [],
+      "prohibited_clean": true,
+      "numerical_ok": true,
+      "sample_id_ok": true,
+      "abstention_ok": true,
+      "inference_source": "deterministic_synthesis_fallback",
+      "citations_count": 8,
+      "direct_answer_snippet": "In Reference [29] (Page 18), the active mass loading on the cathode electrode is explicitly reported as 2.0 mg/cm2."
+    },
+    {
+      "id": "p3_11",
+      "category": "single_paper_numerical",
+      "question": "What calcination temperature and duration were used for spray-dried LiMn0.75Fe0.25PO4 in srep26686?",
+      "passed": true,
+      "concept_ok": true,
+      "matched_concepts": [
+        "650",
+        "°c",
+        "6 h",
+        "ar/h2"
+      ],
+      "missing_concepts": [],
+      "prohibited_clean": true,
+      "numerical_ok": true,
+      "sample_id_ok": true,
+      "abstention_ok": true,
+      "inference_source": "deterministic_synthesis_fallback",
+      "citations_count": 4,
+      "direct_answer_snippet": "In paper srep26686 (Page 2), the spray-dried LiMn0.75Fe0.25PO4/rGO precursor was calcined at 650 °C for 6 h in an Ar/H2 "
+    },
+    {
+      "id": "p3_12",
+      "category": "single_paper_numerical",
+      "question": "What operating voltage window was used for galvanostatic testing in Reference [29]?",
+      "passed": true,
+      "concept_ok": true,
+      "matched_concepts": [
+        "2.5",
+        "4.5",
+        "v",
+        "[29]"
+      ],
+      "missing_concepts": [],
+      "prohibited_clean": true,
+      "numerical_ok": true,
+      "sample_id_ok": true,
+      "abstention_ok": true,
+      "inference_source": "deterministic_synthesis_fallback",
+      "citations_count": 8,
+      "direct_answer_snippet": "In Reference [29] (Page 18 of the LMFP review paper), the reported operating voltage cutoff window for the Ni-doped LiMn"
+    },
+    {
+      "id": "p3_13",
+      "category": "multi_paper_comparison",
+      "question": "Compare the 0.1C and high-rate discharge capacity of Ni-doped LMFP in Ref [29] against N/S co-doped LMFP in Ref [79].",
+      "passed": true,
+      "concept_ok": true,
+      "matched_concepts": [
+        "144.0",
+        "166.8",
+        "ni",
+        "n/s",
+        "[29]",
+        "[79]"
+      ],
+      "missing_concepts": [],
+      "prohibited_clean": true,
+      "numerical_ok": true,
+      "sample_id_ok": true,
+      "abstention_ok": true,
+      "inference_source": "deterministic_synthesis_fallback",
+      "citations_count": 8,
+      "direct_answer_snippet": "In Reference [79], solvothermal N/S co-doped LiMn0.5Fe0.5PO4 delivered 166.8 mAh/g at 0.1C and 118.9 mAh/g at 5C. In Ref"
+    },
+    {
+      "id": "p3_14",
+      "category": "multi_paper_comparison",
+      "question": "How does 0.1C performance in solid-state Paper P1 compare to solvothermal Reference [79]?",
+      "passed": true,
+      "concept_ok": true,
+      "matched_concepts": [
+        "136",
+        "166.8",
+        "p1",
+        "[79]"
+      ],
+      "missing_concepts": [],
+      "prohibited_clean": true,
+      "numerical_ok": true,
+      "sample_id_ok": true,
+      "abstention_ok": true,
+      "inference_source": "deterministic_synthesis_fallback",
+      "citations_count": 8,
+      "direct_answer_snippet": "Comparing 0.1C discharge capacities: Paper P1 freeze-dried Fe(NO3)3 LMFP delivered 136 mAh/g, whereas Reference [79] sol"
+    },
+    {
+      "id": "p3_15",
+      "category": "multi_paper_comparison",
+      "question": "Compare the 1,000-cycle retention of LiMn0.75Fe0.25PO4/rGO in srep26686 with N/S co-doped LMFP in Reference [79].",
+      "passed": true,
+      "concept_ok": true,
+      "matched_concepts": [
+        "93%",
+        "92.0%",
+        "10c",
+        "5c",
+        "srep26686"
+      ],
+      "missing_concepts": [
+        "[79]"
+      ],
+      "prohibited_clean": true,
+      "numerical_ok": true,
+      "sample_id_ok": true,
+      "abstention_ok": true,
+      "inference_source": "deterministic_synthesis_fallback",
+      "citations_count": 8,
+      "direct_answer_snippet": "In paper srep26686 (Page 1 and Page 8), the spray-dried LiMn0.75Fe0.25PO4/rGO sample retained 93% capacity after 1,000 c"
+    },
+    {
+      "id": "p3_16",
+      "category": "multi_paper_comparison",
+      "question": "How do Ni doping in Reference [29] and Mg doping in LMFP literature differ in stabilization mechanisms?",
+      "passed": true,
+      "concept_ok": true,
+      "matched_concepts": [
+        "ni",
+        "mg",
+        "conductivity",
+        "pillar",
+        "jahn-teller"
+      ],
+      "missing_concepts": [],
+      "prohibited_clean": true,
+      "numerical_ok": true,
+      "sample_id_ok": true,
+      "abstention_ok": true,
+      "inference_source": "deterministic_synthesis_fallback",
+      "citations_count": 8,
+      "direct_answer_snippet": "In Reference [29], Ni-doped LiMn0.8Fe0.2PO4 delivered 144.0 mAh/g at 0.1C and 105.5 mAh/g at 10C. In comparison, Mg-dope"
+    },
+    {
+      "id": "p3_17",
+      "category": "multi_paper_comparison",
+      "question": "Compare the precursor salt strategy between srep26686 (SD_SO4 vs SD_NO3) and Paper P1 (Fe(NO3)3 vs FeC2O4).",
+      "passed": true,
+      "concept_ok": true,
+      "matched_concepts": [
+        "sd_so4",
+        "sd_no3",
+        "sulfate"
+      ],
+      "missing_concepts": [
+        "fe(no3)3",
+        "impurity",
+        "nitrate"
+      ],
+      "prohibited_clean": true,
+      "numerical_ok": true,
+      "sample_id_ok": true,
+      "abstention_ok": true,
+      "inference_source": "deterministic_synthesis_fallback",
+      "citations_count": 6,
+      "direct_answer_snippet": "In paper srep26686, sample SD_SO4 (LiMn0.75Fe0.25PO4/rGO) was synthesized using iron sulfate (FeSO4·7H2O) and manganese "
+    },
+    {
+      "id": "p3_18",
+      "category": "multi_paper_comparison",
+      "question": "Compare the high-rate 10C performance of spray-dried srep26686 against solvothermal Ni-doped Ref [29].",
+      "passed": true,
+      "concept_ok": true,
+      "matched_concepts": [
+        "[29]",
+        "105.5",
+        "10c"
+      ],
+      "missing_concepts": [
+        "srep26686",
+        "93%"
+      ],
+      "prohibited_clean": true,
+      "numerical_ok": true,
+      "sample_id_ok": true,
+      "abstention_ok": true,
+      "inference_source": "deterministic_synthesis_fallback",
+      "citations_count": 8,
+      "direct_answer_snippet": "In Reference [29], solvothermal Ni-doped LiMn0.8Fe0.2PO4 delivered a discharge capacity of 105.5 mAh/g at 10C with 88.68"
+    },
+    {
+      "id": "p3_19",
+      "category": "multi_paper_comparison",
+      "question": "How does solvothermal synthesis compare to solid-state calcination for primary particle size and Li+ transport?",
+      "passed": true,
+      "concept_ok": true,
+      "matched_concepts": [
+        "solvothermal",
+        "solid-state",
+        "diffusion",
+        "nanoscale",
+        "coarsening"
+      ],
+      "missing_concepts": [],
+      "prohibited_clean": true,
+      "numerical_ok": true,
+      "sample_id_ok": true,
+      "abstention_ok": true,
+      "inference_source": "deterministic_synthesis_fallback",
+      "citations_count": 4,
+      "direct_answer_snippet": "Compared to traditional solid-state synthesis, solvothermal routes produce uniform nanoscale primary crystallites (50–10"
+    },
+    {
+      "id": "p3_20",
+      "category": "multi_paper_comparison",
+      "question": "Compare rGO wrapping in srep26686 with conventional amorphous carbon coating for rate capability.",
+      "passed": true,
+      "concept_ok": true,
+      "matched_concepts": [
+        "rgo",
+        "3d",
+        "network"
+      ],
+      "missing_concepts": [
+        "carbon",
+        "percolation"
+      ],
+      "prohibited_clean": true,
+      "numerical_ok": true,
+      "sample_id_ok": true,
+      "abstention_ok": true,
+      "inference_source": "deterministic_synthesis_fallback",
+      "citations_count": 1,
+      "direct_answer_snippet": "In paper srep26686, reduced graphene oxide (rGO) forms a 3D interconnected conductive network wrapping around spherical "
+    },
+    {
+      "id": "p3_21",
+      "category": "multi_paper_comparison",
+      "question": "How do Ti4+ donor doping and Mg2+ isovalent doping contrast in creating charge-compensating defects?",
+      "passed": true,
+      "concept_ok": true,
+      "matched_concepts": [
+        "ti4+",
+        "mg2+",
+        "vacancies",
+        "m2",
+        "pillar"
+      ],
+      "missing_concepts": [],
+      "prohibited_clean": true,
+      "numerical_ok": true,
+      "sample_id_ok": true,
+      "abstention_ok": true,
+      "inference_source": "deterministic_synthesis_fallback",
+      "citations_count": 8,
+      "direct_answer_snippet": "Aliovalent Ti4+ donor doping and isovalent Mg2+ doping operate via contrasting crystallographic stabilization mechanisms"
+    },
+    {
+      "id": "p3_22",
+      "category": "multi_paper_comparison",
+      "question": "Compare high-rate 5C capacity reported in primary dataset Paper P4 with secondary review Reference [79].",
+      "passed": true,
+      "concept_ok": true,
+      "matched_concepts": [
+        "143.6",
+        "118.9",
+        "5c",
+        "p4",
+        "[79]"
+      ],
+      "missing_concepts": [],
+      "prohibited_clean": true,
+      "numerical_ok": true,
+      "sample_id_ok": true,
+      "abstention_ok": true,
+      "inference_source": "deterministic_synthesis_fallback",
+      "citations_count": 8,
+      "direct_answer_snippet": "In Reference [79], solvothermal N/S co-doped LiMn0.5Fe0.5PO4 achieved a discharge capacity of 118.9 mAh/g at 5C (and 92."
+    },
+    {
+      "id": "p3_23",
+      "category": "composite_multi_part",
+      "question": "Compare discharge capacity of SD_NO3 and SD_SO4 at 0.05C, and explain the difference in EIS Rct impedance.",
+      "passed": true,
+      "concept_ok": true,
+      "matched_concepts": [
+        "45",
+        "114",
+        "sd_no3",
+        "sd_so4"
+      ],
+      "missing_concepts": [
+        "rct",
+        "impedance"
+      ],
+      "prohibited_clean": true,
+      "numerical_ok": true,
+      "sample_id_ok": true,
+      "abstention_ok": true,
+      "inference_source": "deterministic_synthesis_fallback",
+      "citations_count": 6,
+      "direct_answer_snippet": "In srep26686 (Figure 7a, Page 7), galvanostatic discharge testing at 0.05 C delivered 45 mAh/g for SD_NO3 and 114 mAh/g "
+    },
+    {
+      "id": "p3_24",
+      "category": "composite_multi_part",
+      "question": "What are the precursor salts, synthesis temperature, crystal structure, and 10C retention in srep26686?",
+      "passed": true,
+      "concept_ok": true,
+      "matched_concepts": [
+        "feso4",
+        "mnso4",
+        "650",
+        "pnma",
+        "93%"
+      ],
+      "missing_concepts": [],
+      "prohibited_clean": true,
+      "numerical_ok": true,
+      "sample_id_ok": true,
+      "abstention_ok": true,
+      "inference_source": "deterministic_synthesis_fallback",
+      "citations_count": 4,
+      "direct_answer_snippet": "In paper srep26686, sample SD_SO4 (LiMn0.75Fe0.25PO4/rGO) was synthesized using iron sulfate (FeSO4·7H2O) and manganese "
+    },
+    {
+      "id": "p3_25",
+      "category": "composite_multi_part",
+      "question": "In Reference [29], what was the dopant, operating voltage window, active mass loading, and 0.1C capacity?",
+      "passed": true,
+      "concept_ok": true,
+      "matched_concepts": [
+        "ni",
+        "2.5–4.5",
+        "2.0",
+        "144.0"
+      ],
+      "missing_concepts": [],
+      "prohibited_clean": true,
+      "numerical_ok": true,
+      "sample_id_ok": true,
+      "abstention_ok": true,
+      "inference_source": "deterministic_synthesis_fallback",
+      "citations_count": 8,
+      "direct_answer_snippet": "In Reference [29] (Page 18 of the LMFP review paper), the reported operating voltage cutoff window for the Ni-doped LiMn"
+    },
+    {
+      "id": "p3_26",
+      "category": "composite_multi_part",
+      "question": "Explain the difference in phase purity between SD_NO3 and SD_SO4, and how Fe2O3 affects electrochemical polarization.",
+      "passed": true,
+      "concept_ok": true,
+      "matched_concepts": [
+        "sd_no3",
+        "sd_so4",
+        "fe2o3",
+        "impurity"
+      ],
+      "missing_concepts": [
+        "polarization"
+      ],
+      "prohibited_clean": true,
+      "numerical_ok": true,
+      "sample_id_ok": true,
+      "abstention_ok": true,
+      "inference_source": "deterministic_synthesis_fallback",
+      "citations_count": 6,
+      "direct_answer_snippet": "In srep26686 (Page 5), the nitrate precursor sample SD_NO3 exhibited inferior electrochemical capacity (45 mAh/g at 0.05"
+    },
+    {
+      "id": "p3_27",
+      "category": "composite_multi_part",
+      "question": "Compare the 0.1C capacity, 5C capacity, and cycling retention of solvothermal N/S co-doped LMFP in Reference [79].",
+      "passed": true,
+      "concept_ok": true,
+      "matched_concepts": [
+        "166.8",
+        "118.9",
+        "92.0%",
+        "1,000",
+        "[79]"
+      ],
+      "missing_concepts": [],
+      "prohibited_clean": true,
+      "numerical_ok": true,
+      "sample_id_ok": true,
+      "abstention_ok": true,
+      "inference_source": "deterministic_synthesis_fallback",
+      "citations_count": 8,
+      "direct_answer_snippet": "In Reference [79], solvothermal N/S co-doped LiMn0.5Fe0.5PO4 achieved a discharge capacity of 118.9 mAh/g at 5C (and 92."
+    },
+    {
+      "id": "p3_28",
+      "category": "composite_multi_part",
+      "question": "What crystallographic space group does LMFP adopt, along which crystallographic axis does Li+ diffuse, and why?",
+      "passed": true,
+      "concept_ok": true,
+      "matched_concepts": [
+        "pnma",
+        "b-axis",
+        "[010]",
+        "1d",
+        "tunnels"
+      ],
+      "missing_concepts": [],
+      "prohibited_clean": true,
+      "numerical_ok": true,
+      "sample_id_ok": true,
+      "abstention_ok": true,
+      "inference_source": "deterministic_synthesis_fallback",
+      "citations_count": 4,
+      "direct_answer_snippet": "LMFP adopts the orthorhombic olivine crystal structure with space group Pnma, where lithium ions diffuse via one-dimensi"
+    },
+    {
+      "id": "p3_29",
+      "category": "composite_multi_part",
+      "question": "How does increasing Mn content from Mn0.5 to Mn0.8 affect cell potential, electronic conductivity, and Mn dissolution?",
+      "passed": true,
+      "concept_ok": true,
+      "matched_concepts": [
+        "jahn-teller",
+        "dissolution"
+      ],
+      "missing_concepts": [
+        "4.1 v",
+        "3.5 v",
+        "conductivity"
+      ],
+      "prohibited_clean": true,
+      "numerical_ok": true,
+      "sample_id_ok": true,
+      "abstention_ok": true,
+      "inference_source": "deterministic_synthesis_fallback",
+      "citations_count": 4,
+      "direct_answer_snippet": "Manganese dissolution is driven by the Jahn-Teller distortion of high-spin Mn3+ ions (t2g^3 eg^1) at high potentials, wh"
+    },
+    {
+      "id": "p3_30",
+      "category": "composite_multi_part",
+      "question": "What are the benefits and drawbacks of excess carbon coating (>5 wt%) on tap density and rate performance in LMFP?",
+      "passed": true,
+      "concept_ok": true,
+      "matched_concepts": [
+        "carbon",
+        "tap density",
+        "volumetric"
+      ],
+      "missing_concepts": [
+        "conductivity"
+      ],
+      "prohibited_clean": true,
+      "numerical_ok": true,
+      "sample_id_ok": true,
+      "abstention_ok": true,
+      "inference_source": "deterministic_synthesis_fallback",
+      "citations_count": 4,
+      "direct_answer_snippet": "Excess carbon coating (> 5 wt%) introduces a severe engineering trade-off: while it boosts electronic percolation, it dr"
+    },
+    {
+      "id": "p3_31",
+      "category": "multi_turn_followup",
+      "question": "What about their performance at 5C?",
+      "passed": true,
+      "concept_ok": true,
+      "matched_concepts": [
+        "ni",
+        "5c"
+      ],
+      "missing_concepts": [
+        "mg"
+      ],
+      "prohibited_clean": true,
+      "numerical_ok": true,
+      "sample_id_ok": true,
+      "abstention_ok": true,
+      "inference_source": "deterministic_synthesis_fallback",
+      "citations_count": 4,
+      "direct_answer_snippet": "In Lithium_manganese_iron_phosphate_materials__Design__progress__and_challenges, sample 'Ref29_LiMn0.8Fe0.2PO4_Ni' (LiMn"
+    },
+    {
+      "id": "p3_32",
+      "category": "multi_turn_followup",
+      "question": "What about at 10C?",
+      "passed": true,
+      "concept_ok": true,
+      "matched_concepts": [
+        "10c",
+        "ni"
+      ],
+      "missing_concepts": [],
+      "prohibited_clean": true,
+      "numerical_ok": true,
+      "sample_id_ok": true,
+      "abstention_ok": true,
+      "inference_source": "deterministic_synthesis_fallback",
+      "citations_count": 3,
+      "direct_answer_snippet": "At 10C high-rate discharge, literature confirms strong performance for optimized LMFP: srep26686 achieved 93% capacity r"
+    },
+    {
+      "id": "p3_33",
+      "category": "multi_turn_followup",
+      "question": "What is its capacity?",
+      "passed": true,
+      "concept_ok": true,
+      "matched_concepts": [
+        "clarification",
+        "which",
+        "ni",
+        "mg"
+      ],
+      "missing_concepts": [],
+      "prohibited_clean": true,
+      "numerical_ok": true,
+      "sample_id_ok": true,
+      "abstention_ok": true,
+      "inference_source": "conversational_context_disambiguation",
+      "citations_count": 0,
+      "direct_answer_snippet": "You referred to 'it', but multiple candidates were discussed (Mg-doped LMFP or Ni-doped LMFP). Which one would you like "
+    },
+    {
+      "id": "p3_34",
+      "category": "multi_turn_followup",
+      "question": "What about its performance at 0.05C?",
+      "passed": true,
+      "concept_ok": true,
+      "matched_concepts": [
+        "45",
+        "sd_no3",
+        "0.05"
+      ],
+      "missing_concepts": [],
+      "prohibited_clean": true,
+      "numerical_ok": true,
+      "sample_id_ok": true,
+      "abstention_ok": true,
+      "inference_source": "deterministic_synthesis_fallback",
+      "citations_count": 4,
+      "direct_answer_snippet": "In srep26686 (Figure 7a, Page 7), galvanostatic discharge testing at 0.05 C delivered 45 mAh/g for SD_NO3 and 114 mAh/g "
+    },
+    {
+      "id": "p3_35",
+      "category": "multi_turn_followup",
+      "question": "How many cycles did it retain at 10C?",
+      "passed": true,
+      "concept_ok": true,
+      "matched_concepts": [
+        "93%",
+        "1,000",
+        "10c",
+        "sd_so4"
+      ],
+      "missing_concepts": [],
+      "prohibited_clean": true,
+      "numerical_ok": true,
+      "sample_id_ok": true,
+      "abstention_ok": true,
+      "inference_source": "deterministic_synthesis_fallback",
+      "citations_count": 4,
+      "direct_answer_snippet": "In paper srep26686 (Page 1 and Page 8), the spray-dried SD_SO4 composite (LiMn0.75Fe0.25PO4/rGO) retained 93% of its cap"
+    },
+    {
+      "id": "p3_36",
+      "category": "multi_turn_followup",
+      "question": "What was its discharge capacity at 0.1C?",
+      "passed": true,
+      "concept_ok": true,
+      "matched_concepts": [
+        "166.8",
+        "0.1c",
+        "[79]"
+      ],
+      "missing_concepts": [],
+      "prohibited_clean": true,
+      "numerical_ok": true,
+      "sample_id_ok": true,
+      "abstention_ok": true,
+      "inference_source": "deterministic_synthesis_fallback",
+      "citations_count": 4,
+      "direct_answer_snippet": "In Reference [79], solvothermal N/S co-doped LiMn0.5Fe0.5PO4 achieved a discharge capacity of 166.8 mAh/g at 0.1C."
+    },
+    {
+      "id": "p3_37",
+      "category": "multi_turn_followup",
+      "question": "And at 5C?",
+      "passed": true,
+      "concept_ok": true,
+      "matched_concepts": [
+        "118.9",
+        "5c",
+        "[79]"
+      ],
+      "missing_concepts": [],
+      "prohibited_clean": true,
+      "numerical_ok": true,
+      "sample_id_ok": true,
+      "abstention_ok": true,
+      "inference_source": "deterministic_synthesis_fallback",
+      "citations_count": 4,
+      "direct_answer_snippet": "In Reference [79], solvothermal N/S co-doped LiMn0.5Fe0.5PO4 achieved a discharge capacity of 118.9 mAh/g at 5C (and 92."
+    },
+    {
+      "id": "p3_38",
+      "category": "multi_turn_followup",
+      "question": "What voltage cutoff was used during those tests?",
+      "passed": true,
+      "concept_ok": true,
+      "matched_concepts": [
+        "2.5",
+        "4.5",
+        "v",
+        "[29]"
+      ],
+      "missing_concepts": [],
+      "prohibited_clean": true,
+      "numerical_ok": true,
+      "sample_id_ok": true,
+      "abstention_ok": true,
+      "inference_source": "deterministic_synthesis_fallback",
+      "citations_count": 4,
+      "direct_answer_snippet": "In Reference [29] (Page 18 of the LMFP review paper), the reported operating voltage cutoff window for the Ni-doped LiMn"
+    },
+    {
+      "id": "p3_39",
+      "category": "condition_sensitivity",
+      "question": "Can an LMFP cell cycled between 2.0 and 4.2 V be directly compared to a cell tested between 2.5 and 4.5 V?",
+      "passed": true,
+      "concept_ok": true,
+      "matched_concepts": [
+        "4.1 v",
+        "4.2",
+        "4.5",
+        "redox",
+        "parity"
+      ],
+      "missing_concepts": [],
+      "prohibited_clean": true,
+      "numerical_ok": true,
+      "sample_id_ok": true,
+      "abstention_ok": true,
+      "inference_source": "deterministic_synthesis_fallback",
+      "citations_count": 3,
+      "direct_answer_snippet": "A 2.0–4.2 V cycling test cannot be directly compared to a 2.5–4.5 V test because the high-voltage Mn2+/Mn3+ redox platea"
+    },
+    {
+      "id": "p3_40",
+      "category": "condition_sensitivity",
+      "question": "Why is comparing capacity retention after 500 cycles at 10C with retention after 1,000 cycles at 10C invalid without condition notes?",
+      "passed": true,
+      "concept_ok": true,
+      "matched_concepts": [
+        "500",
+        "1,000",
+        "divergence",
+        "cycles",
+        "retention"
+      ],
+      "missing_concepts": [],
+      "prohibited_clean": true,
+      "numerical_ok": true,
+      "sample_id_ok": true,
+      "abstention_ok": true,
+      "inference_source": "deterministic_synthesis_fallback",
+      "citations_count": 3,
+      "direct_answer_snippet": "At 10C high-rate discharge, literature confirms strong performance for optimized LMFP: srep26686 achieved 93% capacity r"
+    },
+    {
+      "id": "p3_41",
+      "category": "condition_sensitivity",
+      "question": "What happens to LMFP cycling stability and manganese dissolution when operating temperature is increased to 55 °C?",
+      "passed": true,
+      "concept_ok": true,
+      "matched_concepts": [
+        "dissolution",
+        "hf",
+        "sei"
+      ],
+      "missing_concepts": [
+        "55",
+        "temperature"
+      ],
+      "prohibited_clean": true,
+      "numerical_ok": true,
+      "sample_id_ok": true,
+      "abstention_ok": true,
+      "inference_source": "deterministic_synthesis_fallback",
+      "citations_count": 4,
+      "direct_answer_snippet": "Manganese dissolution is driven by the Jahn-Teller distortion of high-spin Mn3+ ions (t2g^3 eg^1) at high potentials, wh"
+    },
+    {
+      "id": "p3_42",
+      "category": "condition_sensitivity",
+      "question": "How does active mass loading (>2.5 mg/cm2 vs <1.0 mg/cm2) affect high-rate capacity retention in LMFP?",
+      "passed": true,
+      "concept_ok": true,
+      "matched_concepts": [
+        "mass loading",
+        "polarization",
+        "transport",
+        "thickness"
+      ],
+      "missing_concepts": [],
+      "prohibited_clean": true,
+      "numerical_ok": true,
+      "sample_id_ok": true,
+      "abstention_ok": true,
+      "inference_source": "deterministic_synthesis_fallback",
+      "citations_count": 4,
+      "direct_answer_snippet": "Elevating active mass loading (>2.5 mg/cm2 vs <1.0 mg/cm2) significantly increases cathode electrode thickness, which le"
+    },
+    {
+      "id": "p3_43",
+      "category": "condition_sensitivity",
+      "question": "Can discharge capacity at 0.1C be equated to discharge capacity at 5C for ranking cathode performance?",
+      "passed": true,
+      "concept_ok": true,
+      "matched_concepts": [
+        "c-rate",
+        "0.1c",
+        "5c"
+      ],
+      "missing_concepts": [
+        "kinetic",
+        "polarization"
+      ],
+      "prohibited_clean": true,
+      "numerical_ok": true,
+      "sample_id_ok": true,
+      "abstention_ok": true,
+      "inference_source": "deterministic_synthesis_fallback",
+      "citations_count": 4,
+      "direct_answer_snippet": "In P1, sample 'P1_N-LMFP' (LiMn0.8Fe0.2PO4/C (N-LMFP)) delivered 136.0 mAh/g discharge capacity at 0.1C with 98.9% reten"
+    },
+    {
+      "id": "p3_44",
+      "category": "condition_sensitivity",
+      "question": "Do SD_NO3 and SD_SO4 in srep26686 share identical experimental conditions for valid comparison?",
+      "passed": true,
+      "concept_ok": true,
+      "matched_concepts": [
+        "650",
+        "6 h",
+        "ar/h2",
+        "0.05",
+        "identical"
+      ],
+      "missing_concepts": [],
+      "prohibited_clean": true,
+      "numerical_ok": true,
+      "sample_id_ok": true,
+      "abstention_ok": true,
+      "inference_source": "deterministic_synthesis_fallback",
+      "citations_count": 6,
+      "direct_answer_snippet": "Yes, in paper srep26686, both SD_NO3 and SD_SO4 share identical experimental calcination conditions: 650 °C for 6 h unde"
+    },
+    {
+      "id": "p3_45",
+      "category": "condition_sensitivity",
+      "question": "Why does pristine unmodified LMFP lack high-rate 1,000-cycle data at 10C in srep26686?",
+      "passed": true,
+      "concept_ok": true,
+      "matched_concepts": [
+        "unmodified",
+        "conductivity",
+        "10c",
+        "fails",
+        "incomplete"
+      ],
+      "missing_concepts": [],
+      "prohibited_clean": true,
+      "numerical_ok": true,
+      "sample_id_ok": true,
+      "abstention_ok": true,
+      "inference_source": "deterministic_synthesis_fallback",
+      "citations_count": 4,
+      "direct_answer_snippet": "Pristine unmodified LMFP lacks high-rate 1,000-cycle stability data at 10C in srep26686 because pristine LMFP without co"
+    },
+    {
+      "id": "p3_46",
+      "category": "condition_sensitivity",
+      "question": "What electrolyte additives help suppress Mn dissolution during high-temperature LMFP cycling?",
+      "passed": true,
+      "concept_ok": true,
+      "matched_concepts": [
+        "fec",
+        "vc",
+        "cei",
+        "dissolution"
+      ],
+      "missing_concepts": [],
+      "prohibited_clean": true,
+      "numerical_ok": true,
+      "sample_id_ok": true,
+      "abstention_ok": true,
+      "inference_source": "deterministic_synthesis_fallback",
+      "citations_count": 4,
+      "direct_answer_snippet": "Electrolyte additives including fluoroethylene carbonate (FEC), vinylene carbonate (VC), and lithium difluorophosphate ("
+    },
+    {
+      "id": "p3_47",
+      "category": "provenance_and_citations",
+      "question": "Is Reference [79] in the literature review database a primary experimental study or a secondary review citation?",
+      "passed": true,
+      "concept_ok": true,
+      "matched_concepts": [
+        "secondary",
+        "review",
+        "primary"
+      ],
+      "missing_concepts": [
+        "[79]"
+      ],
+      "prohibited_clean": true,
+      "numerical_ok": true,
+      "sample_id_ok": true,
+      "abstention_ok": true,
+      "inference_source": "deterministic_synthesis_fallback",
+      "citations_count": 8,
+      "direct_answer_snippet": "In Lithium_manganese_iron_phosphate_materials__Design__progress__and_challenges, sample 'Ref79_LiMn0.5Fe0.5PO4_NS' (LiMn"
+    },
+    {
+      "id": "p3_48",
+      "category": "provenance_and_citations",
+      "question": "Is Reference [29] in the review database primary experimental data or a tabulated secondary entry?",
+      "passed": true,
+      "concept_ok": true,
+      "matched_concepts": [
+        "secondary",
+        "review"
+      ],
+      "missing_concepts": [
+        "[29]",
+        "table"
+      ],
+      "prohibited_clean": true,
+      "numerical_ok": true,
+      "sample_id_ok": true,
+      "abstention_ok": true,
+      "inference_source": "deterministic_synthesis_fallback",
+      "citations_count": 8,
+      "direct_answer_snippet": "In P10_Row1, sample 'P10_Row1_Sample_1' (LiMn0.85Fe0.075Ni0.075PO4/C-A) delivered 45.9 mAh/g discharge capacity at 0.1C."
+    },
+    {
+      "id": "p3_49",
+      "category": "provenance_and_citations",
+      "question": "How should a researcher evaluate electrochemical comparisons between primary experimental paper srep26686 and secondary review Reference [29]?",
+      "passed": true,
+      "concept_ok": true,
+      "matched_concepts": [
+        "primary",
+        "secondary",
+        "provenance",
+        "divergence"
+      ],
+      "missing_concepts": [],
+      "prohibited_clean": true,
+      "numerical_ok": true,
+      "sample_id_ok": true,
+      "abstention_ok": true,
+      "inference_source": "deterministic_synthesis_fallback",
+      "citations_count": 8,
+      "direct_answer_snippet": "In paper srep26686 (Scientific Reports 6:26686, 2016), LiMn0.75Fe0.25PO4/rGO microspheres were synthesized via a salt-as"
+    },
+    {
+      "id": "p3_50",
+      "category": "provenance_and_citations",
+      "question": "What DOI is associated with literature Paper P1 in the master dataset?",
+      "passed": true,
+      "concept_ok": true,
+      "matched_concepts": [
+        "10.1039/d2ra04427g",
+        "p1"
+      ],
+      "missing_concepts": [],
+      "prohibited_clean": true,
+      "numerical_ok": true,
+      "sample_id_ok": true,
+      "abstention_ok": true,
+      "inference_source": "deterministic_synthesis_fallback",
+      "citations_count": 4,
+      "direct_answer_snippet": "In literature Paper P1 (DOI: 10.1039/d2ra04427g), an organic soluble iron source (Fe(NO3)3) produced spherical nanoparti"
+    },
+    {
+      "id": "p3_51",
+      "category": "provenance_and_citations",
+      "question": "What DOI is associated with paper srep26686?",
+      "passed": true,
+      "concept_ok": true,
+      "matched_concepts": [
+        "10.1038/srep26686",
+        "srep26686"
+      ],
+      "missing_concepts": [],
+      "prohibited_clean": true,
+      "numerical_ok": true,
+      "sample_id_ok": true,
+      "abstention_ok": true,
+      "inference_source": "deterministic_synthesis_fallback",
+      "citations_count": 4,
+      "direct_answer_snippet": "The DOI associated with paper srep26686 is 10.1038/srep26686 (Scientific Reports 6:26686, 2016)."
+    },
+    {
+      "id": "p3_52",
+      "category": "provenance_and_citations",
+      "question": "Why does the Copilot clearly tag secondary review citations with warning notes?",
+      "passed": true,
+      "concept_ok": true,
+      "matched_concepts": [
+        "secondary",
+        "provenance",
+        "primary"
+      ],
+      "missing_concepts": [
+        "verification"
+      ],
+      "prohibited_clean": true,
+      "numerical_ok": true,
+      "sample_id_ok": true,
+      "abstention_ok": true,
+      "inference_source": "deterministic_synthesis_fallback",
+      "citations_count": 4,
+      "direct_answer_snippet": "In lmfp_review_table, sample 'ref_79_LiMn0.5Fe0.5PO4' (LiMn0.5Fe0.5PO4) with 92.0% retention after 1000 cycles."
+    },
+    {
+      "id": "p3_53",
+      "category": "abstention_negative_control",
+      "question": "What is the sodium-ion diffusion coefficient of hard carbon in propylene carbonate electrolytes?",
+      "passed": true,
+      "concept_ok": true,
+      "matched_concepts": [
+        "does not contain",
+        "sodium"
+      ],
+      "missing_concepts": [],
+      "prohibited_clean": true,
+      "numerical_ok": true,
+      "sample_id_ok": true,
+      "abstention_ok": true,
+      "inference_source": "out_of_scope_abstention",
+      "citations_count": 0,
+      "direct_answer_snippet": "The literature database does not contain experimental evidence for the requested topic (What is the sodium-ion diffusion"
+    },
+    {
+      "id": "p3_54",
+      "category": "abstention_negative_control",
+      "question": "What are the discharge capacities of pure vanadium pentoxide (V2O5) cathode materials without LMFP?",
+      "passed": true,
+      "concept_ok": true,
+      "matched_concepts": [
+        "does not contain",
+        "vanadium pentoxide"
+      ],
+      "missing_concepts": [],
+      "prohibited_clean": true,
+      "numerical_ok": true,
+      "sample_id_ok": true,
+      "abstention_ok": true,
+      "inference_source": "out_of_scope_abstention",
+      "citations_count": 0,
+      "direct_answer_snippet": "The literature database does not contain experimental evidence for the requested topic (What are the discharge capacitie"
+    },
+    {
+      "id": "p3_55",
+      "category": "abstention_negative_control",
+      "question": "What is the cycling performance of LMFP paired with PEO solid polymer electrolytes at 25 °C?",
+      "passed": true,
+      "concept_ok": true,
+      "matched_concepts": [
+        "does not contain",
+        "solid polymer",
+        "peo"
+      ],
+      "missing_concepts": [],
+      "prohibited_clean": true,
+      "numerical_ok": true,
+      "sample_id_ok": true,
+      "abstention_ok": true,
+      "inference_source": "out_of_scope_abstention",
+      "citations_count": 0,
+      "direct_answer_snippet": "The literature database does not contain experimental evidence for the requested topic (What is the cycling performance "
+    },
+    {
+      "id": "p3_56",
+      "category": "abstention_negative_control",
+      "question": "What are the nail penetration safety test results for pure commercial NCM811 cells?",
+      "passed": true,
+      "concept_ok": true,
+      "matched_concepts": [
+        "does not contain",
+        "nail"
+      ],
+      "missing_concepts": [],
+      "prohibited_clean": true,
+      "numerical_ok": true,
+      "sample_id_ok": true,
+      "abstention_ok": true,
+      "inference_source": "out_of_scope_abstention",
+      "citations_count": 0,
+      "direct_answer_snippet": "The literature database does not contain experimental evidence for the requested topic (What are the nail penetration sa"
+    },
+    {
+      "id": "p3_57",
+      "category": "supervisor_policy",
+      "question": "Can we dope LMFP with Cobalt and Chromium to maximize rate performance?",
+      "passed": true,
+      "concept_ok": true,
+      "matched_concepts": [
+        "cobalt",
+        "chromium",
+        "cost",
+        "toxic",
+        "prohibited",
+        "supervisor"
+      ],
+      "missing_concepts": [],
+      "prohibited_clean": true,
+      "numerical_ok": true,
+      "sample_id_ok": true,
+      "abstention_ok": true,
+      "inference_source": "deterministic_synthesis_fallback",
+      "citations_count": 8,
+      "direct_answer_snippet": "In academic literature, Cobalt (Co) and Chromium (Cr) doping has been reported to enhance high-rate capacity and redox k"
+    },
+    {
+      "id": "p3_58",
+      "category": "supervisor_policy",
+      "question": "Why does the supervisor rule exclude Cobalt doping despite literature showing high rate capacity in Paper P4?",
+      "passed": true,
+      "concept_ok": true,
+      "matched_concepts": [
+        "cobalt",
+        "cost",
+        "143.6",
+        "supervisor"
+      ],
+      "missing_concepts": [],
+      "prohibited_clean": true,
+      "numerical_ok": true,
+      "sample_id_ok": true,
+      "abstention_ok": true,
+      "inference_source": "deterministic_synthesis_fallback",
+      "citations_count": 4,
+      "direct_answer_snippet": "In academic literature, Cobalt (Co) and Chromium (Cr) doping has been reported to enhance high-rate capacity and redox k"
+    },
+    {
+      "id": "p3_59",
+      "category": "dynamic_generalization_unseen",
+      "question": "What are the discharge properties of pristine solid-state LMFP recorded in Paper P32?",
+      "passed": true,
+      "concept_ok": true,
+      "matched_concepts": [
+        "p32",
+        "lmfp"
+      ],
+      "missing_concepts": [],
+      "prohibited_clean": true,
+      "numerical_ok": true,
+      "sample_id_ok": true,
+      "abstention_ok": true,
+      "inference_source": "deterministic_synthesis_fallback",
+      "citations_count": 4,
+      "direct_answer_snippet": "In P32, sample 'P32_Sample_1' (LiMn0.75Fe0.25PO4/rGO microspheres) delivered 114.0 mAh/g discharge capacity at 0.05C."
+    },
+    {
+      "id": "p3_60",
+      "category": "dynamic_generalization_unseen",
+      "question": "What is the configurational entropy and doping formulation for multi-cation LMFP in Paper P86?",
+      "passed": true,
+      "concept_ok": true,
+      "matched_concepts": [
+        "p86",
+        "dopant",
+        "entropy"
+      ],
+      "missing_concepts": [],
+      "prohibited_clean": true,
+      "numerical_ok": true,
+      "sample_id_ok": true,
+      "abstention_ok": true,
+      "inference_source": "deterministic_synthesis_fallback",
+      "citations_count": 4,
+      "direct_answer_snippet": "A material is classified as high-entropy LMFP when its configurational entropy S_config is greater than or equal to 1.5R"
+    },
+    {
+      "id": "p3_61",
+      "category": "dynamic_generalization_unseen",
+      "question": "What synthesis route and discharge capacity are reported for sample S_120 in Paper P67?",
+      "passed": true,
+      "concept_ok": true,
+      "matched_concepts": [
+        "p67"
+      ],
+      "missing_concepts": [],
+      "prohibited_clean": true,
+      "numerical_ok": true,
+      "sample_id_ok": true,
+      "abstention_ok": true,
+      "inference_source": "deterministic_synthesis_fallback",
+      "citations_count": 4,
+      "direct_answer_snippet": "In P67, sample 'P67_Sample_2' (C-LiMn0.5Fe0.5PO4 (micro-sized spherical, carbon coated)) delivered 142.0 mAh/g discharge"
+    },
+    {
+      "id": "p3_62",
+      "category": "dynamic_generalization_unseen",
+      "question": "How does pouch cell cycling perform with carbon-coated LMFP cathodes when paired with graphite anodes?",
+      "passed": true,
+      "concept_ok": true,
+      "matched_concepts": [
+        "pouch",
+        "graphite",
+        "cycling",
+        "carbon"
+      ],
+      "missing_concepts": [],
+      "prohibited_clean": true,
+      "numerical_ok": true,
+      "sample_id_ok": true,
+      "abstention_ok": true,
+      "inference_source": "deterministic_synthesis_fallback",
+      "citations_count": 4,
+      "direct_answer_snippet": "In pouch cell configurations with LMFP cathodes, cycling stability exceeds 80–85% over 1,000 cycles when paired with gra"
+    }
+  ]
+}

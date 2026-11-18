@@ -1,0 +1,3478 @@
+[
+  {
+    "question_id": "eval_01",
+    "category": "rate_capability",
+    "question": "How does Mg doping influence rate capability at 5C in LMFP?",
+    "supporting_paper": "Master Dataset / P6 / P71",
+    "expected_concepts": [
+      "mg",
+      "5c",
+      "diffusion",
+      "m2",
+      "polarization"
+    ],
+    "top4_matches": [
+      {
+        "rank": 1,
+        "passage_id": "csv_P59_P59_Sample_16_746",
+        "paper_id": "P59",
+        "sample_label": "P59_Sample_16",
+        "composition": "LiMn0.8Fe0.2PO4/C (LMFP microspheres)",
+        "source_type": "master_dataset",
+        "bm25_score": 14.72,
+        "semantic_score": 1.647,
+        "structured_score": 3.0,
+        "combined_score": 0.0521,
+        "match_reasons": [
+          "BM25 match (rank 2)",
+          "Semantic match (rank 5)",
+          "Structured condition match (rank 58)"
+        ]
+      },
+      {
+        "rank": 2,
+        "passage_id": "csv_P71_P71_Sample_17_1041",
+        "paper_id": "P71",
+        "sample_label": "P71_Sample_17",
+        "composition": "LiMn0.8Fe0.2PO4/C (LMFP-AB/C, acetylene-black embedded)",
+        "source_type": "master_dataset",
+        "bm25_score": 12.848,
+        "semantic_score": 1.458,
+        "structured_score": 3.0,
+        "combined_score": 0.0473,
+        "match_reasons": [
+          "BM25 match (rank 5)",
+          "Semantic match (rank 13)",
+          "Structured condition match (rank 70)"
+        ]
+      },
+      {
+        "rank": 3,
+        "passage_id": "csv_P71_P71_Sample_22_1046",
+        "paper_id": "P71",
+        "sample_label": "P71_Sample_22",
+        "composition": "LiMn0.8Fe0.2PO4/C (LMFP/C, core-shell control)",
+        "source_type": "master_dataset",
+        "bm25_score": 12.848,
+        "semantic_score": 1.458,
+        "structured_score": 3.0,
+        "combined_score": 0.0463,
+        "match_reasons": [
+          "BM25 match (rank 6)",
+          "Semantic match (rank 15)",
+          "Structured condition match (rank 71)"
+        ]
+      },
+      {
+        "rank": 4,
+        "passage_id": "csv_P68_P68_Sample_3_985",
+        "paper_id": "P68",
+        "sample_label": "P68_Sample_3",
+        "composition": "LiFe0.6Mn0.4PO4/C microspheres (double carbon coating + spray drying)",
+        "source_type": "master_dataset",
+        "bm25_score": 11.405,
+        "semantic_score": 1.263,
+        "structured_score": 3.0,
+        "combined_score": 0.0446,
+        "match_reasons": [
+          "BM25 match (rank 12)",
+          "Semantic match (rank 17)",
+          "Structured condition match (rank 66)"
+        ]
+      }
+    ],
+    "top10_passage_ids": [
+      "csv_P59_P59_Sample_16_746",
+      "csv_P71_P71_Sample_17_1041",
+      "csv_P71_P71_Sample_22_1046",
+      "csv_P68_P68_Sample_3_985",
+      "csv_P6_T1_Row4_P6_T1_Row4_Sample_1_27",
+      "csv_P63_P63_Sample_23_873",
+      "csv_P60_P60_Sample_9_766",
+      "csv_P76_P76_Sample_3_1099",
+      "csv_P63_P63_Sample_22_872",
+      "csv_P86_P86_Sample_1_1181"
+    ],
+    "top10_paper_ids": [
+      "P59",
+      "P71",
+      "P71",
+      "P68",
+      "P6_T1_Row4",
+      "P63",
+      "P60",
+      "P76",
+      "P63",
+      "P86"
+    ],
+    "recall_at_1": false,
+    "recall_at_4": true,
+    "recall_at_10": true
+  },
+  {
+    "question_id": "eval_02",
+    "category": "crystallography",
+    "question": "What crystal structure and space group is confirmed for LiMn0.75Fe0.25PO4 in srep26686?",
+    "supporting_paper": "srep26686 (Page 2)",
+    "expected_concepts": [
+      "pnma",
+      "olivine",
+      "orthorhombic"
+    ],
+    "top4_matches": [
+      {
+        "rank": 1,
+        "passage_id": "rev_21",
+        "paper_id": "srep26686",
+        "sample_label": "LiMn0.75Fe0.25PO4",
+        "composition": "LiMn0.75Fe0.25PO4",
+        "source_type": "literature_review",
+        "bm25_score": 17.97,
+        "semantic_score": 2.607,
+        "structured_score": 0.0,
+        "combined_score": 0.0495,
+        "match_reasons": [
+          "BM25 match (rank 2)",
+          "Semantic match (rank 1)",
+          "Peer-reviewed paper excerpt"
+        ]
+      },
+      {
+        "rank": 2,
+        "passage_id": "rev_12",
+        "paper_id": "srep26686",
+        "sample_label": "LiMn0.75Fe0.25PO4/reduced",
+        "composition": "LiMn0.75Fe0.25PO4/reduced",
+        "source_type": "literature_review",
+        "bm25_score": 16.186,
+        "semantic_score": 2.388,
+        "structured_score": 0.0,
+        "combined_score": 0.0443,
+        "match_reasons": [
+          "BM25 match (rank 9)",
+          "Semantic match (rank 6)",
+          "Peer-reviewed paper excerpt"
+        ]
+      },
+      {
+        "rank": 3,
+        "passage_id": "rev_19",
+        "paper_id": "srep26686",
+        "sample_label": "LiMn0.75Fe0.25PO4/rGO",
+        "composition": "LiMn0.75Fe0.25PO4/rGO",
+        "source_type": "literature_review",
+        "bm25_score": 14.946,
+        "semantic_score": 2.22,
+        "structured_score": 0.0,
+        "combined_score": 0.042,
+        "match_reasons": [
+          "BM25 match (rank 11)",
+          "Semantic match (rank 10)",
+          "Peer-reviewed paper excerpt"
+        ]
+      },
+      {
+        "rank": 4,
+        "passage_id": "rev_22",
+        "paper_id": "srep26686",
+        "sample_label": "LiMn0.75Fe0.25PO4/C",
+        "composition": "LiMn0.75Fe0.25PO4/C",
+        "source_type": "literature_review",
+        "bm25_score": 14.937,
+        "semantic_score": 2.151,
+        "structured_score": 0.0,
+        "combined_score": 0.0403,
+        "match_reasons": [
+          "BM25 match (rank 13)",
+          "Semantic match (rank 13)",
+          "Peer-reviewed paper excerpt"
+        ]
+      }
+    ],
+    "top10_passage_ids": [
+      "rev_21",
+      "rev_12",
+      "rev_19",
+      "rev_22",
+      "rev_36",
+      "rev_32",
+      "rev_33",
+      "rev_34",
+      "csv_P63_P63_Sample_37_887",
+      "csv_P1_P1_LMP-C_3"
+    ],
+    "top10_paper_ids": [
+      "srep26686",
+      "srep26686",
+      "srep26686",
+      "srep26686",
+      "srep26686",
+      "srep26686",
+      "srep26686",
+      "srep26686",
+      "P63",
+      "P1"
+    ],
+    "recall_at_1": true,
+    "recall_at_4": true,
+    "recall_at_10": true
+  },
+  {
+    "question_id": "eval_03",
+    "category": "sample_association_respectively",
+    "question": "What are the discharge capacities of SD_NO3 and SD_SO4 in srep26686 at 0.05 C?",
+    "supporting_paper": "srep26686 (Page 7)",
+    "expected_concepts": [
+      "sd_no3",
+      "sd_so4",
+      "45",
+      "114"
+    ],
+    "top4_matches": [
+      {
+        "rank": 1,
+        "passage_id": "rev_23",
+        "paper_id": "srep26686",
+        "sample_label": "LiMn0.75Fe0.25PO4",
+        "composition": "LiMn0.75Fe0.25PO4",
+        "source_type": "literature_review",
+        "bm25_score": 26.939,
+        "semantic_score": 3.148,
+        "structured_score": 0.0,
+        "combined_score": 0.05,
+        "match_reasons": [
+          "BM25 match (rank 1)",
+          "Semantic match (rank 1)",
+          "Peer-reviewed paper excerpt"
+        ]
+      },
+      {
+        "rank": 2,
+        "passage_id": "rev_24",
+        "paper_id": "srep26686",
+        "sample_label": "LiMn0.75Fe0.25PO4/C",
+        "composition": "LiMn0.75Fe0.25PO4/C",
+        "source_type": "literature_review",
+        "bm25_score": 26.939,
+        "semantic_score": 3.148,
+        "structured_score": 0.0,
+        "combined_score": 0.049,
+        "match_reasons": [
+          "BM25 match (rank 2)",
+          "Semantic match (rank 2)",
+          "Peer-reviewed paper excerpt"
+        ]
+      },
+      {
+        "rank": 3,
+        "passage_id": "rev_25",
+        "paper_id": "srep26686",
+        "sample_label": "LiMn0.75Fe0.25PO4/rGO",
+        "composition": "LiMn0.75Fe0.25PO4/rGO",
+        "source_type": "literature_review",
+        "bm25_score": 26.939,
+        "semantic_score": 3.148,
+        "structured_score": 0.0,
+        "combined_score": 0.0481,
+        "match_reasons": [
+          "BM25 match (rank 3)",
+          "Semantic match (rank 3)",
+          "Peer-reviewed paper excerpt"
+        ]
+      },
+      {
+        "rank": 4,
+        "passage_id": "csv_P91_P91_Sample_1_1210",
+        "paper_id": "P91",
+        "sample_label": "P91_Sample_1",
+        "composition": "LiMn3/4Fe1/4PO4/C (x = 1/4), the optimum Fe content of the series",
+        "source_type": "master_dataset",
+        "bm25_score": 9.082,
+        "semantic_score": 1.105,
+        "structured_score": 0.0,
+        "combined_score": 0.0345,
+        "match_reasons": [
+          "BM25 match (rank 9)",
+          "Semantic match (rank 9)"
+        ]
+      }
+    ],
+    "top10_passage_ids": [
+      "rev_23",
+      "rev_24",
+      "rev_25",
+      "csv_P91_P91_Sample_1_1210",
+      "csv_P76_P76_Sample_4_1100",
+      "csv_P82_P82_Sample_1_1132",
+      "csv_P81_P81_Sample_2_1129",
+      "csv_P41_P41_Sample_23_256",
+      "csv_P38_P38_Sample_9_175",
+      "csv_P38_P38_Sample_11_177"
+    ],
+    "top10_paper_ids": [
+      "srep26686",
+      "srep26686",
+      "srep26686",
+      "P91",
+      "P76",
+      "P82",
+      "P81",
+      "P41",
+      "P38",
+      "P38"
+    ],
+    "recall_at_1": true,
+    "recall_at_4": true,
+    "recall_at_10": true
+  },
+  {
+    "question_id": "eval_04",
+    "category": "condition_preservation",
+    "question": "What is the cycling capacity retention of the spray-dried sample in srep26686 after 1,000 cycles?",
+    "supporting_paper": "srep26686 (Page 1, 8)",
+    "expected_concepts": [
+      "93%",
+      "1,000",
+      "10 c"
+    ],
+    "top4_matches": [
+      {
+        "rank": 1,
+        "passage_id": "rev_26",
+        "paper_id": "srep26686",
+        "sample_label": "LiMn0.75Fe0.25PO4",
+        "composition": "LiMn0.75Fe0.25PO4",
+        "source_type": "literature_review",
+        "bm25_score": 15.22,
+        "semantic_score": 1.929,
+        "structured_score": 2.0,
+        "combined_score": 0.0851,
+        "match_reasons": [
+          "BM25 match (rank 2)",
+          "Semantic match (rank 2)",
+          "Structured condition match (rank 3)",
+          "Peer-reviewed paper excerpt"
+        ]
+      },
+      {
+        "rank": 2,
+        "passage_id": "rev_27",
+        "paper_id": "srep26686",
+        "sample_label": "LiMn0.75Fe0.25PO4/C",
+        "composition": "LiMn0.75Fe0.25PO4/C",
+        "source_type": "literature_review",
+        "bm25_score": 15.22,
+        "semantic_score": 1.929,
+        "structured_score": 2.0,
+        "combined_score": 0.0835,
+        "match_reasons": [
+          "BM25 match (rank 3)",
+          "Semantic match (rank 3)",
+          "Structured condition match (rank 4)",
+          "Peer-reviewed paper excerpt"
+        ]
+      },
+      {
+        "rank": 3,
+        "passage_id": "rev_28",
+        "paper_id": "srep26686",
+        "sample_label": "LiMn0.75Fe0.25PO4/rGO",
+        "composition": "LiMn0.75Fe0.25PO4/rGO",
+        "source_type": "literature_review",
+        "bm25_score": 15.22,
+        "semantic_score": 1.929,
+        "structured_score": 2.0,
+        "combined_score": 0.0819,
+        "match_reasons": [
+          "BM25 match (rank 4)",
+          "Semantic match (rank 4)",
+          "Structured condition match (rank 5)",
+          "Peer-reviewed paper excerpt"
+        ]
+      },
+      {
+        "rank": 4,
+        "passage_id": "rev_12",
+        "paper_id": "srep26686",
+        "sample_label": "LiMn0.75Fe0.25PO4/reduced",
+        "composition": "LiMn0.75Fe0.25PO4/reduced",
+        "source_type": "literature_review",
+        "bm25_score": 8.387,
+        "semantic_score": 1.237,
+        "structured_score": 2.0,
+        "combined_score": 0.0715,
+        "match_reasons": [
+          "BM25 match (rank 35)",
+          "Semantic match (rank 14)",
+          "Structured condition match (rank 2)",
+          "Peer-reviewed paper excerpt"
+        ]
+      }
+    ],
+    "top10_passage_ids": [
+      "rev_26",
+      "rev_27",
+      "rev_28",
+      "rev_12",
+      "csv_P6_T1_Row3_P6_T1_Row3_Sample_1_26",
+      "csv_P76_P76_Sample_4_1100",
+      "csv_P62_P62_Sample_12_823",
+      "rev_1",
+      "csv_P53_P53_Sample_25_602",
+      "rev_32"
+    ],
+    "top10_paper_ids": [
+      "srep26686",
+      "srep26686",
+      "srep26686",
+      "srep26686",
+      "P6_T1_Row3",
+      "P76",
+      "P62",
+      "Lithium manganese iron phosphate materials_ Design, progress, and challenges",
+      "P53",
+      "srep26686"
+    ],
+    "recall_at_1": true,
+    "recall_at_4": true,
+    "recall_at_10": true
+  },
+  {
+    "question_id": "eval_05",
+    "category": "degradation_mechanisms",
+    "question": "What are the reported mechanisms of Mn dissolution during LMFP cycling?",
+    "supporting_paper": "Literature Review (Page 18) / Domain Corpus",
+    "expected_concepts": [
+      "jahn-teller",
+      "mn3+",
+      "disproportionation",
+      "hf"
+    ],
+    "top4_matches": [
+      {
+        "rank": 1,
+        "passage_id": "rev_13",
+        "paper_id": "srep26686",
+        "sample_label": "LiMn0.75Fe0.25PO4",
+        "composition": "LiMn0.75Fe0.25PO4",
+        "source_type": "literature_review",
+        "bm25_score": 10.798,
+        "semantic_score": 1.123,
+        "structured_score": 0.0,
+        "combined_score": 0.0451,
+        "match_reasons": [
+          "BM25 match (rank 5)",
+          "Semantic match (rank 8)",
+          "Peer-reviewed paper excerpt"
+        ]
+      },
+      {
+        "rank": 2,
+        "passage_id": "rev_14",
+        "paper_id": "srep26686",
+        "sample_label": "LiMn0.75Fe0.25PO4/rGO",
+        "composition": "LiMn0.75Fe0.25PO4/rGO",
+        "source_type": "literature_review",
+        "bm25_score": 10.798,
+        "semantic_score": 1.123,
+        "structured_score": 0.0,
+        "combined_score": 0.0443,
+        "match_reasons": [
+          "BM25 match (rank 6)",
+          "Semantic match (rank 9)",
+          "Peer-reviewed paper excerpt"
+        ]
+      },
+      {
+        "rank": 3,
+        "passage_id": "csv_P72_P72_Sample_20_1072",
+        "paper_id": "P72",
+        "sample_label": "P72_Sample_20",
+        "composition": "LiMn0.8Fe0.2PO4 (LMFP, spray-dried pristine)",
+        "source_type": "master_dataset",
+        "bm25_score": 13.03,
+        "semantic_score": 1.907,
+        "structured_score": 0.0,
+        "combined_score": 0.04,
+        "match_reasons": [
+          "BM25 match (rank 1)",
+          "Semantic match (rank 1)"
+        ]
+      },
+      {
+        "rank": 4,
+        "passage_id": "csv_P72_P72_Sample_19_1071",
+        "paper_id": "P72",
+        "sample_label": "P72_Sample_19",
+        "composition": "LiMn0.8Fe0.2PO4 (CG-LMFP, concentration-gradient)",
+        "source_type": "master_dataset",
+        "bm25_score": 10.08,
+        "semantic_score": 1.461,
+        "structured_score": 0.0,
+        "combined_score": 0.0368,
+        "match_reasons": [
+          "BM25 match (rank 8)",
+          "Semantic match (rank 3)"
+        ]
+      }
+    ],
+    "top10_passage_ids": [
+      "rev_13",
+      "rev_14",
+      "csv_P72_P72_Sample_20_1072",
+      "csv_P72_P72_Sample_19_1071",
+      "csv_P65_P65_Sample_25_954",
+      "csv_P41_P41_Sample_23_256",
+      "csv_P41_P41_Sample_25_258",
+      "rev_17",
+      "csv_P60_P60_Sample_22_779",
+      "csv_P60_P60_Sample_23_780"
+    ],
+    "top10_paper_ids": [
+      "srep26686",
+      "srep26686",
+      "P72",
+      "P72",
+      "P65",
+      "P41",
+      "P41",
+      "srep26686",
+      "P60",
+      "P60"
+    ],
+    "recall_at_1": false,
+    "recall_at_4": false,
+    "recall_at_10": false
+  },
+  {
+    "question_id": "eval_06",
+    "category": "policy_and_supervisor_rules",
+    "question": "Can we dope LMFP with Cobalt and Chromium to maximize rate performance?",
+    "supporting_paper": "ECMT Supervisor Policy & Master Dataset P4",
+    "expected_concepts": [
+      "cobalt",
+      "cost",
+      "chromium",
+      "toxicity"
+    ],
+    "top4_matches": [
+      {
+        "rank": 1,
+        "passage_id": "csv_P59_P59_Sample_24_754",
+        "paper_id": "P59",
+        "sample_label": "P59_Sample_24",
+        "composition": "NMC/LMFP blends (82, 73, 64) - rate performance",
+        "source_type": "master_dataset",
+        "bm25_score": 11.744,
+        "semantic_score": 1.348,
+        "structured_score": 0.0,
+        "combined_score": 0.0385,
+        "match_reasons": [
+          "BM25 match (rank 5)",
+          "Semantic match (rank 1)"
+        ]
+      },
+      {
+        "rank": 2,
+        "passage_id": "csv_P77_P77_Sample_1_1102",
+        "paper_id": "P77",
+        "sample_label": "P77_Sample_1",
+        "composition": "LiMn0.6Fe0.4PO4/C (optimum composition)",
+        "source_type": "master_dataset",
+        "bm25_score": 12.38,
+        "semantic_score": 1.08,
+        "structured_score": 0.0,
+        "combined_score": 0.0352,
+        "match_reasons": [
+          "BM25 match (rank 1)",
+          "Semantic match (rank 17)"
+        ]
+      },
+      {
+        "rank": 3,
+        "passage_id": "csv_P77_P77_Sample_2_1103",
+        "paper_id": "P77",
+        "sample_label": "P77_Sample_2",
+        "composition": "LiMn0.7Fe0.3PO4/C",
+        "source_type": "master_dataset",
+        "bm25_score": 9.84,
+        "semantic_score": 1.245,
+        "structured_score": 0.0,
+        "combined_score": 0.0348,
+        "match_reasons": [
+          "BM25 match (rank 17)",
+          "Semantic match (rank 2)"
+        ]
+      },
+      {
+        "rank": 4,
+        "passage_id": "rev_26",
+        "paper_id": "srep26686",
+        "sample_label": "LiMn0.75Fe0.25PO4",
+        "composition": "LiMn0.75Fe0.25PO4",
+        "source_type": "literature_review",
+        "bm25_score": 12.001,
+        "semantic_score": 0.692,
+        "structured_score": 0.0,
+        "combined_score": 0.0346,
+        "match_reasons": [
+          "BM25 match (rank 2)",
+          "Semantic match (rank 75)",
+          "Peer-reviewed paper excerpt"
+        ]
+      }
+    ],
+    "top10_passage_ids": [
+      "csv_P59_P59_Sample_24_754",
+      "csv_P77_P77_Sample_1_1102",
+      "csv_P77_P77_Sample_2_1103",
+      "rev_26",
+      "csv_P77_P77_Sample_3_1104",
+      "rev_27",
+      "rev_28",
+      "csv_P62_P62_Sample_19_830",
+      "csv_P52_P52_Sample_28_565",
+      "csv_P84_P84_Sample_18_1160"
+    ],
+    "top10_paper_ids": [
+      "P59",
+      "P77",
+      "P77",
+      "srep26686",
+      "P77",
+      "srep26686",
+      "srep26686",
+      "P62",
+      "P52",
+      "P84"
+    ],
+    "recall_at_1": false,
+    "recall_at_4": false,
+    "recall_at_10": false
+  },
+  {
+    "question_id": "eval_07",
+    "category": "thermodynamics",
+    "question": "What configurational entropy threshold classifies a material as high-entropy LMFP?",
+    "supporting_paper": "HE-LMFP Specification Module",
+    "expected_concepts": [
+      "1.5r",
+      "s_config",
+      "m2 site"
+    ],
+    "top4_matches": [
+      {
+        "rank": 1,
+        "passage_id": "rev_37",
+        "paper_id": "srep26686",
+        "sample_label": "LiMn0.75Fe0.25PO4",
+        "composition": "LiMn0.75Fe0.25PO4",
+        "source_type": "literature_review",
+        "bm25_score": 4.897,
+        "semantic_score": 0.731,
+        "structured_score": 0.0,
+        "combined_score": 0.0414,
+        "match_reasons": [
+          "BM25 match (rank 14)",
+          "Semantic match (rank 9)",
+          "Peer-reviewed paper excerpt"
+        ]
+      },
+      {
+        "rank": 2,
+        "passage_id": "csv_P42_P42_Sample_14_273",
+        "paper_id": "P42",
+        "sample_label": "P42_Sample_14",
+        "composition": "Commercial LiFePO4 (LFP, benchmark)",
+        "source_type": "master_dataset",
+        "bm25_score": 8.31,
+        "semantic_score": 1.21,
+        "structured_score": 0.0,
+        "combined_score": 0.04,
+        "match_reasons": [
+          "BM25 match (rank 1)",
+          "Semantic match (rank 1)"
+        ]
+      },
+      {
+        "rank": 3,
+        "passage_id": "csv_P45_P45_Sample_16_339",
+        "paper_id": "P45",
+        "sample_label": "P45_Sample_16",
+        "composition": "Commercial LiMn0.4Fe0.6PO4 (C-LMFP, benchmark)",
+        "source_type": "master_dataset",
+        "bm25_score": 8.31,
+        "semantic_score": 1.21,
+        "structured_score": 0.0,
+        "combined_score": 0.0392,
+        "match_reasons": [
+          "BM25 match (rank 2)",
+          "Semantic match (rank 2)"
+        ]
+      },
+      {
+        "rank": 4,
+        "passage_id": "csv_P83_P83_Sample_1_1136",
+        "paper_id": "P83",
+        "sample_label": "P83_Sample_1",
+        "composition": "LMFP@C: undoped LiMn0.8Fe0.2PO4@C baseline (x = 0)",
+        "source_type": "master_dataset",
+        "bm25_score": 5.65,
+        "semantic_score": 0.809,
+        "structured_score": 0.0,
+        "combined_score": 0.0361,
+        "match_reasons": [
+          "BM25 match (rank 9)",
+          "Semantic match (rank 4)"
+        ]
+      }
+    ],
+    "top10_passage_ids": [
+      "rev_37",
+      "csv_P42_P42_Sample_14_273",
+      "csv_P45_P45_Sample_16_339",
+      "csv_P83_P83_Sample_1_1136",
+      "csv_P60_P60_Sample_21_778",
+      "csv_P59_P59_Sample_19_749",
+      "csv_P71_P71_Sample_10_1034",
+      "csv_P83_P83_Sample_6_1141",
+      "csv_P83_P83_Sample_5_1140",
+      "csv_P83_P83_Sample_2_1137"
+    ],
+    "top10_paper_ids": [
+      "srep26686",
+      "P42",
+      "P45",
+      "P83",
+      "P60",
+      "P59",
+      "P71",
+      "P83",
+      "P83",
+      "P83"
+    ],
+    "recall_at_1": false,
+    "recall_at_4": false,
+    "recall_at_10": false
+  },
+  {
+    "question_id": "eval_08",
+    "category": "synthesis_routes",
+    "question": "How do different iron precursor sources compare in Paper P1?",
+    "supporting_paper": "Paper P1 (DOI: 10.1039/d2ra04427g)",
+    "expected_concepts": [
+      "fe(no3)3",
+      "136",
+      "fec2o4",
+      "fe2o3"
+    ],
+    "top4_matches": [
+      {
+        "rank": 1,
+        "passage_id": "csv_P49_P49_Sample_23_467",
+        "paper_id": "P49",
+        "sample_label": "P49_Sample_23",
+        "composition": "FeC2O4.2H2O (iron precursor)",
+        "source_type": "master_dataset",
+        "bm25_score": 9.824,
+        "semantic_score": 1.561,
+        "structured_score": 0.0,
+        "combined_score": 0.04,
+        "match_reasons": [
+          "BM25 match (rank 1)",
+          "Semantic match (rank 1)"
+        ]
+      },
+      {
+        "rank": 2,
+        "passage_id": "csv_P50_P50_Sample_33_506",
+        "paper_id": "P50",
+        "sample_label": "P50_Sample_33",
+        "composition": "LiMn0.6Fe0.4PO4/C (Blended-LMFP)",
+        "source_type": "master_dataset",
+        "bm25_score": 6.722,
+        "semantic_score": 0.96,
+        "structured_score": 0.0,
+        "combined_score": 0.0385,
+        "match_reasons": [
+          "BM25 match (rank 3)",
+          "Semantic match (rank 3)"
+        ]
+      },
+      {
+        "rank": 3,
+        "passage_id": "csv_P82_P82_Sample_3_1134",
+        "paper_id": "P82",
+        "sample_label": "P82_Sample_3",
+        "composition": "LMFP/Fe/C: LiMn0.8Fe0.2PO4 with iron-catalysed graphitised carbon coating",
+        "source_type": "master_dataset",
+        "bm25_score": 5.862,
+        "semantic_score": 0.836,
+        "structured_score": 0.0,
+        "combined_score": 0.0377,
+        "match_reasons": [
+          "BM25 match (rank 4)",
+          "Semantic match (rank 4)"
+        ]
+      },
+      {
+        "rank": 4,
+        "passage_id": "csv_P82_P82_Sample_4_1135",
+        "paper_id": "P82",
+        "sample_label": "P82_Sample_4",
+        "composition": "LMFP/C: LiMn0.8Fe0.2PO4 with conventional glucose-derived carbon coating (control)",
+        "source_type": "master_dataset",
+        "bm25_score": 5.862,
+        "semantic_score": 0.836,
+        "structured_score": 0.0,
+        "combined_score": 0.037,
+        "match_reasons": [
+          "BM25 match (rank 5)",
+          "Semantic match (rank 5)"
+        ]
+      }
+    ],
+    "top10_passage_ids": [
+      "csv_P49_P49_Sample_23_467",
+      "csv_P50_P50_Sample_33_506",
+      "csv_P82_P82_Sample_3_1134",
+      "csv_P82_P82_Sample_4_1135",
+      "csv_P61_P61_Sample_11_796",
+      "csv_P1_P1_LMP-C_3",
+      "csv_P1_P1_C-LMFP_1",
+      "rev_23",
+      "rev_24",
+      "rev_25"
+    ],
+    "top10_paper_ids": [
+      "P49",
+      "P50",
+      "P82",
+      "P82",
+      "P61",
+      "P1",
+      "P1",
+      "srep26686",
+      "srep26686",
+      "srep26686"
+    ],
+    "recall_at_1": false,
+    "recall_at_4": false,
+    "recall_at_10": true
+  },
+  {
+    "question_id": "eval_09",
+    "category": "appropriate_abstention",
+    "question": "What is the sodium-ion diffusion coefficient of LMFP in propylene carbonate electrolyte?",
+    "supporting_paper": "None (Negative Control)",
+    "expected_concepts": [
+      "does not contain",
+      "insufficient evidence",
+      "not reported"
+    ],
+    "top4_matches": [
+      {
+        "rank": 1,
+        "passage_id": "rev_20",
+        "paper_id": "srep26686",
+        "sample_label": "LiMn0.75Fe0.25PO4/rGO",
+        "composition": "LiMn0.75Fe0.25PO4/rGO",
+        "source_type": "literature_review",
+        "bm25_score": 7.703,
+        "semantic_score": 0.944,
+        "structured_score": 0.0,
+        "combined_score": 0.0481,
+        "match_reasons": [
+          "BM25 match (rank 3)",
+          "Semantic match (rank 3)",
+          "Peer-reviewed paper excerpt"
+        ]
+      },
+      {
+        "rank": 2,
+        "passage_id": "rev_21",
+        "paper_id": "srep26686",
+        "sample_label": "LiMn0.75Fe0.25PO4",
+        "composition": "LiMn0.75Fe0.25PO4",
+        "source_type": "literature_review",
+        "bm25_score": 7.703,
+        "semantic_score": 0.944,
+        "structured_score": 0.0,
+        "combined_score": 0.0472,
+        "match_reasons": [
+          "BM25 match (rank 4)",
+          "Semantic match (rank 4)",
+          "Peer-reviewed paper excerpt"
+        ]
+      },
+      {
+        "rank": 3,
+        "passage_id": "rev_22",
+        "paper_id": "srep26686",
+        "sample_label": "LiMn0.75Fe0.25PO4/C",
+        "composition": "LiMn0.75Fe0.25PO4/C",
+        "source_type": "literature_review",
+        "bm25_score": 7.703,
+        "semantic_score": 0.944,
+        "structured_score": 0.0,
+        "combined_score": 0.0463,
+        "match_reasons": [
+          "BM25 match (rank 5)",
+          "Semantic match (rank 5)",
+          "Peer-reviewed paper excerpt"
+        ]
+      },
+      {
+        "rank": 4,
+        "passage_id": "csv_P43_P43_Sample_7_283",
+        "paper_id": "P43",
+        "sample_label": "P43_Sample_7",
+        "composition": "Electrospun P(VdF-HFP) microfibrous membrane (gel polymer electrolyte host)",
+        "source_type": "master_dataset",
+        "bm25_score": 10.491,
+        "semantic_score": 1.394,
+        "structured_score": 0.0,
+        "combined_score": 0.04,
+        "match_reasons": [
+          "BM25 match (rank 1)",
+          "Semantic match (rank 1)"
+        ]
+      }
+    ],
+    "top10_passage_ids": [
+      "rev_20",
+      "rev_21",
+      "rev_22",
+      "csv_P43_P43_Sample_7_283",
+      "csv_P60_P60_Sample_13_770",
+      "csv_P62_P62_Sample_5_816",
+      "csv_P40_P40_Sample_27_233",
+      "csv_P81_P81_Sample_2_1129",
+      "csv_P78_P78_Sample_3_1110",
+      "csv_P40_P40_Sample_2_208"
+    ],
+    "top10_paper_ids": [
+      "srep26686",
+      "srep26686",
+      "srep26686",
+      "P43",
+      "P60",
+      "P62",
+      "P40",
+      "P81",
+      "P78",
+      "P40"
+    ],
+    "recall_at_1": true,
+    "recall_at_4": true,
+    "recall_at_10": true
+  },
+  {
+    "question_id": "eval_10",
+    "category": "conversational_context",
+    "question": "What about its effect at 5C?",
+    "supporting_paper": "Master Dataset P6 / P71",
+    "expected_concepts": [
+      "mg",
+      "5c",
+      "capacity",
+      "polarization"
+    ],
+    "top4_matches": [
+      {
+        "rank": 1,
+        "passage_id": "csv_P59_P59_Sample_16_746",
+        "paper_id": "P59",
+        "sample_label": "P59_Sample_16",
+        "composition": "LiMn0.8Fe0.2PO4/C (LMFP microspheres)",
+        "source_type": "master_dataset",
+        "bm25_score": 7.332,
+        "semantic_score": 0.825,
+        "structured_score": 3.0,
+        "combined_score": 0.0513,
+        "match_reasons": [
+          "BM25 match (rank 1)",
+          "Semantic match (rank 9)",
+          "Structured condition match (rank 58)"
+        ]
+      },
+      {
+        "rank": 2,
+        "passage_id": "csv_P72_P72_Sample_14_1066",
+        "paper_id": "P72",
+        "sample_label": "P72_Sample_14",
+        "composition": "LiMn0.8Fe0.2PO4 (LMFP, spray-dried pristine)",
+        "source_type": "master_dataset",
+        "bm25_score": 6.419,
+        "semantic_score": 0.93,
+        "structured_score": 3.0,
+        "combined_score": 0.0508,
+        "match_reasons": [
+          "BM25 match (rank 4)",
+          "Semantic match (rank 2)",
+          "Structured condition match (rank 73)"
+        ]
+      },
+      {
+        "rank": 3,
+        "passage_id": "csv_P9_Row5_P9_Row5_Sample_1_38",
+        "paper_id": "P9_Row5",
+        "sample_label": "P9_Row5_Sample_1",
+        "composition": "LiMg0.05Mn0.3Fe0.65PO4/C",
+        "source_type": "master_dataset",
+        "bm25_score": 6.49,
+        "semantic_score": 0.945,
+        "structured_score": 2.5,
+        "combined_score": 0.0495,
+        "match_reasons": [
+          "BM25 match (rank 3)",
+          "Semantic match (rank 1)",
+          "Structured condition match (rank 97)"
+        ]
+      },
+      {
+        "rank": 4,
+        "passage_id": "csv_P60_P60_Sample_9_766",
+        "paper_id": "P60",
+        "sample_label": "P60_Sample_9",
+        "composition": "LiMn0.8Fe0.2PO4/C (flexible LMFP microspheres)",
+        "source_type": "master_dataset",
+        "bm25_score": 6.575,
+        "semantic_score": 0.791,
+        "structured_score": 3.0,
+        "combined_score": 0.0494,
+        "match_reasons": [
+          "BM25 match (rank 2)",
+          "Semantic match (rank 14)",
+          "Structured condition match (rank 59)"
+        ]
+      }
+    ],
+    "top10_passage_ids": [
+      "csv_P59_P59_Sample_16_746",
+      "csv_P72_P72_Sample_14_1066",
+      "csv_P9_Row5_P9_Row5_Sample_1_38",
+      "csv_P60_P60_Sample_9_766",
+      "csv_P6_T1_Row2_P6_T1_Row2_Sample_1_25",
+      "csv_P12_Row1_P12_Row1_Sample_1_44",
+      "csv_P81_P81_Sample_2_1129",
+      "csv_P12_Row2_P12_Row2_Sample_1_45",
+      "csv_P12_Row3_P12_Row3_Sample_1_46",
+      "csv_P47_P47_Sample_6_388"
+    ],
+    "top10_paper_ids": [
+      "P59",
+      "P72",
+      "P9_Row5",
+      "P60",
+      "P6_T1_Row2",
+      "P12_Row1",
+      "P81",
+      "P12_Row2",
+      "P12_Row3",
+      "P47"
+    ],
+    "recall_at_1": false,
+    "recall_at_4": false,
+    "recall_at_10": true
+  },
+  {
+    "question_id": "eval_11",
+    "category": "multi_paper_dopant_comparison",
+    "question": "How does N/S co-doping in Reference [79] compare to Ni doping in Reference [29] at 0.1C and high rates?",
+    "supporting_paper": "Review Paper (Page 18, Ref [79], Ref [29])",
+    "expected_concepts": [
+      "166.8",
+      "144.0",
+      "n/s",
+      "ni",
+      "[79]",
+      "[29]"
+    ],
+    "top4_matches": [
+      {
+        "rank": 1,
+        "passage_id": "csv_P10_Row1_P10_Row1_Sample_1_39",
+        "paper_id": "P10_Row1",
+        "sample_label": "P10_Row1_Sample_1",
+        "composition": "LiMn0.85Fe0.075Ni0.075PO4/C-A",
+        "source_type": "master_dataset",
+        "bm25_score": 12.193,
+        "semantic_score": 0.99,
+        "structured_score": 4.5,
+        "combined_score": 0.0532,
+        "match_reasons": [
+          "BM25 match (rank 9)",
+          "Semantic match (rank 17)",
+          "Structured condition match (rank 23)"
+        ]
+      },
+      {
+        "rank": 2,
+        "passage_id": "csv_P10_Row2_P10_Row2_Sample_1_40",
+        "paper_id": "P10_Row2",
+        "sample_label": "P10_Row2_Sample_1",
+        "composition": "LiMn0.85Fe0.075Ni0.075PO4/C-B",
+        "source_type": "master_dataset",
+        "bm25_score": 12.193,
+        "semantic_score": 0.99,
+        "structured_score": 4.5,
+        "combined_score": 0.0524,
+        "match_reasons": [
+          "BM25 match (rank 10)",
+          "Semantic match (rank 18)",
+          "Structured condition match (rank 24)"
+        ]
+      },
+      {
+        "rank": 3,
+        "passage_id": "csv_P10_Row3_P10_Row3_Sample_1_41",
+        "paper_id": "P10_Row3",
+        "sample_label": "P10_Row3_Sample_1",
+        "composition": "LiMn0.85Fe0.075Ni0.075PO4/C-C",
+        "source_type": "master_dataset",
+        "bm25_score": 11.891,
+        "semantic_score": 0.96,
+        "structured_score": 4.5,
+        "combined_score": 0.0514,
+        "match_reasons": [
+          "BM25 match (rank 11)",
+          "Semantic match (rank 20)",
+          "Structured condition match (rank 25)"
+        ]
+      },
+      {
+        "rank": 4,
+        "passage_id": "rev_4",
+        "paper_id": "Lithium manganese iron phosphate materials_ Design, progress, and challenges",
+        "sample_label": "LiMn0.5Fe0.5PO4",
+        "composition": "LiMn0.5Fe0.5PO4",
+        "source_type": "literature_review",
+        "bm25_score": 15.912,
+        "semantic_score": 1.38,
+        "structured_score": 0.0,
+        "combined_score": 0.0495,
+        "match_reasons": [
+          "BM25 match (rank 1)",
+          "Semantic match (rank 2)",
+          "Peer-reviewed paper excerpt"
+        ]
+      }
+    ],
+    "top10_passage_ids": [
+      "csv_P10_Row1_P10_Row1_Sample_1_39",
+      "csv_P10_Row2_P10_Row2_Sample_1_40",
+      "csv_P10_Row3_P10_Row3_Sample_1_41",
+      "rev_4",
+      "csv_P60_P60_Sample_19_776",
+      "csv_P70_P70_Sample_21_1017",
+      "csv_P63_P63_Sample_22_872",
+      "csv_P34_P34_Sample_9_132",
+      "csv_P59_P59_Sample_19_749",
+      "csv_P86_P86_Sample_1_1181"
+    ],
+    "top10_paper_ids": [
+      "P10_Row1",
+      "P10_Row2",
+      "P10_Row3",
+      "Lithium manganese iron phosphate materials_ Design, progress, and challenges",
+      "P60",
+      "P70",
+      "P63",
+      "P34",
+      "P59",
+      "P86"
+    ],
+    "recall_at_1": false,
+    "recall_at_4": false,
+    "recall_at_10": false
+  },
+  {
+    "question_id": "eval_12",
+    "category": "voltage_window_preservation",
+    "question": "What is the operating voltage window reported for the Ni-doped sample in Reference [29]?",
+    "supporting_paper": "Review Paper (Page 18, Ref [29])",
+    "expected_concepts": [
+      "2.5",
+      "4.5",
+      "v",
+      "[29]"
+    ],
+    "top4_matches": [
+      {
+        "rank": 1,
+        "passage_id": "csv_P27_P27_Sample_3_79",
+        "paper_id": "P27",
+        "sample_label": "P27_Sample_3",
+        "composition": "Ni-doped LiFePO4 (TM-LFP, DFT supercell model)",
+        "source_type": "master_dataset",
+        "bm25_score": 8.312,
+        "semantic_score": 1.205,
+        "structured_score": 2.5,
+        "combined_score": 0.0647,
+        "match_reasons": [
+          "BM25 match (rank 6)",
+          "Semantic match (rank 3)",
+          "Structured condition match (rank 6)"
+        ]
+      },
+      {
+        "rank": 2,
+        "passage_id": "rev_7",
+        "paper_id": "Lithium manganese iron phosphate materials_ Design, progress, and challenges",
+        "sample_label": "LiMn0.8Fe0.2PO4",
+        "composition": "LiMn0.8Fe0.2PO4",
+        "source_type": "literature_review",
+        "bm25_score": 10.617,
+        "semantic_score": 1.661,
+        "structured_score": 0.0,
+        "combined_score": 0.05,
+        "match_reasons": [
+          "BM25 match (rank 1)",
+          "Semantic match (rank 1)",
+          "Peer-reviewed paper excerpt"
+        ]
+      },
+      {
+        "rank": 3,
+        "passage_id": "rev_4",
+        "paper_id": "Lithium manganese iron phosphate materials_ Design, progress, and challenges",
+        "sample_label": "LiMn0.5Fe0.5PO4",
+        "composition": "LiMn0.5Fe0.5PO4",
+        "source_type": "literature_review",
+        "bm25_score": 8.259,
+        "semantic_score": 1.208,
+        "structured_score": 0.0,
+        "combined_score": 0.0468,
+        "match_reasons": [
+          "BM25 match (rank 7)",
+          "Semantic match (rank 2)",
+          "Peer-reviewed paper excerpt"
+        ]
+      },
+      {
+        "rank": 4,
+        "passage_id": "rev_32",
+        "paper_id": "srep26686",
+        "sample_label": "LiMn0.8Fe0.2PO4",
+        "composition": "LiMn0.8Fe0.2PO4",
+        "source_type": "literature_review",
+        "bm25_score": 10.089,
+        "semantic_score": 0.922,
+        "structured_score": 0.0,
+        "combined_score": 0.0461,
+        "match_reasons": [
+          "BM25 match (rank 2)",
+          "Semantic match (rank 9)",
+          "Peer-reviewed paper excerpt"
+        ]
+      }
+    ],
+    "top10_passage_ids": [
+      "csv_P27_P27_Sample_3_79",
+      "rev_7",
+      "rev_4",
+      "rev_32",
+      "rev_33",
+      "rev_34",
+      "csv_P59_P59_Sample_19_749",
+      "csv_P85_P85_Sample_5_1180",
+      "csv_P60_P60_Sample_21_778",
+      "csv_P47_P47_Sample_17_399"
+    ],
+    "top10_paper_ids": [
+      "P27",
+      "Lithium manganese iron phosphate materials_ Design, progress, and challenges",
+      "Lithium manganese iron phosphate materials_ Design, progress, and challenges",
+      "srep26686",
+      "srep26686",
+      "srep26686",
+      "P59",
+      "P85",
+      "P60",
+      "P47"
+    ],
+    "recall_at_1": false,
+    "recall_at_4": false,
+    "recall_at_10": false
+  },
+  {
+    "question_id": "eval_13",
+    "category": "carbon_composites",
+    "question": "What role does reduced graphene oxide (rGO) play in the LiMn0.75Fe0.25PO4 composite synthesized in srep26686?",
+    "supporting_paper": "srep26686 (Page 1, 2)",
+    "expected_concepts": [
+      "rgo",
+      "conductive",
+      "3d",
+      "network",
+      "microspheres"
+    ],
+    "top4_matches": [
+      {
+        "rank": 1,
+        "passage_id": "rev_38",
+        "paper_id": "srep26686",
+        "sample_label": "LiMn0.75Fe0.25PO4",
+        "composition": "LiMn0.75Fe0.25PO4",
+        "source_type": "literature_review",
+        "bm25_score": 12.749,
+        "semantic_score": 1.607,
+        "structured_score": 0.0,
+        "combined_score": 0.0485,
+        "match_reasons": [
+          "BM25 match (rank 2)",
+          "Semantic match (rank 3)",
+          "Peer-reviewed paper excerpt"
+        ]
+      },
+      {
+        "rank": 2,
+        "passage_id": "rev_12",
+        "paper_id": "srep26686",
+        "sample_label": "LiMn0.75Fe0.25PO4/reduced",
+        "composition": "LiMn0.75Fe0.25PO4/reduced",
+        "source_type": "literature_review",
+        "bm25_score": 10.478,
+        "semantic_score": 1.546,
+        "structured_score": 0.0,
+        "combined_score": 0.0463,
+        "match_reasons": [
+          "BM25 match (rank 5)",
+          "Semantic match (rank 5)",
+          "Peer-reviewed paper excerpt"
+        ]
+      },
+      {
+        "rank": 3,
+        "passage_id": "rev_35",
+        "paper_id": "srep26686",
+        "sample_label": "LiMn0.75Fe0.25PO4/C",
+        "composition": "LiMn0.75Fe0.25PO4/C",
+        "source_type": "literature_review",
+        "bm25_score": 8.673,
+        "semantic_score": 1.269,
+        "structured_score": 0.0,
+        "combined_score": 0.0439,
+        "match_reasons": [
+          "BM25 match (rank 8)",
+          "Semantic match (rank 8)",
+          "Peer-reviewed paper excerpt"
+        ]
+      },
+      {
+        "rank": 4,
+        "passage_id": "rev_36",
+        "paper_id": "srep26686",
+        "sample_label": "LiMn0.8Fe0.2PO4/C",
+        "composition": "LiMn0.8Fe0.2PO4/C",
+        "source_type": "literature_review",
+        "bm25_score": 8.673,
+        "semantic_score": 1.269,
+        "structured_score": 0.0,
+        "combined_score": 0.0431,
+        "match_reasons": [
+          "BM25 match (rank 9)",
+          "Semantic match (rank 9)",
+          "Peer-reviewed paper excerpt"
+        ]
+      }
+    ],
+    "top10_passage_ids": [
+      "rev_38",
+      "rev_12",
+      "rev_35",
+      "rev_36",
+      "rev_29",
+      "csv_P84_P84_Sample_1_1143",
+      "csv_P84_P84_Sample_31_1173",
+      "csv_P29_P29_Sample_2_84",
+      "csv_P90_P90_Sample_5_1209",
+      "csv_P55_P55_Sample_13_642"
+    ],
+    "top10_paper_ids": [
+      "srep26686",
+      "srep26686",
+      "srep26686",
+      "srep26686",
+      "srep26686",
+      "P84",
+      "P84",
+      "P29",
+      "P90",
+      "P55"
+    ],
+    "recall_at_1": true,
+    "recall_at_4": true,
+    "recall_at_10": true
+  },
+  {
+    "question_id": "eval_14",
+    "category": "synthesis_conditions",
+    "question": "What calcination temperature and atmosphere were utilized for the spray-dried LiMn0.75Fe0.25PO4 in srep26686?",
+    "supporting_paper": "srep26686 (Page 2)",
+    "expected_concepts": [
+      "650",
+      "\u00b0c",
+      "ar/h2",
+      "6 h"
+    ],
+    "top4_matches": [
+      {
+        "rank": 1,
+        "passage_id": "rev_18",
+        "paper_id": "srep26686",
+        "sample_label": "LiMn0.75Fe0.25PO4",
+        "composition": "LiMn0.75Fe0.25PO4",
+        "source_type": "literature_review",
+        "bm25_score": 12.245,
+        "semantic_score": 1.317,
+        "structured_score": 0.0,
+        "combined_score": 0.049,
+        "match_reasons": [
+          "BM25 match (rank 1)",
+          "Semantic match (rank 3)",
+          "Peer-reviewed paper excerpt"
+        ]
+      },
+      {
+        "rank": 2,
+        "passage_id": "rev_32",
+        "paper_id": "srep26686",
+        "sample_label": "LiMn0.8Fe0.2PO4",
+        "composition": "LiMn0.8Fe0.2PO4",
+        "source_type": "literature_review",
+        "bm25_score": 10.704,
+        "semantic_score": 1.306,
+        "structured_score": 0.0,
+        "combined_score": 0.0467,
+        "match_reasons": [
+          "BM25 match (rank 4)",
+          "Semantic match (rank 5)",
+          "Peer-reviewed paper excerpt"
+        ]
+      },
+      {
+        "rank": 3,
+        "passage_id": "rev_19",
+        "paper_id": "srep26686",
+        "sample_label": "LiMn0.75Fe0.25PO4/rGO",
+        "composition": "LiMn0.75Fe0.25PO4/rGO",
+        "source_type": "literature_review",
+        "bm25_score": 10.541,
+        "semantic_score": 1.317,
+        "structured_score": 0.0,
+        "combined_score": 0.0459,
+        "match_reasons": [
+          "BM25 match (rank 7)",
+          "Semantic match (rank 4)",
+          "Peer-reviewed paper excerpt"
+        ]
+      },
+      {
+        "rank": 4,
+        "passage_id": "rev_33",
+        "paper_id": "srep26686",
+        "sample_label": "LiMn0.85Fe0.15PO4",
+        "composition": "LiMn0.85Fe0.15PO4",
+        "source_type": "literature_review",
+        "bm25_score": 10.704,
+        "semantic_score": 1.306,
+        "structured_score": 0.0,
+        "combined_score": 0.0459,
+        "match_reasons": [
+          "BM25 match (rank 5)",
+          "Semantic match (rank 6)",
+          "Peer-reviewed paper excerpt"
+        ]
+      }
+    ],
+    "top10_passage_ids": [
+      "rev_18",
+      "rev_32",
+      "rev_19",
+      "rev_33",
+      "rev_34",
+      "rev_31",
+      "csv_P43_P43_Sample_3_279",
+      "csv_P43_P43_Sample_4_280",
+      "csv_P74_P74_Sample_1_1089",
+      "csv_P37_Row4_P37_Row4_Sample_1_158"
+    ],
+    "top10_paper_ids": [
+      "srep26686",
+      "srep26686",
+      "srep26686",
+      "srep26686",
+      "srep26686",
+      "srep26686",
+      "P43",
+      "P43",
+      "P74",
+      "P37_Row4"
+    ],
+    "recall_at_1": true,
+    "recall_at_4": true,
+    "recall_at_10": true
+  },
+  {
+    "question_id": "eval_15",
+    "category": "impurity_phases",
+    "question": "Why did the nitrate precursor sample SD_NO3 show inferior electrochemical capacity in srep26686?",
+    "supporting_paper": "srep26686 (Page 5)",
+    "expected_concepts": [
+      "fe2o3",
+      "impurity",
+      "nitrate",
+      "fe(no3)3"
+    ],
+    "top4_matches": [
+      {
+        "rank": 1,
+        "passage_id": "rev_26",
+        "paper_id": "srep26686",
+        "sample_label": "LiMn0.75Fe0.25PO4",
+        "composition": "LiMn0.75Fe0.25PO4",
+        "source_type": "literature_review",
+        "bm25_score": 18.293,
+        "semantic_score": 1.438,
+        "structured_score": 0.0,
+        "combined_score": 0.05,
+        "match_reasons": [
+          "BM25 match (rank 1)",
+          "Semantic match (rank 1)",
+          "Peer-reviewed paper excerpt"
+        ]
+      },
+      {
+        "rank": 2,
+        "passage_id": "rev_27",
+        "paper_id": "srep26686",
+        "sample_label": "LiMn0.75Fe0.25PO4/C",
+        "composition": "LiMn0.75Fe0.25PO4/C",
+        "source_type": "literature_review",
+        "bm25_score": 18.293,
+        "semantic_score": 1.438,
+        "structured_score": 0.0,
+        "combined_score": 0.049,
+        "match_reasons": [
+          "BM25 match (rank 2)",
+          "Semantic match (rank 2)",
+          "Peer-reviewed paper excerpt"
+        ]
+      },
+      {
+        "rank": 3,
+        "passage_id": "rev_28",
+        "paper_id": "srep26686",
+        "sample_label": "LiMn0.75Fe0.25PO4/rGO",
+        "composition": "LiMn0.75Fe0.25PO4/rGO",
+        "source_type": "literature_review",
+        "bm25_score": 18.293,
+        "semantic_score": 1.438,
+        "structured_score": 0.0,
+        "combined_score": 0.0481,
+        "match_reasons": [
+          "BM25 match (rank 3)",
+          "Semantic match (rank 3)",
+          "Peer-reviewed paper excerpt"
+        ]
+      },
+      {
+        "rank": 4,
+        "passage_id": "rev_32",
+        "paper_id": "srep26686",
+        "sample_label": "LiMn0.8Fe0.2PO4",
+        "composition": "LiMn0.8Fe0.2PO4",
+        "source_type": "literature_review",
+        "bm25_score": 8.778,
+        "semantic_score": 0.722,
+        "structured_score": 0.0,
+        "combined_score": 0.0367,
+        "match_reasons": [
+          "BM25 match (rank 14)",
+          "Semantic match (rank 25)",
+          "Peer-reviewed paper excerpt"
+        ]
+      }
+    ],
+    "top10_passage_ids": [
+      "rev_26",
+      "rev_27",
+      "rev_28",
+      "rev_32",
+      "rev_33",
+      "csv_P70_P70_Sample_26_1022",
+      "rev_34",
+      "csv_P50_P50_Sample_38_511",
+      "csv_P81_P81_Sample_2_1129",
+      "csv_P78_P78_Sample_5_1112"
+    ],
+    "top10_paper_ids": [
+      "srep26686",
+      "srep26686",
+      "srep26686",
+      "srep26686",
+      "srep26686",
+      "P70",
+      "srep26686",
+      "P50",
+      "P81",
+      "P78"
+    ],
+    "recall_at_1": true,
+    "recall_at_4": true,
+    "recall_at_10": true
+  },
+  {
+    "question_id": "eval_16",
+    "category": "dopant_strategies_ti",
+    "question": "What are the reported effects of Ti4+ doping on the structural and electrochemical properties of LMFP?",
+    "supporting_paper": "Master Dataset / Chemistry Dopants Module",
+    "expected_concepts": [
+      "ti",
+      "ti4+",
+      "m2",
+      "pillar",
+      "li+ diffusion",
+      "polarization"
+    ],
+    "top4_matches": [
+      {
+        "rank": 1,
+        "passage_id": "rev_13",
+        "paper_id": "srep26686",
+        "sample_label": "LiMn0.75Fe0.25PO4",
+        "composition": "LiMn0.75Fe0.25PO4",
+        "source_type": "literature_review",
+        "bm25_score": 15.159,
+        "semantic_score": 1.766,
+        "structured_score": 0.0,
+        "combined_score": 0.05,
+        "match_reasons": [
+          "BM25 match (rank 1)",
+          "Semantic match (rank 1)",
+          "Peer-reviewed paper excerpt"
+        ]
+      },
+      {
+        "rank": 2,
+        "passage_id": "rev_14",
+        "paper_id": "srep26686",
+        "sample_label": "LiMn0.75Fe0.25PO4/rGO",
+        "composition": "LiMn0.75Fe0.25PO4/rGO",
+        "source_type": "literature_review",
+        "bm25_score": 15.159,
+        "semantic_score": 1.766,
+        "structured_score": 0.0,
+        "combined_score": 0.049,
+        "match_reasons": [
+          "BM25 match (rank 2)",
+          "Semantic match (rank 2)",
+          "Peer-reviewed paper excerpt"
+        ]
+      },
+      {
+        "rank": 3,
+        "passage_id": "rev_27",
+        "paper_id": "srep26686",
+        "sample_label": "LiMn0.75Fe0.25PO4/C",
+        "composition": "LiMn0.75Fe0.25PO4/C",
+        "source_type": "literature_review",
+        "bm25_score": 8.516,
+        "semantic_score": 0.924,
+        "structured_score": 0.0,
+        "combined_score": 0.0432,
+        "match_reasons": [
+          "BM25 match (rank 6)",
+          "Semantic match (rank 12)",
+          "Peer-reviewed paper excerpt"
+        ]
+      },
+      {
+        "rank": 4,
+        "passage_id": "rev_32",
+        "paper_id": "srep26686",
+        "sample_label": "LiMn0.8Fe0.2PO4",
+        "composition": "LiMn0.8Fe0.2PO4",
+        "source_type": "literature_review",
+        "bm25_score": 8.309,
+        "semantic_score": 0.786,
+        "structured_score": 0.0,
+        "combined_score": 0.0406,
+        "match_reasons": [
+          "BM25 match (rank 8)",
+          "Semantic match (rank 18)",
+          "Peer-reviewed paper excerpt"
+        ]
+      }
+    ],
+    "top10_passage_ids": [
+      "rev_13",
+      "rev_14",
+      "rev_27",
+      "rev_32",
+      "rev_33",
+      "rev_34",
+      "csv_P72_P72_Sample_28_1080",
+      "csv_P70_P70_Sample_27_1023",
+      "csv_P62_P62_Sample_5_816",
+      "csv_P56_P56_Sample_27_681"
+    ],
+    "top10_paper_ids": [
+      "srep26686",
+      "srep26686",
+      "srep26686",
+      "srep26686",
+      "srep26686",
+      "srep26686",
+      "P72",
+      "P70",
+      "P62",
+      "P56"
+    ],
+    "recall_at_1": false,
+    "recall_at_4": false,
+    "recall_at_10": false
+  },
+  {
+    "question_id": "eval_17",
+    "category": "supervisor_policy_vs_literature",
+    "question": "Does academic literature report electrochemical improvements from Cobalt doping in LMFP, and why is it restricted in this project?",
+    "supporting_paper": "Master Dataset P4 & Supervisor Policy",
+    "expected_concepts": [
+      "literature",
+      "co",
+      "redox",
+      "supervisor",
+      "cost"
+    ],
+    "top4_matches": [
+      {
+        "rank": 1,
+        "passage_id": "rev_13",
+        "paper_id": "srep26686",
+        "sample_label": "LiMn0.75Fe0.25PO4",
+        "composition": "LiMn0.75Fe0.25PO4",
+        "source_type": "literature_review",
+        "bm25_score": 10.439,
+        "semantic_score": 1.447,
+        "structured_score": 0.0,
+        "combined_score": 0.0486,
+        "match_reasons": [
+          "BM25 match (rank 4)",
+          "Semantic match (rank 1)",
+          "Peer-reviewed paper excerpt"
+        ]
+      },
+      {
+        "rank": 2,
+        "passage_id": "rev_20",
+        "paper_id": "srep26686",
+        "sample_label": "LiMn0.75Fe0.25PO4/rGO",
+        "composition": "LiMn0.75Fe0.25PO4/rGO",
+        "source_type": "literature_review",
+        "bm25_score": 11.144,
+        "semantic_score": 1.093,
+        "structured_score": 0.0,
+        "combined_score": 0.0477,
+        "match_reasons": [
+          "BM25 match (rank 1)",
+          "Semantic match (rank 6)",
+          "Peer-reviewed paper excerpt"
+        ]
+      },
+      {
+        "rank": 3,
+        "passage_id": "rev_22",
+        "paper_id": "srep26686",
+        "sample_label": "LiMn0.75Fe0.25PO4/C",
+        "composition": "LiMn0.75Fe0.25PO4/C",
+        "source_type": "literature_review",
+        "bm25_score": 11.144,
+        "semantic_score": 1.093,
+        "structured_score": 0.0,
+        "combined_score": 0.046,
+        "match_reasons": [
+          "BM25 match (rank 3)",
+          "Semantic match (rank 8)",
+          "Peer-reviewed paper excerpt"
+        ]
+      },
+      {
+        "rank": 4,
+        "passage_id": "csv_P49_P49_Sample_5_449",
+        "paper_id": "P49",
+        "sample_label": "P49_Sample_5",
+        "composition": "LiFe0.9Mn0.1PO4",
+        "source_type": "master_dataset",
+        "bm25_score": 8.572,
+        "semantic_score": 1.362,
+        "structured_score": 0.0,
+        "combined_score": 0.0371,
+        "match_reasons": [
+          "BM25 match (rank 7)",
+          "Semantic match (rank 3)"
+        ]
+      }
+    ],
+    "top10_passage_ids": [
+      "rev_13",
+      "rev_20",
+      "rev_22",
+      "csv_P49_P49_Sample_5_449",
+      "csv_P72_P72_Sample_28_1080",
+      "csv_P49_P49_Sample_6_450",
+      "csv_P28_P28_Sample_1_82",
+      "csv_P84_P84_Sample_33_1175",
+      "csv_P86_P86_Sample_1_1181",
+      "csv_P52_P52_Sample_40_577"
+    ],
+    "top10_paper_ids": [
+      "srep26686",
+      "srep26686",
+      "srep26686",
+      "P49",
+      "P72",
+      "P49",
+      "P28",
+      "P84",
+      "P86",
+      "P52"
+    ],
+    "recall_at_1": false,
+    "recall_at_4": false,
+    "recall_at_10": false
+  },
+  {
+    "question_id": "eval_18",
+    "category": "high_rate_capability",
+    "question": "What discharge capacity or retention is achieved at 10C rate in the optimized LMFP literature samples?",
+    "supporting_paper": "srep26686 (Page 1) / Ref [29] (Page 18)",
+    "expected_concepts": [
+      "10c",
+      "105.5",
+      "114",
+      "93%"
+    ],
+    "top4_matches": [
+      {
+        "rank": 1,
+        "passage_id": "rev_26",
+        "paper_id": "srep26686",
+        "sample_label": "LiMn0.75Fe0.25PO4",
+        "composition": "LiMn0.75Fe0.25PO4",
+        "source_type": "literature_review",
+        "bm25_score": 15.061,
+        "semantic_score": 1.111,
+        "structured_score": 2.0,
+        "combined_score": 0.0779,
+        "match_reasons": [
+          "BM25 match (rank 2)",
+          "Semantic match (rank 23)",
+          "Structured condition match (rank 3)",
+          "Peer-reviewed paper excerpt"
+        ]
+      },
+      {
+        "rank": 2,
+        "passage_id": "rev_27",
+        "paper_id": "srep26686",
+        "sample_label": "LiMn0.75Fe0.25PO4/C",
+        "composition": "LiMn0.75Fe0.25PO4/C",
+        "source_type": "literature_review",
+        "bm25_score": 15.061,
+        "semantic_score": 1.111,
+        "structured_score": 2.0,
+        "combined_score": 0.0765,
+        "match_reasons": [
+          "BM25 match (rank 3)",
+          "Semantic match (rank 24)",
+          "Structured condition match (rank 4)",
+          "Peer-reviewed paper excerpt"
+        ]
+      },
+      {
+        "rank": 3,
+        "passage_id": "rev_28",
+        "paper_id": "srep26686",
+        "sample_label": "LiMn0.75Fe0.25PO4/rGO",
+        "composition": "LiMn0.75Fe0.25PO4/rGO",
+        "source_type": "literature_review",
+        "bm25_score": 15.061,
+        "semantic_score": 1.111,
+        "structured_score": 2.0,
+        "combined_score": 0.0752,
+        "match_reasons": [
+          "BM25 match (rank 4)",
+          "Semantic match (rank 25)",
+          "Structured condition match (rank 5)",
+          "Peer-reviewed paper excerpt"
+        ]
+      },
+      {
+        "rank": 4,
+        "passage_id": "rev_12",
+        "paper_id": "srep26686",
+        "sample_label": "LiMn0.75Fe0.25PO4/reduced",
+        "composition": "LiMn0.75Fe0.25PO4/reduced",
+        "source_type": "literature_review",
+        "bm25_score": 4.619,
+        "semantic_score": 0.681,
+        "structured_score": 2.0,
+        "combined_score": 0.0455,
+        "match_reasons": [
+          "BM25 match (rank 296)",
+          "Semantic match (rank 194)",
+          "Structured condition match (rank 2)",
+          "Peer-reviewed paper excerpt"
+        ]
+      }
+    ],
+    "top10_passage_ids": [
+      "rev_26",
+      "rev_27",
+      "rev_28",
+      "rev_12",
+      "csv_P86_P86_Sample_1_1181",
+      "csv_P82_P82_Sample_3_1134",
+      "csv_P82_P82_Sample_4_1135",
+      "csv_P6_T1_Row4_P6_T1_Row4_Sample_1_27",
+      "csv_P78_P78_Sample_5_1112",
+      "csv_P59_P59_Sample_16_746"
+    ],
+    "top10_paper_ids": [
+      "srep26686",
+      "srep26686",
+      "srep26686",
+      "srep26686",
+      "P86",
+      "P82",
+      "P82",
+      "P6_T1_Row4",
+      "P78",
+      "P59"
+    ],
+    "recall_at_1": true,
+    "recall_at_4": true,
+    "recall_at_10": true
+  },
+  {
+    "question_id": "eval_19",
+    "category": "stoichiometry_tradeoffs",
+    "question": "What is the scientific trade-off between higher manganese content (e.g. Mn0.8Fe0.2) versus equimolar composition (Mn0.5Fe0.5) in LMFP?",
+    "supporting_paper": "Literature Review / Chemistry Rules",
+    "expected_concepts": [
+      "4.1 v",
+      "plateau",
+      "conductivity",
+      "jahn-teller",
+      "polarization"
+    ],
+    "top4_matches": [
+      {
+        "rank": 1,
+        "passage_id": "rev_20",
+        "paper_id": "srep26686",
+        "sample_label": "LiMn0.75Fe0.25PO4/rGO",
+        "composition": "LiMn0.75Fe0.25PO4/rGO",
+        "source_type": "literature_review",
+        "bm25_score": 9.28,
+        "semantic_score": 1.181,
+        "structured_score": 0.0,
+        "combined_score": 0.0459,
+        "match_reasons": [
+          "BM25 match (rank 5)",
+          "Semantic match (rank 6)",
+          "Peer-reviewed paper excerpt"
+        ]
+      },
+      {
+        "rank": 2,
+        "passage_id": "rev_21",
+        "paper_id": "srep26686",
+        "sample_label": "LiMn0.75Fe0.25PO4",
+        "composition": "LiMn0.75Fe0.25PO4",
+        "source_type": "literature_review",
+        "bm25_score": 9.28,
+        "semantic_score": 1.181,
+        "structured_score": 0.0,
+        "combined_score": 0.045,
+        "match_reasons": [
+          "BM25 match (rank 6)",
+          "Semantic match (rank 7)",
+          "Peer-reviewed paper excerpt"
+        ]
+      },
+      {
+        "rank": 3,
+        "passage_id": "rev_22",
+        "paper_id": "srep26686",
+        "sample_label": "LiMn0.75Fe0.25PO4/C",
+        "composition": "LiMn0.75Fe0.25PO4/C",
+        "source_type": "literature_review",
+        "bm25_score": 9.28,
+        "semantic_score": 1.181,
+        "structured_score": 0.0,
+        "combined_score": 0.0443,
+        "match_reasons": [
+          "BM25 match (rank 7)",
+          "Semantic match (rank 8)",
+          "Peer-reviewed paper excerpt"
+        ]
+      },
+      {
+        "rank": 4,
+        "passage_id": "csv_P87_P87_Sample_2_1188",
+        "paper_id": "P87",
+        "sample_label": "P87_Sample_2",
+        "composition": "C-LiMn0.8Fe0.2PO4 (C-LMFP), carbon-coated nanoparticles supplied by The Dow Chemical Company",
+        "source_type": "master_dataset",
+        "bm25_score": 11.265,
+        "semantic_score": 1.623,
+        "structured_score": 0.0,
+        "combined_score": 0.04,
+        "match_reasons": [
+          "BM25 match (rank 1)",
+          "Semantic match (rank 1)"
+        ]
+      }
+    ],
+    "top10_passage_ids": [
+      "rev_20",
+      "rev_21",
+      "rev_22",
+      "csv_P87_P87_Sample_2_1188",
+      "csv_P87_P87_Sample_4_1190",
+      "csv_P87_P87_Sample_5_1191",
+      "csv_P87_P87_Sample_3_1189",
+      "csv_P91_P91_Sample_1_1210",
+      "csv_P64_P64_Sample_8_899",
+      "csv_P64_P64_Sample_9_900"
+    ],
+    "top10_paper_ids": [
+      "srep26686",
+      "srep26686",
+      "srep26686",
+      "P87",
+      "P87",
+      "P87",
+      "P87",
+      "P91",
+      "P64",
+      "P64"
+    ],
+    "recall_at_1": false,
+    "recall_at_4": false,
+    "recall_at_10": false
+  },
+  {
+    "question_id": "eval_20",
+    "category": "synthesis_comparison",
+    "question": "How does solvothermal synthesis compare to solid-state reaction in terms of particle morphology and kinetics for LMFP?",
+    "supporting_paper": "Review Paper (Page 18) & P1/P4",
+    "expected_concepts": [
+      "solvothermal",
+      "solid-state",
+      "nanoparticles",
+      "morphology",
+      "diffusion length"
+    ],
+    "top4_matches": [
+      {
+        "rank": 1,
+        "passage_id": "csv_P34_P34_Sample_7_130",
+        "paper_id": "P34",
+        "sample_label": "P34_Sample_7",
+        "composition": "LiMn0.8Fe0.2PO4/C",
+        "source_type": "master_dataset",
+        "bm25_score": 13.505,
+        "semantic_score": 1.917,
+        "structured_score": 2.0,
+        "combined_score": 0.0479,
+        "match_reasons": [
+          "BM25 match (rank 3)",
+          "Semantic match (rank 2)",
+          "Structured condition match (rank 117)"
+        ]
+      },
+      {
+        "rank": 2,
+        "passage_id": "csv_P78_P78_Sample_1_1108",
+        "paper_id": "P78",
+        "sample_label": "P78_Sample_1",
+        "composition": "LiMn0.7Fe0.3PO4/C (LMFP) nanoparticles, carbon-coated",
+        "source_type": "master_dataset",
+        "bm25_score": 13.914,
+        "semantic_score": 1.975,
+        "structured_score": 2.0,
+        "combined_score": 0.041,
+        "match_reasons": [
+          "BM25 match (rank 2)",
+          "Semantic match (rank 1)",
+          "Structured condition match (rank 1050)"
+        ]
+      },
+      {
+        "rank": 3,
+        "passage_id": "csv_P74_P74_Sample_3_1091",
+        "paper_id": "P74",
+        "sample_label": "P74_Sample_3",
+        "composition": "Carbon-coated LiMn0.8Fe0.2PO4 mesocrystals - GITT and in situ EIS kinetics",
+        "source_type": "master_dataset",
+        "bm25_score": 14.862,
+        "semantic_score": 1.545,
+        "structured_score": 2.0,
+        "combined_score": 0.0406,
+        "match_reasons": [
+          "BM25 match (rank 1)",
+          "Semantic match (rank 3)",
+          "Structured condition match (rank 1033)"
+        ]
+      },
+      {
+        "rank": 4,
+        "passage_id": "csv_P34_P34_Sample_3_126",
+        "paper_id": "P34",
+        "sample_label": "P34_Sample_3",
+        "composition": "LiMnPO4 nanoparticles",
+        "source_type": "master_dataset",
+        "bm25_score": 10.342,
+        "semantic_score": 1.147,
+        "structured_score": 2.0,
+        "combined_score": 0.0394,
+        "match_reasons": [
+          "BM25 match (rank 14)",
+          "Semantic match (rank 21)",
+          "Structured condition match (rank 113)"
+        ]
+      }
+    ],
+    "top10_passage_ids": [
+      "csv_P34_P34_Sample_7_130",
+      "csv_P78_P78_Sample_1_1108",
+      "csv_P74_P74_Sample_3_1091",
+      "csv_P34_P34_Sample_3_126",
+      "csv_P61_P61_Sample_13_798",
+      "csv_P77_P77_Sample_5_1106",
+      "csv_P77_P77_Sample_6_1107",
+      "csv_P63_P63_Sample_14_864",
+      "csv_P77_P77_Sample_4_1105",
+      "csv_P1_P1_N-LMFP_0"
+    ],
+    "top10_paper_ids": [
+      "P34",
+      "P78",
+      "P74",
+      "P34",
+      "P61",
+      "P77",
+      "P77",
+      "P63",
+      "P77",
+      "P1"
+    ],
+    "recall_at_1": false,
+    "recall_at_4": false,
+    "recall_at_10": true
+  },
+  {
+    "question_id": "eval_21",
+    "category": "coulombic_efficiency",
+    "question": "What initial Coulombic efficiency or capacity loss mechanisms are typically observed in first cycle LMFP?",
+    "supporting_paper": "Master Dataset & Review Corpus",
+    "expected_concepts": [
+      "sei",
+      "initial coulombic efficiency",
+      "electrolyte decomposition",
+      "polarization"
+    ],
+    "top4_matches": [
+      {
+        "rank": 1,
+        "passage_id": "rev_13",
+        "paper_id": "srep26686",
+        "sample_label": "LiMn0.75Fe0.25PO4",
+        "composition": "LiMn0.75Fe0.25PO4",
+        "source_type": "literature_review",
+        "bm25_score": 14.011,
+        "semantic_score": 1.599,
+        "structured_score": 0.0,
+        "combined_score": 0.0481,
+        "match_reasons": [
+          "BM25 match (rank 2)",
+          "Semantic match (rank 4)",
+          "Peer-reviewed paper excerpt"
+        ]
+      },
+      {
+        "rank": 2,
+        "passage_id": "rev_14",
+        "paper_id": "srep26686",
+        "sample_label": "LiMn0.75Fe0.25PO4/rGO",
+        "composition": "LiMn0.75Fe0.25PO4/rGO",
+        "source_type": "literature_review",
+        "bm25_score": 14.011,
+        "semantic_score": 1.599,
+        "structured_score": 0.0,
+        "combined_score": 0.0472,
+        "match_reasons": [
+          "BM25 match (rank 3)",
+          "Semantic match (rank 5)",
+          "Peer-reviewed paper excerpt"
+        ]
+      },
+      {
+        "rank": 3,
+        "passage_id": "csv_P55_P55_Sample_12_641",
+        "paper_id": "P55",
+        "sample_label": "P55_Sample_12",
+        "composition": "LiMn0.75Fe0.25PO4/rmGO nanorod hybrid",
+        "source_type": "master_dataset",
+        "bm25_score": 16.624,
+        "semantic_score": 2.409,
+        "structured_score": 0.0,
+        "combined_score": 0.04,
+        "match_reasons": [
+          "BM25 match (rank 1)",
+          "Semantic match (rank 1)"
+        ]
+      },
+      {
+        "rank": 4,
+        "passage_id": "csv_P59_P59_Sample_7_737",
+        "paper_id": "P59",
+        "sample_label": "P59_Sample_7",
+        "composition": "LiMn0.8Fe0.2PO4/C (LMFP microspheres)",
+        "source_type": "master_dataset",
+        "bm25_score": 13.278,
+        "semantic_score": 1.917,
+        "structured_score": 0.0,
+        "combined_score": 0.0385,
+        "match_reasons": [
+          "BM25 match (rank 4)",
+          "Semantic match (rank 2)"
+        ]
+      }
+    ],
+    "top10_passage_ids": [
+      "rev_13",
+      "rev_14",
+      "csv_P55_P55_Sample_12_641",
+      "csv_P59_P59_Sample_7_737",
+      "csv_P61_P61_Sample_15_800",
+      "csv_P60_P60_Sample_26_783",
+      "csv_P61_P61_Sample_19_804",
+      "csv_P61_P61_Sample_16_801",
+      "csv_P61_P61_Sample_17_802",
+      "csv_P61_P61_Sample_18_803"
+    ],
+    "top10_paper_ids": [
+      "srep26686",
+      "srep26686",
+      "P55",
+      "P59",
+      "P61",
+      "P60",
+      "P61",
+      "P61",
+      "P61",
+      "P61"
+    ],
+    "recall_at_1": false,
+    "recall_at_4": false,
+    "recall_at_10": false
+  },
+  {
+    "question_id": "eval_22",
+    "category": "condition_preservation_mass_loading",
+    "question": "What active mass loading was reported for the solvothermal Ni-doped LMFP cathode in Reference [29]?",
+    "supporting_paper": "Review Paper (Page 18, Ref [29])",
+    "expected_concepts": [
+      "2.0",
+      "mg/cm2",
+      "[29]"
+    ],
+    "top4_matches": [
+      {
+        "rank": 1,
+        "passage_id": "csv_P27_P27_Sample_3_79",
+        "paper_id": "P27",
+        "sample_label": "P27_Sample_3",
+        "composition": "Ni-doped LiFePO4 (TM-LFP, DFT supercell model)",
+        "source_type": "master_dataset",
+        "bm25_score": 8.312,
+        "semantic_score": 1.205,
+        "structured_score": 2.5,
+        "combined_score": 0.0644,
+        "match_reasons": [
+          "BM25 match (rank 7)",
+          "Semantic match (rank 3)",
+          "Structured condition match (rank 6)"
+        ]
+      },
+      {
+        "rank": 2,
+        "passage_id": "csv_P79_P79_Sample_5_1118",
+        "paper_id": "P79",
+        "sample_label": "P79_Sample_5",
+        "composition": "LiNi0.8Mn0.1Co0.1O2 (NMC811, Li-FUN Technologies) - layered oxide reference, not an olivine",
+        "source_type": "master_dataset",
+        "bm25_score": 9.937,
+        "semantic_score": 1.195,
+        "structured_score": 2.5,
+        "combined_score": 0.0493,
+        "match_reasons": [
+          "BM25 match (rank 6)",
+          "Semantic match (rank 4)",
+          "Structured condition match (rank 73)"
+        ]
+      },
+      {
+        "rank": 3,
+        "passage_id": "csv_P59_P59_Sample_19_749",
+        "paper_id": "P59",
+        "sample_label": "P59_Sample_19",
+        "composition": "LiNi0.6Mn0.2Co0.2O2 (NMC, reference)",
+        "source_type": "master_dataset",
+        "bm25_score": 6.348,
+        "semantic_score": 0.718,
+        "structured_score": 2.5,
+        "combined_score": 0.0474,
+        "match_reasons": [
+          "BM25 match (rank 20)",
+          "Semantic match (rank 34)",
+          "Structured condition match (rank 23)"
+        ]
+      },
+      {
+        "rank": 4,
+        "passage_id": "rev_32",
+        "paper_id": "srep26686",
+        "sample_label": "LiMn0.8Fe0.2PO4",
+        "composition": "LiMn0.8Fe0.2PO4",
+        "source_type": "literature_review",
+        "bm25_score": 11.168,
+        "semantic_score": 1.026,
+        "structured_score": 0.0,
+        "combined_score": 0.0456,
+        "match_reasons": [
+          "BM25 match (rank 3)",
+          "Semantic match (rank 9)",
+          "Peer-reviewed paper excerpt"
+        ]
+      }
+    ],
+    "top10_passage_ids": [
+      "csv_P27_P27_Sample_3_79",
+      "csv_P79_P79_Sample_5_1118",
+      "csv_P59_P59_Sample_19_749",
+      "rev_32",
+      "rev_33",
+      "rev_34",
+      "csv_P65_P65_Sample_18_947",
+      "csv_P79_P79_Sample_6_1119",
+      "csv_P62_P62_Sample_38_849",
+      "csv_P60_P60_Sample_21_778"
+    ],
+    "top10_paper_ids": [
+      "P27",
+      "P79",
+      "P59",
+      "srep26686",
+      "srep26686",
+      "srep26686",
+      "P65",
+      "P79",
+      "P62",
+      "P60"
+    ],
+    "recall_at_1": false,
+    "recall_at_4": false,
+    "recall_at_10": false
+  },
+  {
+    "question_id": "eval_23",
+    "category": "crystallography_kinetics",
+    "question": "Along which crystallographic axis of the Pnma space group does 1D lithium-ion diffusion occur in olivine LMFP?",
+    "supporting_paper": "Domain Knowledge & srep26686",
+    "expected_concepts": [
+      "b-axis",
+      "010",
+      "1d",
+      "diffusion channel",
+      "pnma"
+    ],
+    "top4_matches": [
+      {
+        "rank": 1,
+        "passage_id": "rev_15",
+        "paper_id": "srep26686",
+        "sample_label": "LiMn0.75Fe0.25PO4",
+        "composition": "LiMn0.75Fe0.25PO4",
+        "source_type": "literature_review",
+        "bm25_score": 20.637,
+        "semantic_score": 2.679,
+        "structured_score": 0.0,
+        "combined_score": 0.049,
+        "match_reasons": [
+          "BM25 match (rank 1)",
+          "Semantic match (rank 3)",
+          "Peer-reviewed paper excerpt"
+        ]
+      },
+      {
+        "rank": 2,
+        "passage_id": "rev_16",
+        "paper_id": "srep26686",
+        "sample_label": "LiMn0.75Fe0.25PO4/rGO",
+        "composition": "LiMn0.75Fe0.25PO4/rGO",
+        "source_type": "literature_review",
+        "bm25_score": 20.637,
+        "semantic_score": 2.679,
+        "structured_score": 0.0,
+        "combined_score": 0.0481,
+        "match_reasons": [
+          "BM25 match (rank 2)",
+          "Semantic match (rank 4)",
+          "Peer-reviewed paper excerpt"
+        ]
+      },
+      {
+        "rank": 3,
+        "passage_id": "rev_17",
+        "paper_id": "srep26686",
+        "sample_label": "LiMn0.75Fe0.25PO4/C",
+        "composition": "LiMn0.75Fe0.25PO4/C",
+        "source_type": "literature_review",
+        "bm25_score": 20.637,
+        "semantic_score": 2.679,
+        "structured_score": 0.0,
+        "combined_score": 0.0472,
+        "match_reasons": [
+          "BM25 match (rank 3)",
+          "Semantic match (rank 5)",
+          "Peer-reviewed paper excerpt"
+        ]
+      },
+      {
+        "rank": 4,
+        "passage_id": "rev_12",
+        "paper_id": "srep26686",
+        "sample_label": "LiMn0.75Fe0.25PO4/reduced",
+        "composition": "LiMn0.75Fe0.25PO4/reduced",
+        "source_type": "literature_review",
+        "bm25_score": 16.891,
+        "semantic_score": 2.492,
+        "structured_score": 0.0,
+        "combined_score": 0.0439,
+        "match_reasons": [
+          "BM25 match (rank 8)",
+          "Semantic match (rank 8)",
+          "Peer-reviewed paper excerpt"
+        ]
+      }
+    ],
+    "top10_passage_ids": [
+      "rev_15",
+      "rev_16",
+      "rev_17",
+      "rev_12",
+      "rev_32",
+      "rev_33",
+      "rev_34",
+      "rev_36",
+      "csv_P60_P60_Sample_13_770",
+      "csv_P56_P56_Sample_10_664"
+    ],
+    "top10_paper_ids": [
+      "srep26686",
+      "srep26686",
+      "srep26686",
+      "srep26686",
+      "srep26686",
+      "srep26686",
+      "srep26686",
+      "srep26686",
+      "P60",
+      "P56"
+    ],
+    "recall_at_1": true,
+    "recall_at_4": true,
+    "recall_at_10": true
+  },
+  {
+    "question_id": "eval_24",
+    "category": "carbon_tradeoffs",
+    "question": "What is the technical trade-off of excessive carbon coating (> 5 wt%) on LMFP cathode performance?",
+    "supporting_paper": "Chemistry Rules & Industrial Specifications",
+    "expected_concepts": [
+      "tap density",
+      "volumetric energy density",
+      "excess carbon",
+      "slurry"
+    ],
+    "top4_matches": [
+      {
+        "rank": 1,
+        "passage_id": "rev_37",
+        "paper_id": "srep26686",
+        "sample_label": "LiMn0.75Fe0.25PO4",
+        "composition": "LiMn0.75Fe0.25PO4",
+        "source_type": "literature_review",
+        "bm25_score": 10.349,
+        "semantic_score": 0.995,
+        "structured_score": 0.0,
+        "combined_score": 0.0428,
+        "match_reasons": [
+          "BM25 match (rank 4)",
+          "Semantic match (rank 16)",
+          "Peer-reviewed paper excerpt"
+        ]
+      },
+      {
+        "rank": 2,
+        "passage_id": "csv_P62_P62_Sample_38_849",
+        "paper_id": "P62",
+        "sample_label": "P62_Sample_38",
+        "composition": "LiMn0.8Fe0.2PO4/C (QS-6.4-670)",
+        "source_type": "master_dataset",
+        "bm25_score": 12.016,
+        "semantic_score": 1.609,
+        "structured_score": 0.0,
+        "combined_score": 0.04,
+        "match_reasons": [
+          "BM25 match (rank 1)",
+          "Semantic match (rank 1)"
+        ]
+      },
+      {
+        "rank": 3,
+        "passage_id": "csv_P82_P82_Sample_1_1132",
+        "paper_id": "P82",
+        "sample_label": "P82_Sample_1",
+        "composition": "LMFP/Fe/C: LiMn0.8Fe0.2PO4 with iron-catalysed graphitised carbon coating",
+        "source_type": "master_dataset",
+        "bm25_score": 9.239,
+        "semantic_score": 1.159,
+        "structured_score": 0.0,
+        "combined_score": 0.037,
+        "match_reasons": [
+          "BM25 match (rank 5)",
+          "Semantic match (rank 5)"
+        ]
+      },
+      {
+        "rank": 4,
+        "passage_id": "csv_P67_P67_Sample_6_982",
+        "paper_id": "P67",
+        "sample_label": "P67_Sample_6",
+        "composition": "C-LiMn0.5Fe0.5PO4 (micro-sized spherical, carbon coated)",
+        "source_type": "master_dataset",
+        "bm25_score": 9.074,
+        "semantic_score": 1.196,
+        "structured_score": 0.0,
+        "combined_score": 0.0364,
+        "match_reasons": [
+          "BM25 match (rank 8)",
+          "Semantic match (rank 4)"
+        ]
+      }
+    ],
+    "top10_passage_ids": [
+      "rev_37",
+      "csv_P62_P62_Sample_38_849",
+      "csv_P82_P82_Sample_1_1132",
+      "csv_P67_P67_Sample_6_982",
+      "csv_P59_P59_Sample_24_754",
+      "csv_P79_P79_Sample_6_1119",
+      "csv_P78_P78_Sample_1_1108",
+      "csv_P34_P34_Sample_11_134",
+      "csv_P82_P82_Sample_2_1133",
+      "csv_P59_P59_Sample_27_757"
+    ],
+    "top10_paper_ids": [
+      "srep26686",
+      "P62",
+      "P82",
+      "P67",
+      "P59",
+      "P79",
+      "P78",
+      "P34",
+      "P82",
+      "P59"
+    ],
+    "recall_at_1": false,
+    "recall_at_4": false,
+    "recall_at_10": false
+  },
+  {
+    "question_id": "eval_25",
+    "category": "research_gaps",
+    "question": "What are the major unaddressed research gaps regarding high-temperature (55 \u00b0C) cycling of LMFP?",
+    "supporting_paper": "Research Gap Analysis & Literature Corpus",
+    "expected_concepts": [
+      "55 \u00b0c",
+      "mn dissolution",
+      "hf attack",
+      "electrolyte degradation",
+      "gap"
+    ],
+    "top4_matches": [
+      {
+        "rank": 1,
+        "passage_id": "rev_13",
+        "paper_id": "srep26686",
+        "sample_label": "LiMn0.75Fe0.25PO4",
+        "composition": "LiMn0.75Fe0.25PO4",
+        "source_type": "literature_review",
+        "bm25_score": 10.798,
+        "semantic_score": 1.123,
+        "structured_score": 0.0,
+        "combined_score": 0.0476,
+        "match_reasons": [
+          "BM25 match (rank 4)",
+          "Semantic match (rank 3)",
+          "Peer-reviewed paper excerpt"
+        ]
+      },
+      {
+        "rank": 2,
+        "passage_id": "rev_32",
+        "paper_id": "srep26686",
+        "sample_label": "LiMn0.8Fe0.2PO4",
+        "composition": "LiMn0.8Fe0.2PO4",
+        "source_type": "literature_review",
+        "bm25_score": 11.978,
+        "semantic_score": 0.994,
+        "structured_score": 0.0,
+        "combined_score": 0.0469,
+        "match_reasons": [
+          "BM25 match (rank 1)",
+          "Semantic match (rank 8)",
+          "Peer-reviewed paper excerpt"
+        ]
+      },
+      {
+        "rank": 3,
+        "passage_id": "rev_14",
+        "paper_id": "srep26686",
+        "sample_label": "LiMn0.75Fe0.25PO4/rGO",
+        "composition": "LiMn0.75Fe0.25PO4/rGO",
+        "source_type": "literature_review",
+        "bm25_score": 10.798,
+        "semantic_score": 1.123,
+        "structured_score": 0.0,
+        "combined_score": 0.0467,
+        "match_reasons": [
+          "BM25 match (rank 5)",
+          "Semantic match (rank 4)",
+          "Peer-reviewed paper excerpt"
+        ]
+      },
+      {
+        "rank": 4,
+        "passage_id": "rev_33",
+        "paper_id": "srep26686",
+        "sample_label": "LiMn0.85Fe0.15PO4",
+        "composition": "LiMn0.85Fe0.15PO4",
+        "source_type": "literature_review",
+        "bm25_score": 11.978,
+        "semantic_score": 0.994,
+        "structured_score": 0.0,
+        "combined_score": 0.0461,
+        "match_reasons": [
+          "BM25 match (rank 2)",
+          "Semantic match (rank 9)",
+          "Peer-reviewed paper excerpt"
+        ]
+      }
+    ],
+    "top10_passage_ids": [
+      "rev_13",
+      "rev_32",
+      "rev_14",
+      "rev_33",
+      "rev_34",
+      "csv_P81_P81_Sample_4_1131",
+      "csv_P72_P72_Sample_22_1074",
+      "csv_P81_P81_Sample_3_1130",
+      "csv_P67_P67_Sample_4_980",
+      "csv_P67_P67_Sample_5_981"
+    ],
+    "top10_paper_ids": [
+      "srep26686",
+      "srep26686",
+      "srep26686",
+      "srep26686",
+      "srep26686",
+      "P81",
+      "P72",
+      "P81",
+      "P67",
+      "P67"
+    ],
+    "recall_at_1": false,
+    "recall_at_4": false,
+    "recall_at_10": false
+  },
+  {
+    "question_id": "eval_26",
+    "category": "appropriate_abstention_solid_electrolyte",
+    "question": "What is the room temperature ionic conductivity of PEO solid polymer electrolyte with LiMn0.7Fe0.3PO4 in the dataset?",
+    "supporting_paper": "None (Negative Control)",
+    "expected_concepts": [
+      "does not contain",
+      "insufficient evidence",
+      "not reported"
+    ],
+    "top4_matches": [
+      {
+        "rank": 1,
+        "passage_id": "rev_32",
+        "paper_id": "srep26686",
+        "sample_label": "LiMn0.8Fe0.2PO4",
+        "composition": "LiMn0.8Fe0.2PO4",
+        "source_type": "literature_review",
+        "bm25_score": 11.691,
+        "semantic_score": 1.3,
+        "structured_score": 0.0,
+        "combined_score": 0.0472,
+        "match_reasons": [
+          "BM25 match (rank 6)",
+          "Semantic match (rank 2)",
+          "Peer-reviewed paper excerpt"
+        ]
+      },
+      {
+        "rank": 2,
+        "passage_id": "rev_33",
+        "paper_id": "srep26686",
+        "sample_label": "LiMn0.85Fe0.15PO4",
+        "composition": "LiMn0.85Fe0.15PO4",
+        "source_type": "literature_review",
+        "bm25_score": 11.691,
+        "semantic_score": 1.3,
+        "structured_score": 0.0,
+        "combined_score": 0.0464,
+        "match_reasons": [
+          "BM25 match (rank 7)",
+          "Semantic match (rank 3)",
+          "Peer-reviewed paper excerpt"
+        ]
+      },
+      {
+        "rank": 3,
+        "passage_id": "rev_34",
+        "paper_id": "srep26686",
+        "sample_label": "LiMn0.5Fe0.5PO4",
+        "composition": "LiMn0.5Fe0.5PO4",
+        "source_type": "literature_review",
+        "bm25_score": 11.691,
+        "semantic_score": 1.3,
+        "structured_score": 0.0,
+        "combined_score": 0.0455,
+        "match_reasons": [
+          "BM25 match (rank 8)",
+          "Semantic match (rank 4)",
+          "Peer-reviewed paper excerpt"
+        ]
+      },
+      {
+        "rank": 4,
+        "passage_id": "csv_P43_P43_Sample_7_283",
+        "paper_id": "P43",
+        "sample_label": "P43_Sample_7",
+        "composition": "Electrospun P(VdF-HFP) microfibrous membrane (gel polymer electrolyte host)",
+        "source_type": "master_dataset",
+        "bm25_score": 24.992,
+        "semantic_score": 3.455,
+        "structured_score": 0.0,
+        "combined_score": 0.04,
+        "match_reasons": [
+          "BM25 match (rank 1)",
+          "Semantic match (rank 1)"
+        ]
+      }
+    ],
+    "top10_passage_ids": [
+      "rev_32",
+      "rev_33",
+      "rev_34",
+      "csv_P43_P43_Sample_7_283",
+      "rev_20",
+      "rev_21",
+      "rev_22",
+      "csv_P78_P78_Sample_3_1110",
+      "csv_P65_P65_Sample_28_957",
+      "csv_P43_P43_Sample_3_279"
+    ],
+    "top10_paper_ids": [
+      "srep26686",
+      "srep26686",
+      "srep26686",
+      "P43",
+      "srep26686",
+      "srep26686",
+      "srep26686",
+      "P78",
+      "P65",
+      "P43"
+    ],
+    "recall_at_1": true,
+    "recall_at_4": true,
+    "recall_at_10": true
+  },
+  {
+    "question_id": "eval_27",
+    "category": "appropriate_abstention_safety_testing",
+    "question": "What are the nail penetration safety test results for 50 Ah LMFP pouch cells in the local literature database?",
+    "supporting_paper": "None (Negative Control)",
+    "expected_concepts": [
+      "does not contain",
+      "insufficient evidence",
+      "not reported"
+    ],
+    "top4_matches": [
+      {
+        "rank": 1,
+        "passage_id": "rev_13",
+        "paper_id": "srep26686",
+        "sample_label": "LiMn0.75Fe0.25PO4",
+        "composition": "LiMn0.75Fe0.25PO4",
+        "source_type": "literature_review",
+        "bm25_score": 10.757,
+        "semantic_score": 1.119,
+        "structured_score": 0.0,
+        "combined_score": 0.0468,
+        "match_reasons": [
+          "BM25 match (rank 2)",
+          "Semantic match (rank 7)",
+          "Peer-reviewed paper excerpt"
+        ]
+      },
+      {
+        "rank": 2,
+        "passage_id": "rev_14",
+        "paper_id": "srep26686",
+        "sample_label": "LiMn0.75Fe0.25PO4/rGO",
+        "composition": "LiMn0.75Fe0.25PO4/rGO",
+        "source_type": "literature_review",
+        "bm25_score": 10.757,
+        "semantic_score": 1.119,
+        "structured_score": 0.0,
+        "combined_score": 0.046,
+        "match_reasons": [
+          "BM25 match (rank 3)",
+          "Semantic match (rank 8)",
+          "Peer-reviewed paper excerpt"
+        ]
+      },
+      {
+        "rank": 3,
+        "passage_id": "csv_P60_P60_Sample_17_774",
+        "paper_id": "P60",
+        "sample_label": "P60_Sample_17",
+        "composition": "LiMn0.8Fe0.2PO4/C (flexible LMFP microspheres)",
+        "source_type": "master_dataset",
+        "bm25_score": 9.816,
+        "semantic_score": 1.397,
+        "structured_score": 0.0,
+        "combined_score": 0.0389,
+        "match_reasons": [
+          "BM25 match (rank 4)",
+          "Semantic match (rank 1)"
+        ]
+      },
+      {
+        "rank": 4,
+        "passage_id": "csv_P49_P49_Sample_5_449",
+        "paper_id": "P49",
+        "sample_label": "P49_Sample_5",
+        "composition": "LiFe0.9Mn0.1PO4",
+        "source_type": "master_dataset",
+        "bm25_score": 8.572,
+        "semantic_score": 1.362,
+        "structured_score": 0.0,
+        "combined_score": 0.0378,
+        "match_reasons": [
+          "BM25 match (rank 6)",
+          "Semantic match (rank 2)"
+        ]
+      }
+    ],
+    "top10_passage_ids": [
+      "rev_13",
+      "rev_14",
+      "csv_P60_P60_Sample_17_774",
+      "csv_P49_P49_Sample_5_449",
+      "csv_P59_P59_Sample_10_740",
+      "csv_P60_P60_Sample_23_780",
+      "csv_P49_P49_Sample_6_450",
+      "csv_P61_P61_Sample_22_807",
+      "rev_17",
+      "csv_P28_P28_Sample_1_82"
+    ],
+    "top10_paper_ids": [
+      "srep26686",
+      "srep26686",
+      "P60",
+      "P49",
+      "P59",
+      "P60",
+      "P49",
+      "P61",
+      "srep26686",
+      "P28"
+    ],
+    "recall_at_1": true,
+    "recall_at_4": true,
+    "recall_at_10": true
+  },
+  {
+    "question_id": "eval_28",
+    "category": "conversational_context_ti",
+    "question": "What is its structural role in the olivine lattice?",
+    "supporting_paper": "Chemistry Rules & Master Dataset",
+    "expected_concepts": [
+      "ti",
+      "pillar",
+      "m2",
+      "lattice"
+    ],
+    "top4_matches": [
+      {
+        "rank": 1,
+        "passage_id": "csv_P6_T1_Row1_P6_T1_Row1_Sample_1_24",
+        "paper_id": "P6_T1_Row1",
+        "sample_label": "P6_T1_Row1_Sample_1",
+        "composition": "Li(Mn0.85Fe0.15)0.92Ti0.08PO4/C",
+        "source_type": "master_dataset",
+        "bm25_score": 6.789,
+        "semantic_score": 1.024,
+        "structured_score": 2.5,
+        "combined_score": 0.055,
+        "match_reasons": [
+          "BM25 match (rank 38)",
+          "Semantic match (rank 25)",
+          "Structured condition match (rank 1)"
+        ]
+      },
+      {
+        "rank": 2,
+        "passage_id": "rev_20",
+        "paper_id": "srep26686",
+        "sample_label": "LiMn0.75Fe0.25PO4/rGO",
+        "composition": "LiMn0.75Fe0.25PO4/rGO",
+        "source_type": "literature_review",
+        "bm25_score": 8.8,
+        "semantic_score": 1.108,
+        "structured_score": 0.0,
+        "combined_score": 0.05,
+        "match_reasons": [
+          "BM25 match (rank 1)",
+          "Semantic match (rank 1)",
+          "Peer-reviewed paper excerpt"
+        ]
+      },
+      {
+        "rank": 3,
+        "passage_id": "rev_21",
+        "paper_id": "srep26686",
+        "sample_label": "LiMn0.75Fe0.25PO4",
+        "composition": "LiMn0.75Fe0.25PO4",
+        "source_type": "literature_review",
+        "bm25_score": 8.8,
+        "semantic_score": 1.108,
+        "structured_score": 0.0,
+        "combined_score": 0.049,
+        "match_reasons": [
+          "BM25 match (rank 2)",
+          "Semantic match (rank 2)",
+          "Peer-reviewed paper excerpt"
+        ]
+      },
+      {
+        "rank": 4,
+        "passage_id": "rev_22",
+        "paper_id": "srep26686",
+        "sample_label": "LiMn0.75Fe0.25PO4/C",
+        "composition": "LiMn0.75Fe0.25PO4/C",
+        "source_type": "literature_review",
+        "bm25_score": 8.8,
+        "semantic_score": 1.108,
+        "structured_score": 0.0,
+        "combined_score": 0.0481,
+        "match_reasons": [
+          "BM25 match (rank 3)",
+          "Semantic match (rank 3)",
+          "Peer-reviewed paper excerpt"
+        ]
+      }
+    ],
+    "top10_passage_ids": [
+      "csv_P6_T1_Row1_P6_T1_Row1_Sample_1_24",
+      "rev_20",
+      "rev_21",
+      "rev_22",
+      "csv_P12_Row1_P12_Row1_Sample_1_44",
+      "csv_P12_Row2_P12_Row2_Sample_1_45",
+      "csv_P12_Row3_P12_Row3_Sample_1_46",
+      "csv_P47_P47_Sample_17_399",
+      "csv_P37_Row5_P37_Row5_Sample_1_159",
+      "csv_P37_Row7_P37_Row7_Sample_1_161"
+    ],
+    "top10_paper_ids": [
+      "P6_T1_Row1",
+      "srep26686",
+      "srep26686",
+      "srep26686",
+      "P12_Row1",
+      "P12_Row2",
+      "P12_Row3",
+      "P47",
+      "P37_Row5",
+      "P37_Row7"
+    ],
+    "recall_at_1": false,
+    "recall_at_4": false,
+    "recall_at_10": false
+  },
+  {
+    "question_id": "eval_29",
+    "category": "multi_paper_capacity_comparison",
+    "question": "Compare the 0.1C discharge capacity of freeze-dried Fe(NO3)3 LMFP in Paper P1 with the solvothermal N/S co-doped LMFP in Reference [79].",
+    "supporting_paper": "Paper P1 vs Review Paper Ref [79]",
+    "expected_concepts": [
+      "136",
+      "166.8",
+      "p1",
+      "[79]"
+    ],
+    "top4_matches": [
+      {
+        "rank": 1,
+        "passage_id": "csv_P1_P1_LMP-C_3",
+        "paper_id": "P1",
+        "sample_label": "P1_LMP-C",
+        "composition": "LiMnPO4/C (LMP/C Control)",
+        "source_type": "master_dataset",
+        "bm25_score": 9.892,
+        "semantic_score": 1.409,
+        "structured_score": 4.5,
+        "combined_score": 0.0603,
+        "match_reasons": [
+          "BM25 match (rank 26)",
+          "Semantic match (rank 10)",
+          "Structured condition match (rank 1)"
+        ]
+      },
+      {
+        "rank": 2,
+        "passage_id": "csv_P70_P70_Sample_21_1017",
+        "paper_id": "P70",
+        "sample_label": "P70_Sample_21",
+        "composition": "LiFePO4/C (commercial reference, Yunnan Huilong)",
+        "source_type": "master_dataset",
+        "bm25_score": 10.992,
+        "semantic_score": 1.619,
+        "structured_score": 4.5,
+        "combined_score": 0.0575,
+        "match_reasons": [
+          "BM25 match (rank 14)",
+          "Semantic match (rank 3)",
+          "Structured condition match (rank 18)"
+        ]
+      },
+      {
+        "rank": 3,
+        "passage_id": "csv_P81_P81_Sample_2_1129",
+        "paper_id": "P81",
+        "sample_label": "P81_Sample_2",
+        "composition": "LMFP: LiMn0.8Fe0.2PO4 control, conventional glucose-derived carbon only (no CVD)",
+        "source_type": "master_dataset",
+        "bm25_score": 11.196,
+        "semantic_score": 1.454,
+        "structured_score": 4.5,
+        "combined_score": 0.0551,
+        "match_reasons": [
+          "BM25 match (rank 8)",
+          "Semantic match (rank 9)",
+          "Structured condition match (rank 25)"
+        ]
+      },
+      {
+        "rank": 4,
+        "passage_id": "csv_P4_Row1_P4_Row1_Sample_1_17",
+        "paper_id": "P4_Row1",
+        "sample_label": "P4_Row1_Sample_1",
+        "composition": "LiMn0.69Co0.01Fe0.3PO4/C (LMFP-M1/C)",
+        "source_type": "master_dataset",
+        "bm25_score": 9.488,
+        "semantic_score": 1.075,
+        "structured_score": 4.5,
+        "combined_score": 0.0491,
+        "match_reasons": [
+          "BM25 match (rank 32)",
+          "Semantic match (rank 70)",
+          "Structured condition match (rank 4)"
+        ]
+      }
+    ],
+    "top10_passage_ids": [
+      "csv_P1_P1_LMP-C_3",
+      "csv_P70_P70_Sample_21_1017",
+      "csv_P81_P81_Sample_2_1129",
+      "csv_P4_Row1_P4_Row1_Sample_1_17",
+      "rev_1",
+      "csv_P4_Row2_P4_Row2_Sample_1_18",
+      "csv_P4_Row3_P4_Row3_Sample_1_19",
+      "csv_P4_Row4_P4_Row4_Sample_1_20",
+      "csv_P4_Row5_P4_Row5_Sample_1_21",
+      "csv_P86_P86_Sample_4_1184"
+    ],
+    "top10_paper_ids": [
+      "P1",
+      "P70",
+      "P81",
+      "P4_Row1",
+      "Lithium manganese iron phosphate materials_ Design, progress, and challenges",
+      "P4_Row2",
+      "P4_Row3",
+      "P4_Row4",
+      "P4_Row5",
+      "P86"
+    ],
+    "recall_at_1": true,
+    "recall_at_4": true,
+    "recall_at_10": true
+  },
+  {
+    "question_id": "eval_30",
+    "category": "conflicting_evidence_precursors",
+    "question": "Do different synthesis precursors yield conflicting electrochemical results for LMFP, and what evidence supports this?",
+    "supporting_paper": "srep26686 (Page 5, 7)",
+    "expected_concepts": [
+      "precursor",
+      "sd_no3",
+      "sd_so4",
+      "sulfate",
+      "nitrate",
+      "impurity"
+    ],
+    "top4_matches": [
+      {
+        "rank": 1,
+        "passage_id": "csv_P28_P28_Sample_1_82",
+        "paper_id": "P28",
+        "sample_label": "P28_Sample_1",
+        "composition": "LiFePO4 (undoped, no Mn -- background reference only)",
+        "source_type": "master_dataset",
+        "bm25_score": 13.42,
+        "semantic_score": 1.55,
+        "structured_score": 2.0,
+        "combined_score": 0.0523,
+        "match_reasons": [
+          "BM25 match (rank 1)",
+          "Semantic match (rank 1)",
+          "Structured condition match (rank 73)"
+        ]
+      },
+      {
+        "rank": 2,
+        "passage_id": "csv_P48_P48_Sample_1_415",
+        "paper_id": "P48",
+        "sample_label": "P48_Sample_1",
+        "composition": "LiMn0.4Fe0.6PO4/C (sol-gel, SG)",
+        "source_type": "master_dataset",
+        "bm25_score": 11.176,
+        "semantic_score": 1.118,
+        "structured_score": 2.0,
+        "combined_score": 0.0418,
+        "match_reasons": [
+          "BM25 match (rank 2)",
+          "Semantic match (rank 4)",
+          "Structured condition match (rank 402)"
+        ]
+      },
+      {
+        "rank": 3,
+        "passage_id": "csv_P56_P56_Sample_3_657",
+        "paper_id": "P56",
+        "sample_label": "P56_Sample_3",
+        "composition": "Li(Mn0.2Fe0.8)PO4 (discharged state)",
+        "source_type": "master_dataset",
+        "bm25_score": 9.725,
+        "semantic_score": 1.047,
+        "structured_score": 2.0,
+        "combined_score": 0.0393,
+        "match_reasons": [
+          "BM25 match (rank 4)",
+          "Semantic match (rank 6)",
+          "Structured condition match (rank 619)"
+        ]
+      },
+      {
+        "rank": 4,
+        "passage_id": "csv_P56_P56_Sample_4_658",
+        "paper_id": "P56",
+        "sample_label": "P56_Sample_4",
+        "composition": "Li(Mn0.4Fe0.6)PO4 (discharged state)",
+        "source_type": "master_dataset",
+        "bm25_score": 9.725,
+        "semantic_score": 1.047,
+        "structured_score": 2.0,
+        "combined_score": 0.0386,
+        "match_reasons": [
+          "BM25 match (rank 5)",
+          "Semantic match (rank 7)",
+          "Structured condition match (rank 620)"
+        ]
+      }
+    ],
+    "top10_passage_ids": [
+      "csv_P28_P28_Sample_1_82",
+      "csv_P48_P48_Sample_1_415",
+      "csv_P56_P56_Sample_3_657",
+      "csv_P56_P56_Sample_4_658",
+      "csv_P72_P72_Sample_28_1080",
+      "csv_P56_P56_Sample_5_659",
+      "csv_P56_P56_Sample_1_655",
+      "csv_P61_P61_Sample_11_796",
+      "csv_P48_P48_Sample_2_416",
+      "csv_P84_P84_Sample_33_1175"
+    ],
+    "top10_paper_ids": [
+      "P28",
+      "P48",
+      "P56",
+      "P56",
+      "P72",
+      "P56",
+      "P56",
+      "P61",
+      "P48",
+      "P84"
+    ],
+    "recall_at_1": false,
+    "recall_at_4": false,
+    "recall_at_10": false
+  },
+  {
+    "question_id": "eval_31",
+    "category": "cycling_retention_high_c_rate",
+    "question": "What capacity retention does solvothermal N/S co-doped LiMn0.5Fe0.5PO4 achieve after 1000 cycles at 5C in Reference [79]?",
+    "supporting_paper": "Review Paper (Page 18, Ref [79])",
+    "expected_concepts": [
+      "92.0%",
+      "92%",
+      "1000",
+      "5 c",
+      "[79]"
+    ],
+    "top4_matches": [
+      {
+        "rank": 1,
+        "passage_id": "csv_P70_P70_Sample_23_1019",
+        "paper_id": "P70",
+        "sample_label": "P70_Sample_23",
+        "composition": "LiFePO4/C (commercial reference, Yunnan Huilong)",
+        "source_type": "master_dataset",
+        "bm25_score": 10.674,
+        "semantic_score": 1.572,
+        "structured_score": 5.5,
+        "combined_score": 0.0552,
+        "match_reasons": [
+          "BM25 match (rank 13)",
+          "Semantic match (rank 15)",
+          "Structured condition match (rank 15)"
+        ]
+      },
+      {
+        "rank": 2,
+        "passage_id": "rev_1",
+        "paper_id": "Lithium manganese iron phosphate materials_ Design, progress, and challenges",
+        "sample_label": "LiMn0.5Fe0.5PO4",
+        "composition": "LiMn0.5Fe0.5PO4",
+        "source_type": "literature_review",
+        "bm25_score": 31.313,
+        "semantic_score": 3.334,
+        "structured_score": 0.0,
+        "combined_score": 0.05,
+        "match_reasons": [
+          "BM25 match (rank 1)",
+          "Semantic match (rank 1)",
+          "Peer-reviewed paper excerpt"
+        ]
+      },
+      {
+        "rank": 3,
+        "passage_id": "csv_P89_P89_Sample_3_1200",
+        "paper_id": "P89",
+        "sample_label": "P89_Sample_3",
+        "composition": "LMFP64/CA: LiMn0.6Fe0.4PO4@C@Al2O3 core-shell nanorods",
+        "source_type": "master_dataset",
+        "bm25_score": 11.23,
+        "semantic_score": 1.125,
+        "structured_score": 5.5,
+        "combined_score": 0.0494,
+        "match_reasons": [
+          "BM25 match (rank 10)",
+          "Semantic match (rank 31)",
+          "Structured condition match (rank 26)"
+        ]
+      },
+      {
+        "rank": 4,
+        "passage_id": "csv_P4_Row1_P4_Row1_Sample_1_17",
+        "paper_id": "P4_Row1",
+        "sample_label": "P4_Row1_Sample_1",
+        "composition": "LiMn0.69Co0.01Fe0.3PO4/C (LMFP-M1/C)",
+        "source_type": "master_dataset",
+        "bm25_score": 7.863,
+        "semantic_score": 0.907,
+        "structured_score": 5.5,
+        "combined_score": 0.0493,
+        "match_reasons": [
+          "BM25 match (rank 44)",
+          "Semantic match (rank 61)",
+          "Structured condition match (rank 2)"
+        ]
+      }
+    ],
+    "top10_passage_ids": [
+      "csv_P70_P70_Sample_23_1019",
+      "rev_1",
+      "csv_P89_P89_Sample_3_1200",
+      "csv_P4_Row1_P4_Row1_Sample_1_17",
+      "csv_P4_Row2_P4_Row2_Sample_1_18",
+      "csv_P4_Row3_P4_Row3_Sample_1_19",
+      "csv_P4_Row4_P4_Row4_Sample_1_20",
+      "csv_P76_P76_Sample_5_1101",
+      "csv_P4_Row5_P4_Row5_Sample_1_21",
+      "rev_26"
+    ],
+    "top10_paper_ids": [
+      "P70",
+      "Lithium manganese iron phosphate materials_ Design, progress, and challenges",
+      "P89",
+      "P4_Row1",
+      "P4_Row2",
+      "P4_Row3",
+      "P4_Row4",
+      "P76",
+      "P4_Row5",
+      "srep26686"
+    ],
+    "recall_at_1": false,
+    "recall_at_4": false,
+    "recall_at_10": false
+  },
+  {
+    "question_id": "eval_32",
+    "category": "configurational_entropy_calculation",
+    "question": "How is the configurational entropy S_config calculated for a multi-element substituted LMFP material?",
+    "supporting_paper": "Thermodynamics Specification Module",
+    "expected_concepts": [
+      "s_config",
+      "-r",
+      "sum",
+      "ln",
+      "m2 site"
+    ],
+    "top4_matches": [
+      {
+        "rank": 1,
+        "passage_id": "csv_P47_P47_Sample_17_399",
+        "paper_id": "P47",
+        "sample_label": "P47_Sample_17",
+        "composition": "LiMn0.4Fe0.6PO4/C (LMFP-base)",
+        "source_type": "master_dataset",
+        "bm25_score": 7.997,
+        "semantic_score": 0.868,
+        "structured_score": 0.0,
+        "combined_score": 0.0389,
+        "match_reasons": [
+          "BM25 match (rank 1)",
+          "Semantic match (rank 4)"
+        ]
+      },
+      {
+        "rank": 2,
+        "passage_id": "csv_P47_P47_Sample_2_384",
+        "paper_id": "P47",
+        "sample_label": "P47_Sample_2",
+        "composition": "LiMn0.4Fe0.6PO4/C (LMFP-3%Hf)",
+        "source_type": "master_dataset",
+        "bm25_score": 7.757,
+        "semantic_score": 0.843,
+        "structured_score": 0.0,
+        "combined_score": 0.0361,
+        "match_reasons": [
+          "BM25 match (rank 5)",
+          "Semantic match (rank 8)"
+        ]
+      },
+      {
+        "rank": 3,
+        "passage_id": "csv_P47_P47_Sample_14_396",
+        "paper_id": "P47",
+        "sample_label": "P47_Sample_14",
+        "composition": "LiMn0.4Fe0.6PO4/C (LMFP-2%Hf)",
+        "source_type": "master_dataset",
+        "bm25_score": 7.757,
+        "semantic_score": 0.843,
+        "structured_score": 0.0,
+        "combined_score": 0.0336,
+        "match_reasons": [
+          "BM25 match (rank 9)",
+          "Semantic match (rank 12)"
+        ]
+      },
+      {
+        "rank": 4,
+        "passage_id": "csv_P47_P47_Sample_16_398",
+        "paper_id": "P47",
+        "sample_label": "P47_Sample_16",
+        "composition": "LiMn0.4Fe0.6PO4/C (LMFP-4%Hf)",
+        "source_type": "master_dataset",
+        "bm25_score": 7.757,
+        "semantic_score": 0.843,
+        "structured_score": 0.0,
+        "combined_score": 0.0331,
+        "match_reasons": [
+          "BM25 match (rank 10)",
+          "Semantic match (rank 13)"
+        ]
+      }
+    ],
+    "top10_passage_ids": [
+      "csv_P47_P47_Sample_17_399",
+      "csv_P47_P47_Sample_2_384",
+      "csv_P47_P47_Sample_14_396",
+      "csv_P47_P47_Sample_16_398",
+      "csv_P42_P42_Sample_14_273",
+      "csv_P45_P45_Sample_16_339",
+      "rev_37",
+      "rev_20",
+      "rev_22",
+      "csv_P83_P83_Sample_1_1136"
+    ],
+    "top10_paper_ids": [
+      "P47",
+      "P47",
+      "P47",
+      "P47",
+      "P42",
+      "P45",
+      "srep26686",
+      "srep26686",
+      "srep26686",
+      "P83"
+    ],
+    "recall_at_1": false,
+    "recall_at_4": false,
+    "recall_at_10": false
+  }
+]

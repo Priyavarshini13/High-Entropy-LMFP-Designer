@@ -40,3 +40,7 @@ Thumbs.db
 *.log
 *.tmp
 scratch/
+cloudflared.exe
+.edge_temp/
+data/backups/temp_*
+frontend/node_modules/

@@ -136,7 +136,7 @@ def train_and_evaluate_target(
         "status": "trained",
         "sample_count": n_samples,
         "paper_count": n_papers,
-        "cv_strategy": f"GroupKFold ({n_splits}-fold by Paper_ID)",
+        "cv_strategy": f"GroupKFold ({n_splits}-fold by normalized DOI/title)",
         "metrics": {
             "mae": round(float(np.mean(maes)), 2),
             "mae_std": round(float(np.std(maes)), 2),
@@ -156,7 +156,41 @@ def train_all_models(csv_path: str) -> Dict[str, Any]:
         raise FileNotFoundError(f"Literature dataset not found at {csv_path}")
         
     df_raw = pd.read_csv(csv_path)
-    X_all, groups_all = extract_features_from_dataframe(df_raw)
+    X_all, _ = extract_features_from_dataframe(df_raw)
+
+    # Group samples by publication DOI to prevent paper-level data leakage.
+    doi_groups = (
+        df_raw["DOI"]
+        .fillna("")
+        .astype(str)
+        .str.strip()
+        .str.lower()
+        .str.replace(r"^https?://(?:dx\.)?doi\.org/", "", regex=True)
+        .str.replace(r"^doi:\s*", "", regex=True)
+    )
+
+    # Fall back to normalized paper title when DOI is missing.
+    title_groups = (
+        df_raw["Paper_Title"]
+        .fillna("")
+        .astype(str)
+        .str.strip()
+        .str.lower()
+        .str.replace(r"\s+", " ", regex=True)
+    )
+
+    groups_all = doi_groups.where(
+        doi_groups.ne(""),
+        "title:" + title_groups
+    )
+
+    # Prevent unrelated records with no DOI and no title from sharing one group.
+    missing_identity = doi_groups.eq("") & title_groups.eq("")
+    groups_all = groups_all.astype(str)
+    groups_all.loc[missing_identity] = (
+        "unknown:" + df_raw.loc[missing_identity, "Sample_ID"].astype(str)
+    )
+    groups_all = groups_all.to_numpy()
     
     os.makedirs(ARTIFACTS_DIR, exist_ok=True)
     
@@ -166,7 +200,7 @@ def train_all_models(csv_path: str) -> Dict[str, Any]:
         "total_papers": int(pd.Series(groups_all).nunique()),
         "feature_names": get_feature_names(),
         "model_type": "RandomForestRegressor(n_estimators=100, max_depth=8)",
-        "validation_strategy": "GroupKFold by Paper_ID",
+        "validation_strategy": "GroupKFold by normalized DOI/title",
         "targets": {}
     }
     

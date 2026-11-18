@@ -1,7 +1,7 @@
 {
   "dataset_path": "C:\\Users\\priya\\Downloads\\ECMT Works\\HE-LMFP-Designer-AG\\data\\literature_reference.csv",
   "total_records": 1215,
-  "total_papers": 159,
+  "total_papers": 87,
   "feature_names": [
     "Mn_Ratio",
     "Fe_Ratio",
@@ -12,6 +12,8 @@
     "Carbon_wt_percent",
     "Calcination_Temp_1_C",
     "Calcination_Time_1_h",
+    "Calcination_Temp_Missing",
+    "Calcination_Time_Missing",
     "dopant_Co",
     "dopant_Ti",
     "dopant_Mg",
@@ -28,7 +30,7 @@
     "dopant_Cu"
   ],
   "model_type": "RandomForestRegressor(n_estimators=100, max_depth=8)",
-  "validation_strategy": "GroupKFold by Paper_ID",
+  "validation_strategy": "GroupKFold by normalized DOI/title",
   "targets": {
     "0_1C_capacity": {
       "target_key": "0_1C_capacity",
@@ -36,15 +38,15 @@
       "unit": "mAh/g",
       "status": "trained",
       "sample_count": 182,
-      "paper_count": 101,
-      "cv_strategy": "GroupKFold (5-fold by Paper_ID)",
+      "paper_count": 60,
+      "cv_strategy": "GroupKFold (5-fold by normalized DOI/title)",
       "metrics": {
-        "mae": 12.85,
-        "mae_std": 1.99,
-        "rmse": 17.29,
-        "rmse_std": 4.26,
-        "r2": 0.092,
-        "r2_std": 0.087
+        "mae": 13.76,
+        "mae_std": 1.8,
+        "rmse": 18.67,
+        "rmse_std": 3.56,
+        "r2": -0.061,
+        "r2_std": 0.154
       }
     },
     "1C_capacity": {
@@ -53,15 +55,15 @@
       "unit": "mAh/g",
       "status": "trained",
       "sample_count": 105,
-      "paper_count": 71,
-      "cv_strategy": "GroupKFold (5-fold by Paper_ID)",
+      "paper_count": 51,
+      "cv_strategy": "GroupKFold (5-fold by normalized DOI/title)",
       "metrics": {
-        "mae": 17.54,
-        "mae_std": 3.03,
-        "rmse": 22.65,
-        "rmse_std": 4.01,
-        "r2": 0.069,
-        "r2_std": 0.22
+        "mae": 21.82,
+        "mae_std": 3.4,
+        "rmse": 28.75,
+        "rmse_std": 6.19,
+        "r2": -1.373,
+        "r2_std": 1.736
       }
     },
     "5C_capacity": {
@@ -70,15 +72,15 @@
       "unit": "mAh/g",
       "status": "trained",
       "sample_count": 92,
-      "paper_count": 69,
-      "cv_strategy": "GroupKFold (5-fold by Paper_ID)",
+      "paper_count": 47,
+      "cv_strategy": "GroupKFold (5-fold by normalized DOI/title)",
       "metrics": {
-        "mae": 22.58,
-        "mae_std": 3.84,
-        "rmse": 28.81,
-        "rmse_std": 3.08,
-        "r2": -0.105,
-        "r2_std": 0.3
+        "mae": 20.17,
+        "mae_std": 3.9,
+        "rmse": 25.44,
+        "rmse_std": 2.97,
+        "r2": 0.243,
+        "r2_std": 0.168
       }
     },
     "capacity_retention": {
@@ -87,15 +89,15 @@
       "unit": "%",
       "status": "trained",
       "sample_count": 192,
-      "paper_count": 98,
-      "cv_strategy": "GroupKFold (5-fold by Paper_ID)",
+      "paper_count": 64,
+      "cv_strategy": "GroupKFold (5-fold by normalized DOI/title)",
       "metrics": {
-        "mae": 9.65,
-        "mae_std": 1.81,
-        "rmse": 14.0,
-        "rmse_std": 3.43,
-        "r2": -0.248,
-        "r2_std": 0.341
+        "mae": 10.27,
+        "mae_std": 1.62,
+        "rmse": 14.92,
+        "rmse_std": 2.6,
+        "r2": -0.361,
+        "r2_std": 0.249
       }
     },
     "0_05C_capacity": {
@@ -105,7 +107,7 @@
       "status": "insufficient_data",
       "message": "Insufficient literature data for reliable ML model.",
       "sample_count": 50,
-      "paper_count": 20
+      "paper_count": 16
     },
     "initial_ice": {
       "target_key": "initial_ice",
@@ -114,7 +116,7 @@
       "status": "insufficient_data",
       "message": "Insufficient literature data for reliable ML model.",
       "sample_count": 18,
-      "paper_count": 13
+      "paper_count": 11
     }
   }
 }

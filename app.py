@@ -23,6 +23,7 @@ from chemistry.capacity import calculate_capacity_metrics
 from chemistry.validation import validate_composition
 from literature.loader import load_literature_database
 from literature.matcher import match_composition
+from literature.pdf_review import render_pdf_review_section
 from experiments.comparison import generate_comparison_matrix
 from design.modifications import get_material_modifications
 from design.processing import get_coprecipitation_processing
@@ -68,6 +69,7 @@ def main():
         "⚖️ Chemistry Validation",
         "📊 Entropy & Capacity",
         "📚 Literature Audit",
+        "📄 PDF Literature Extraction",
         "🔬 Synthesis Plan",
         "🔎 Characterization Plan",
         "🧪 Lab Experiment Entry",
@@ -189,6 +191,9 @@ def main():
 
     elif selected_section == "📚 Literature Audit":
         render_literature_section(match_res)
+        
+    elif selected_section == "📄 PDF Literature Extraction":
+        render_pdf_review_section()
 
     elif selected_section == "🔬 Synthesis Plan":
         pass  # Rendered above to capture user inputs

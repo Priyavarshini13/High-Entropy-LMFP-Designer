@@ -1,0 +1,16 @@
+{
+  "paper_filename": "novel_lmfp_e2e_paper.pdf",
+  "extraction_status": "partial_extraction",
+  "records_extracted": 2,
+  "query1": {
+    "question": "What is the 0.1C discharge capacity reported in novel_lmfp_e2e_paper.pdf?",
+    "direct_answer": "In novel_lmfp_e2e_paper, sample 'Li[Mn0.72Fe0.24Mg0.04]PO4/C_p1' (Li[Mn0.72Fe0.24Mg0.04]PO4/C) delivered 158.4 mAh/g discharge capacity at 0.1C.",
+    "passed": true
+  },
+  "query2": {
+    "question": "What synthesis route was confirmed for the material in novel_lmfp_e2e_paper.pdf?",
+    "direct_answer": "In novel_lmfp_e2e_paper, sample 'LiMn0.72Fe0.24Mg0.04PO4/C_p1' (LiMn0.72Fe0.24Mg0.04PO4/C) is reported with synthesis route 'Co-precipitation'.",
+    "passed": true
+  },
+  "overall_passed": true
+}

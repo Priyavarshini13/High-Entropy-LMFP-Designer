@@ -1,0 +1,29 @@
+# Render Infrastructure as Code Blueprint
+# Free Tier Web Service for ECMT AI Backend
+services:
+  - type: web
+    name: ecmt-ai-backend
+    runtime: python
+    plan: free
+    region: oregon
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn backend.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /api/health
+    autoDeploy: true
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: DATABASE_URL
+        sync: false # Supabase PostgreSQL connection string (URI)
+      - key: SUPABASE_URL
+        sync: false # Supabase project URL (https://<project-id>.supabase.co)
+      - key: SUPABASE_KEY
+        sync: false # Supabase Anon or Service Role key for bucket storage
+      - key: SUPABASE_STORAGE_BUCKET
+        value: ecmt-uploads
+      - key: GOOGLE_CLIENT_ID
+        sync: false # Google OAuth 2.0 Web Client ID
+      - key: JWT_SECRET
+        generateValue: true # Render will automatically generate a secure 256-bit secret
+      - key: APPROVED_TEAM_EMAILS
+        sync: false # Optional: comma-separated list of authorized team emails

@@ -180,3 +180,18 @@ def test_model_artifact_loading():
     assert "0_1C_capacity" in models
     assert "capacity_retention" in models
     assert metadata["total_records"] == 1215
+
+
+def test_evaluate_models_against_baseline():
+    """11. Test baseline evaluation module runs without errors and compares metrics."""
+    from models.ml.evaluator import evaluate_models_against_baseline
+
+    res = evaluate_models_against_baseline(DATASET_PATH, n_splits=5)
+    assert "targets" in res
+    assert "0_1C_capacity" in res["targets"]
+    assert "5C_capacity" in res["targets"]
+    assert res["targets"]["0_1C_capacity"]["status"] == "evaluated"
+    assert "model_metrics" in res["targets"]["0_1C_capacity"]
+    assert "baseline_metrics" in res["targets"]["0_1C_capacity"]
+    assert "comparison" in res["targets"]["0_1C_capacity"]
+

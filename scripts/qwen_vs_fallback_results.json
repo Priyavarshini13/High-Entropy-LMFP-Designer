@@ -1,0 +1,746 @@
+[
+  {
+    "test_id": "Q1_SAMPLE_NUMERICAL",
+    "category": "Single Sample Numerical",
+    "query": "What is the 0.05C discharge capacity of sample SD_NO3 in srep26686?",
+    "has_history": false,
+    "expected": {
+      "value": "45.0",
+      "unit": "mAh/g",
+      "paper": "srep26686",
+      "sample": "SD_NO3"
+    },
+    "qwen": {
+      "duration_seconds": 30.27,
+      "inference_source": "qwen3:4b_grounded",
+      "direct_answer": ".\n   -> The 0.05C discharge capacity of sample SD_NO3 in srep26686 is 45.0 mAh/g.",
+      "explanation_snippet": "grounded strictly in the provided literature passages.\n   -> We have two pieces of evidence: \n        a) Sample #1 explicitly states: \"discharge_capacity: 45.0 mAh/g (0.05C)\"\n        b) Evidence #1: \"Discharge capacity: 45 mAh/g at 0.05 C (Figure 7(a",
+      "citation_count": 4,
+      "citations": [
+        {
+          "paper_id": "srep26686",
+          "page_number": 5,
+          "doi": "10.1038/srep26686",
+          "sample_label": "SD_NO3",
+          "composition": "LiMn0.75Fe0.25PO4",
+          "evidence_quote": "Material Sample 'SD_NO3' (ID: srep26686_SD_NO3) in Paper srep26686. Composition: LiMn0.75Fe0.25PO4. Paper Title: Hierarchical 3D porous LiMn0.75Fe0.25PO4/rGO microspheres. DOI: 10.1038/srep26686. Synthesis route: Salt-as",
+          "is_verified": true
+        },
+        {
+          "paper_id": "srep26686",
+          "page_number": 5,
+          "doi": "10.1038/srep26686",
+          "sample_label": "SD_SO4",
+          "composition": "LiMn0.75Fe0.25PO4",
+          "evidence_quote": "Material Sample 'SD_SO4' (ID: srep26686_SD_SO4) in Paper srep26686. Composition: LiMn0.75Fe0.25PO4. Paper Title: Hierarchical 3D porous LiMn0.75Fe0.25PO4/rGO microspheres. DOI: 10.1038/srep26686. Synthesis route: Salt-as",
+          "is_verified": true
+        },
+        {
+          "paper_id": "srep26686",
+          "page_number": 5,
+          "doi": "10.1038/srep26686",
+          "sample_label": "LiMn0.75Fe0.25PO4/rGO",
+          "composition": "LiMn0.75Fe0.25PO4/rGO",
+          "evidence_quote": "Material Sample 'LiMn0.75Fe0.25PO4/rGO' (ID: srep26686_LiMn0_75Fe0_25PO4_rGO) in Paper srep26686. Composition: LiMn0.75Fe0.25PO4/rGO. Paper Title: Hierarchical 3D porous LiMn0.75Fe0.25PO4/rGO microspheres. DOI: 10.1038/s",
+          "is_verified": true
+        },
+        {
+          "paper_id": "srep26686",
+          "page_number": 7,
+          "doi": "10.1038/srep26686",
+          "sample_label": "LiMn0.75Fe0.25PO4",
+          "composition": "LiMn0.75Fe0.25PO4",
+          "evidence_quote": "Source: srep26686.pdf (Page 7). Composition: LiMn0.75Fe0.25PO4. In-situ TR-XRD confirms orthorhombic olivine crystal structure with space group Pnma. Direct quote: \"www.nature.com/scientificreports/ 7 Scientific Reports",
+          "is_verified": true
+        }
+      ],
+      "sourced_facts_count": 4,
+      "conflicts_and_limitations": "Secondary review provenance in [srep26686]: verify primary experimental source \u00b7 Secondary review provenance in [srep26686]: verify primary experimental source"
+    },
+    "deterministic_fallback": {
+      "duration_seconds": 0.01,
+      "inference_source": "deterministic_synthesis_fallback",
+      "direct_answer": "In srep26686 (Figure 7a, Page 7), galvanostatic discharge testing at 0.05 C delivered 45 mAh/g for SD_NO3 and 114 mAh/g for SD_SO4, respectively.",
+      "explanation_snippet": "The sample prepared from sulfate precursors (SD_SO4) delivered 114 mAh/g due to superior structural phase purity, whereas the nitrate precursor sample (SD_NO3) delivered only 45 mAh/g at 0.05 C because it retained unreacted Fe2O3 impurities and lacke",
+      "citation_count": 4,
+      "citations": [
+        {
+          "paper_id": "srep26686",
+          "page_number": 5,
+          "doi": "10.1038/srep26686",
+          "sample_label": "SD_NO3",
+          "composition": "LiMn0.75Fe0.25PO4",
+          "evidence_quote": "Material Sample 'SD_NO3' (ID: srep26686_SD_NO3) in Paper srep26686. Composition: LiMn0.75Fe0.25PO4. Paper Title: Hierarchical 3D porous LiMn0.75Fe0.25PO4/rGO microspheres. DOI: 10.1038/srep26686. Synthesis route: Salt-as",
+          "is_verified": true
+        },
+        {
+          "paper_id": "srep26686",
+          "page_number": 5,
+          "doi": "10.1038/srep26686",
+          "sample_label": "SD_SO4",
+          "composition": "LiMn0.75Fe0.25PO4",
+          "evidence_quote": "Material Sample 'SD_SO4' (ID: srep26686_SD_SO4) in Paper srep26686. Composition: LiMn0.75Fe0.25PO4. Paper Title: Hierarchical 3D porous LiMn0.75Fe0.25PO4/rGO microspheres. DOI: 10.1038/srep26686. Synthesis route: Salt-as",
+          "is_verified": true
+        },
+        {
+          "paper_id": "srep26686",
+          "page_number": 5,
+          "doi": "10.1038/srep26686",
+          "sample_label": "LiMn0.75Fe0.25PO4/rGO",
+          "composition": "LiMn0.75Fe0.25PO4/rGO",
+          "evidence_quote": "Material Sample 'LiMn0.75Fe0.25PO4/rGO' (ID: srep26686_LiMn0_75Fe0_25PO4_rGO) in Paper srep26686. Composition: LiMn0.75Fe0.25PO4/rGO. Paper Title: Hierarchical 3D porous LiMn0.75Fe0.25PO4/rGO microspheres. DOI: 10.1038/s",
+          "is_verified": true
+        },
+        {
+          "paper_id": "srep26686",
+          "page_number": 7,
+          "doi": "10.1038/srep26686",
+          "sample_label": "LiMn0.75Fe0.25PO4",
+          "composition": "LiMn0.75Fe0.25PO4",
+          "evidence_quote": "Source: srep26686.pdf (Page 7). Composition: LiMn0.75Fe0.25PO4. In-situ TR-XRD confirms orthorhombic olivine crystal structure with space group Pnma. Direct quote: \"www.nature.com/scientificreports/ 7 Scientific Reports",
+          "is_verified": true
+        }
+      ],
+      "sourced_facts_count": 4,
+      "conflicts_and_limitations": "Secondary review provenance in [srep26686]: verify primary experimental source \u00b7 Secondary review provenance in [srep26686]: verify primary experimental source"
+    }
+  },
+  {
+    "test_id": "Q2_COMPARATIVE",
+    "category": "Sample Comparison",
+    "query": "Compare the discharge capacity of SD_SO4 and SD_NO3 at 0.05C and high rates.",
+    "has_history": false,
+    "expected": {
+      "value": "114",
+      "unit": "mAh/g",
+      "paper": "srep26686",
+      "sample": "SD_SO4"
+    },
+    "qwen": {
+      "duration_seconds": 17.921,
+      "inference_source": "qwen3:4b_grounded",
+      "direct_answer": "Based strictly on the provided evidence:",
+      "explanation_snippet": "Based strictly on the provided evidence:  \n\n- **At 0.05 C**:  \n  - SD_NO3 (nitrate precursor): **45 mAh/g** (Evidence #1)  \n  - SD_SO4 (sulfate precursor): **114 mAh/g** (Evidence #2)  \n  *This represents a 2.5\u00d7 higher capacity for SD_SO4 vs. SD_NO3 ",
+      "citation_count": 6,
+      "citations": [
+        {
+          "paper_id": "srep26686",
+          "page_number": 5,
+          "doi": "10.1038/srep26686",
+          "sample_label": "SD_NO3",
+          "composition": "LiMn0.75Fe0.25PO4",
+          "evidence_quote": "Material Sample 'SD_NO3' (ID: srep26686_SD_NO3) in Paper srep26686. Composition: LiMn0.75Fe0.25PO4. Paper Title: Hierarchical 3D porous LiMn0.75Fe0.25PO4/rGO microspheres. DOI: 10.1038/srep26686. Synthesis route: Salt-as",
+          "is_verified": true
+        },
+        {
+          "paper_id": "srep26686",
+          "page_number": 5,
+          "doi": "10.1038/srep26686",
+          "sample_label": "SD_SO4",
+          "composition": "LiMn0.75Fe0.25PO4",
+          "evidence_quote": "Material Sample 'SD_SO4' (ID: srep26686_SD_SO4) in Paper srep26686. Composition: LiMn0.75Fe0.25PO4. Paper Title: Hierarchical 3D porous LiMn0.75Fe0.25PO4/rGO microspheres. DOI: 10.1038/srep26686. Synthesis route: Salt-as",
+          "is_verified": true
+        },
+        {
+          "paper_id": "srep26686",
+          "page_number": 7,
+          "doi": "10.1038/srep26686",
+          "sample_label": "LiMn0.75Fe0.25PO4",
+          "composition": "LiMn0.75Fe0.25PO4",
+          "evidence_quote": "Source: srep26686.pdf (Page 7). Composition: LiMn0.75Fe0.25PO4. In-situ TR-XRD confirms orthorhombic olivine crystal structure with space group Pnma. Direct quote: \"www.nature.com/scientificreports/ 7 Scientific Reports",
+          "is_verified": true
+        },
+        {
+          "paper_id": "srep26686",
+          "page_number": 5,
+          "doi": "10.1038/srep26686",
+          "sample_label": "LiMn0.75Fe0.25PO4/rGO",
+          "composition": "LiMn0.75Fe0.25PO4/rGO",
+          "evidence_quote": "Material Sample 'LiMn0.75Fe0.25PO4/rGO' (ID: srep26686_LiMn0_75Fe0_25PO4_rGO) in Paper srep26686. Composition: LiMn0.75Fe0.25PO4/rGO. Paper Title: Hierarchical 3D porous LiMn0.75Fe0.25PO4/rGO microspheres. DOI: 10.1038/s",
+          "is_verified": true
+        },
+        {
+          "paper_id": "P38",
+          "page_number": 1,
+          "doi": "10.1002/celc.201600467",
+          "sample_label": "P38_Sample_9",
+          "composition": "LiFePO4/C (LFP/C, reference)",
+          "evidence_quote": "Paper P38 (P38_Sample_9). Composition: LiFePO4/C (LFP/C, reference). Title: Preparation of Enhanced-Performance LiMn0.6Fe0.4PO4/C Cathode Material for Lithium-Ion Batteries by using a Divalent Transition-Metal Phosphate",
+          "is_verified": true
+        },
+        {
+          "paper_id": "P38",
+          "page_number": 1,
+          "doi": "10.1002/celc.201600467",
+          "sample_label": "P38_Sample_10",
+          "composition": "LiFePO4/C (LFP/C, reference)",
+          "evidence_quote": "Paper P38 (P38_Sample_10). Composition: LiFePO4/C (LFP/C, reference). Title: Preparation of Enhanced-Performance LiMn0.6Fe0.4PO4/C Cathode Material for Lithium-Ion Batteries by using a Divalent Transition-Metal Phosphate",
+          "is_verified": true
+        }
+      ],
+      "sourced_facts_count": 6,
+      "conflicts_and_limitations": "Secondary review provenance in [srep26686]: verify primary experimental source \u00b7 Secondary review provenance in [srep26686]: verify primary experimental source"
+    },
+    "deterministic_fallback": {
+      "duration_seconds": 0.016,
+      "inference_source": "deterministic_synthesis_fallback",
+      "direct_answer": "In srep26686 (Figure 7a, Page 7), galvanostatic discharge testing at 0.05 C delivered 45 mAh/g for SD_NO3 and 114 mAh/g for SD_SO4, respectively.",
+      "explanation_snippet": "The sample prepared from sulfate precursors (SD_SO4) delivered 114 mAh/g due to superior structural phase purity, whereas the nitrate precursor sample (SD_NO3) delivered only 45 mAh/g at 0.05 C because it retained unreacted Fe2O3 impurities and lacke",
+      "citation_count": 6,
+      "citations": [
+        {
+          "paper_id": "srep26686",
+          "page_number": 5,
+          "doi": "10.1038/srep26686",
+          "sample_label": "SD_NO3",
+          "composition": "LiMn0.75Fe0.25PO4",
+          "evidence_quote": "Material Sample 'SD_NO3' (ID: srep26686_SD_NO3) in Paper srep26686. Composition: LiMn0.75Fe0.25PO4. Paper Title: Hierarchical 3D porous LiMn0.75Fe0.25PO4/rGO microspheres. DOI: 10.1038/srep26686. Synthesis route: Salt-as",
+          "is_verified": true
+        },
+        {
+          "paper_id": "srep26686",
+          "page_number": 5,
+          "doi": "10.1038/srep26686",
+          "sample_label": "SD_SO4",
+          "composition": "LiMn0.75Fe0.25PO4",
+          "evidence_quote": "Material Sample 'SD_SO4' (ID: srep26686_SD_SO4) in Paper srep26686. Composition: LiMn0.75Fe0.25PO4. Paper Title: Hierarchical 3D porous LiMn0.75Fe0.25PO4/rGO microspheres. DOI: 10.1038/srep26686. Synthesis route: Salt-as",
+          "is_verified": true
+        },
+        {
+          "paper_id": "srep26686",
+          "page_number": 7,
+          "doi": "10.1038/srep26686",
+          "sample_label": "LiMn0.75Fe0.25PO4",
+          "composition": "LiMn0.75Fe0.25PO4",
+          "evidence_quote": "Source: srep26686.pdf (Page 7). Composition: LiMn0.75Fe0.25PO4. In-situ TR-XRD confirms orthorhombic olivine crystal structure with space group Pnma. Direct quote: \"www.nature.com/scientificreports/ 7 Scientific Reports",
+          "is_verified": true
+        },
+        {
+          "paper_id": "srep26686",
+          "page_number": 5,
+          "doi": "10.1038/srep26686",
+          "sample_label": "LiMn0.75Fe0.25PO4/rGO",
+          "composition": "LiMn0.75Fe0.25PO4/rGO",
+          "evidence_quote": "Material Sample 'LiMn0.75Fe0.25PO4/rGO' (ID: srep26686_LiMn0_75Fe0_25PO4_rGO) in Paper srep26686. Composition: LiMn0.75Fe0.25PO4/rGO. Paper Title: Hierarchical 3D porous LiMn0.75Fe0.25PO4/rGO microspheres. DOI: 10.1038/s",
+          "is_verified": true
+        },
+        {
+          "paper_id": "P38",
+          "page_number": 1,
+          "doi": "10.1002/celc.201600467",
+          "sample_label": "P38_Sample_9",
+          "composition": "LiFePO4/C (LFP/C, reference)",
+          "evidence_quote": "Paper P38 (P38_Sample_9). Composition: LiFePO4/C (LFP/C, reference). Title: Preparation of Enhanced-Performance LiMn0.6Fe0.4PO4/C Cathode Material for Lithium-Ion Batteries by using a Divalent Transition-Metal Phosphate",
+          "is_verified": true
+        },
+        {
+          "paper_id": "P38",
+          "page_number": 1,
+          "doi": "10.1002/celc.201600467",
+          "sample_label": "P38_Sample_10",
+          "composition": "LiFePO4/C (LFP/C, reference)",
+          "evidence_quote": "Paper P38 (P38_Sample_10). Composition: LiFePO4/C (LFP/C, reference). Title: Preparation of Enhanced-Performance LiMn0.6Fe0.4PO4/C Cathode Material for Lithium-Ion Batteries by using a Divalent Transition-Metal Phosphate",
+          "is_verified": true
+        }
+      ],
+      "sourced_facts_count": 6,
+      "conflicts_and_limitations": "Secondary review provenance in [srep26686]: verify primary experimental source \u00b7 Secondary review provenance in [srep26686]: verify primary experimental source"
+    }
+  },
+  {
+    "test_id": "Q3_SYNTHESIS_PRECURSOR",
+    "category": "Synthesis & Impurity Mechanism",
+    "query": "How does the iron nitrate precursor affect the phase purity of LMFP compared to iron sulfate in srep26686?",
+    "has_history": false,
+    "expected": {
+      "value": "Fe2O3",
+      "unit": "impurity",
+      "paper": "srep26686",
+      "sample": "SD_NO3"
+    },
+    "qwen": {
+      "duration_seconds": 22.926,
+      "inference_source": "qwen3:4b_grounded",
+      "direct_answer": "Based strictly on the provided evidence, **the research question cannot be answered** because the evidence does not contain a direct comparison of iron nitrate versus iron sulfate precursors for **LiMn\u2080.\u2086Fe\u2080.\u2084PO\u2084 (LMFP)**. Here's the evidence-grounded rationale:",
+      "explanation_snippet": "Based strictly on the provided evidence, **the research question cannot be answered** because the evidence does not contain a direct comparison of iron nitrate versus iron sulfate precursors for **LiMn\u2080.\u2086Fe\u2080.\u2084PO\u2084 (LMFP)**. Here's the evidence-grounde",
+      "citation_count": 8,
+      "citations": [
+        {
+          "paper_id": "P44",
+          "page_number": 1,
+          "doi": "10.1016/j.jelechem.2026.120432",
+          "sample_label": "P44_Sample_5",
+          "composition": "LiMn0.6Fe0.4PO4/C (LMFP-5)",
+          "evidence_quote": "Paper P44 (P44_Sample_5). Composition: LiMn0.6Fe0.4PO4/C (LMFP-5). Title: Tailoring microstructure and electrochemical performance of LiMn0.6Fe0.4PO4 cathode materials via iron source selection. Synthesis route: Hydrothe",
+          "is_verified": true
+        },
+        {
+          "paper_id": "srep26686",
+          "page_number": 5,
+          "doi": "10.1038/srep26686",
+          "sample_label": "LiMn0.75Fe0.25PO4/rGO",
+          "composition": "LiMn0.75Fe0.25PO4/rGO",
+          "evidence_quote": "Material Sample 'LiMn0.75Fe0.25PO4/rGO' (ID: srep26686_LiMn0_75Fe0_25PO4_rGO) in Paper srep26686. Composition: LiMn0.75Fe0.25PO4/rGO. Paper Title: Hierarchical 3D porous LiMn0.75Fe0.25PO4/rGO microspheres. DOI: 10.1038/s",
+          "is_verified": true
+        },
+        {
+          "paper_id": "P44",
+          "page_number": 1,
+          "doi": "10.1016/j.jelechem.2026.120432",
+          "sample_label": "P44_Sample_16",
+          "composition": "LiMn0.6Fe0.4PO4/C (LMFP-5)",
+          "evidence_quote": "Paper P44 (P44_Sample_16). Composition: LiMn0.6Fe0.4PO4/C (LMFP-5). Title: Tailoring microstructure and electrochemical performance of LiMn0.6Fe0.4PO4 cathode materials via iron source selection. Synthesis route: Hydroth",
+          "is_verified": true
+        },
+        {
+          "paper_id": "srep26686",
+          "page_number": 5,
+          "doi": "10.1038/srep26686",
+          "sample_label": "SD_SO4",
+          "composition": "LiMn0.75Fe0.25PO4",
+          "evidence_quote": "Material Sample 'SD_SO4' (ID: srep26686_SD_SO4) in Paper srep26686. Composition: LiMn0.75Fe0.25PO4. Paper Title: Hierarchical 3D porous LiMn0.75Fe0.25PO4/rGO microspheres. DOI: 10.1038/srep26686. Synthesis route: Salt-as",
+          "is_verified": true
+        },
+        {
+          "paper_id": "srep26686",
+          "page_number": 5,
+          "doi": "10.1038/srep26686",
+          "sample_label": "SD_NO3",
+          "composition": "LiMn0.75Fe0.25PO4",
+          "evidence_quote": "Material Sample 'SD_NO3' (ID: srep26686_SD_NO3) in Paper srep26686. Composition: LiMn0.75Fe0.25PO4. Paper Title: Hierarchical 3D porous LiMn0.75Fe0.25PO4/rGO microspheres. DOI: 10.1038/srep26686. Synthesis route: Salt-as",
+          "is_verified": true
+        },
+        {
+          "paper_id": "P38",
+          "page_number": 1,
+          "doi": "10.1002/celc.201600467",
+          "sample_label": "P38_Sample_9",
+          "composition": "LiFePO4/C (LFP/C, reference)",
+          "evidence_quote": "Paper P38 (P38_Sample_9). Composition: LiFePO4/C (LFP/C, reference). Title: Preparation of Enhanced-Performance LiMn0.6Fe0.4PO4/C Cathode Material for Lithium-Ion Batteries by using a Divalent Transition-Metal Phosphate",
+          "is_verified": true
+        },
+        {
+          "paper_id": "srep26686",
+          "page_number": 7,
+          "doi": "10.1038/srep26686",
+          "sample_label": "LiMn0.75Fe0.25PO4",
+          "composition": "LiMn0.75Fe0.25PO4",
+          "evidence_quote": "Source: srep26686.pdf (Page 7). Composition: LiMn0.75Fe0.25PO4. In-situ TR-XRD confirms orthorhombic olivine crystal structure with space group Pnma. Direct quote: \"www.nature.com/scientificreports/ 7 Scientific Reports",
+          "is_verified": true
+        },
+        {
+          "paper_id": "P38",
+          "page_number": 1,
+          "doi": "10.1002/celc.201600467",
+          "sample_label": "P38_Sample_10",
+          "composition": "LiFePO4/C (LFP/C, reference)",
+          "evidence_quote": "Paper P38 (P38_Sample_10). Composition: LiFePO4/C (LFP/C, reference). Title: Preparation of Enhanced-Performance LiMn0.6Fe0.4PO4/C Cathode Material for Lithium-Ion Batteries by using a Divalent Transition-Metal Phosphate",
+          "is_verified": true
+        }
+      ],
+      "sourced_facts_count": 8,
+      "conflicts_and_limitations": "Provenance Divergence: P44_Sample_5 is from DATASET_ROW (P44), whereas LiMn0.75Fe0.25PO4/rGO is from PRIMARY_PAPER (srep26686). Secondary review entries must be validated against primary experimental data. \u00b7 Missing direct literature counterpart for Sulfate. \u00b7 Incomplete comparison counterpart: Missing direct experimental data for [Sulfate] under matching conditions. \u00b7 Secondary review provenance in [srep26686]: verify primary experimental source"
+    },
+    "deterministic_fallback": {
+      "duration_seconds": 0.016,
+      "inference_source": "deterministic_synthesis_fallback",
+      "direct_answer": "In paper srep26686, sample SD_SO4 (LiMn0.75Fe0.25PO4/rGO) was synthesized using iron sulfate (FeSO4\u00b77H2O) and manganese sulfate (MnSO4\u00b7H2O) precursor salts with (NH4)2HPO4, calcined at 650 \u00b0C for 6 h in an Ar/H2 (95/5 vol%) atmosphere, forming an orthorhombic olivine crystal structure with space group Pnma, and retaining 93% capacity after 1,000 cycles at 10C.",
+      "explanation_snippet": "Sulfate precursors promote atomic-scale stoichiometric homogeneity and full Fe2+ reduction during the 650 \u00b0C heat treatment, achieving a phase-pure Pnma olivine lattice with no residual Fe2O3 or phosphate impurities, buffering strain during extended ",
+      "citation_count": 8,
+      "citations": [
+        {
+          "paper_id": "P44",
+          "page_number": 1,
+          "doi": "10.1016/j.jelechem.2026.120432",
+          "sample_label": "P44_Sample_5",
+          "composition": "LiMn0.6Fe0.4PO4/C (LMFP-5)",
+          "evidence_quote": "Paper P44 (P44_Sample_5). Composition: LiMn0.6Fe0.4PO4/C (LMFP-5). Title: Tailoring microstructure and electrochemical performance of LiMn0.6Fe0.4PO4 cathode materials via iron source selection. Synthesis route: Hydrothe",
+          "is_verified": true
+        },
+        {
+          "paper_id": "srep26686",
+          "page_number": 5,
+          "doi": "10.1038/srep26686",
+          "sample_label": "LiMn0.75Fe0.25PO4/rGO",
+          "composition": "LiMn0.75Fe0.25PO4/rGO",
+          "evidence_quote": "Material Sample 'LiMn0.75Fe0.25PO4/rGO' (ID: srep26686_LiMn0_75Fe0_25PO4_rGO) in Paper srep26686. Composition: LiMn0.75Fe0.25PO4/rGO. Paper Title: Hierarchical 3D porous LiMn0.75Fe0.25PO4/rGO microspheres. DOI: 10.1038/s",
+          "is_verified": true
+        },
+        {
+          "paper_id": "P44",
+          "page_number": 1,
+          "doi": "10.1016/j.jelechem.2026.120432",
+          "sample_label": "P44_Sample_16",
+          "composition": "LiMn0.6Fe0.4PO4/C (LMFP-5)",
+          "evidence_quote": "Paper P44 (P44_Sample_16). Composition: LiMn0.6Fe0.4PO4/C (LMFP-5). Title: Tailoring microstructure and electrochemical performance of LiMn0.6Fe0.4PO4 cathode materials via iron source selection. Synthesis route: Hydroth",
+          "is_verified": true
+        },
+        {
+          "paper_id": "srep26686",
+          "page_number": 5,
+          "doi": "10.1038/srep26686",
+          "sample_label": "SD_SO4",
+          "composition": "LiMn0.75Fe0.25PO4",
+          "evidence_quote": "Material Sample 'SD_SO4' (ID: srep26686_SD_SO4) in Paper srep26686. Composition: LiMn0.75Fe0.25PO4. Paper Title: Hierarchical 3D porous LiMn0.75Fe0.25PO4/rGO microspheres. DOI: 10.1038/srep26686. Synthesis route: Salt-as",
+          "is_verified": true
+        },
+        {
+          "paper_id": "srep26686",
+          "page_number": 5,
+          "doi": "10.1038/srep26686",
+          "sample_label": "SD_NO3",
+          "composition": "LiMn0.75Fe0.25PO4",
+          "evidence_quote": "Material Sample 'SD_NO3' (ID: srep26686_SD_NO3) in Paper srep26686. Composition: LiMn0.75Fe0.25PO4. Paper Title: Hierarchical 3D porous LiMn0.75Fe0.25PO4/rGO microspheres. DOI: 10.1038/srep26686. Synthesis route: Salt-as",
+          "is_verified": true
+        },
+        {
+          "paper_id": "P38",
+          "page_number": 1,
+          "doi": "10.1002/celc.201600467",
+          "sample_label": "P38_Sample_9",
+          "composition": "LiFePO4/C (LFP/C, reference)",
+          "evidence_quote": "Paper P38 (P38_Sample_9). Composition: LiFePO4/C (LFP/C, reference). Title: Preparation of Enhanced-Performance LiMn0.6Fe0.4PO4/C Cathode Material for Lithium-Ion Batteries by using a Divalent Transition-Metal Phosphate",
+          "is_verified": true
+        },
+        {
+          "paper_id": "srep26686",
+          "page_number": 7,
+          "doi": "10.1038/srep26686",
+          "sample_label": "LiMn0.75Fe0.25PO4",
+          "composition": "LiMn0.75Fe0.25PO4",
+          "evidence_quote": "Source: srep26686.pdf (Page 7). Composition: LiMn0.75Fe0.25PO4. In-situ TR-XRD confirms orthorhombic olivine crystal structure with space group Pnma. Direct quote: \"www.nature.com/scientificreports/ 7 Scientific Reports",
+          "is_verified": true
+        },
+        {
+          "paper_id": "P38",
+          "page_number": 1,
+          "doi": "10.1002/celc.201600467",
+          "sample_label": "P38_Sample_10",
+          "composition": "LiFePO4/C (LFP/C, reference)",
+          "evidence_quote": "Paper P38 (P38_Sample_10). Composition: LiFePO4/C (LFP/C, reference). Title: Preparation of Enhanced-Performance LiMn0.6Fe0.4PO4/C Cathode Material for Lithium-Ion Batteries by using a Divalent Transition-Metal Phosphate",
+          "is_verified": true
+        }
+      ],
+      "sourced_facts_count": 8,
+      "conflicts_and_limitations": "Provenance Divergence: P44_Sample_5 is from DATASET_ROW (P44), whereas LiMn0.75Fe0.25PO4/rGO is from PRIMARY_PAPER (srep26686). Secondary review entries must be validated against primary experimental data. \u00b7 Missing direct literature counterpart for Sulfate. \u00b7 Incomplete comparison counterpart: Missing direct experimental data for [Sulfate] under matching conditions. \u00b7 Secondary review provenance in [srep26686]: verify primary experimental source"
+    }
+  },
+  {
+    "test_id": "Q4_CRYSTALLOGRAPHIC_MECHANISM",
+    "category": "Crystallographic Mechanism",
+    "query": "What crystallographic mechanism explains the improved rate capability and stability of olivine LMFP?",
+    "has_history": false,
+    "expected": {
+      "value": "Pnma",
+      "unit": "diffusion",
+      "paper": "Literature",
+      "sample": "LMFP"
+    },
+    "qwen": {
+      "duration_seconds": 24.718,
+      "inference_source": "qwen3:4b_grounded",
+      "direct_answer": "We are given a research question: \"What crystallographic mechanism explains the improved rate capability and stability of olivine LMFP?\"",
+      "explanation_snippet": "We are given a research question: \"What crystallographic mechanism explains the improved rate capability and stability of olivine LMFP?\"\n\nWe must answer strictly based on the provided verified experimental sample profiles and literature evidence.\n\nFi",
+      "citation_count": 4,
+      "citations": [
+        {
+          "paper_id": "srep26686",
+          "page_number": 5,
+          "doi": "10.1038/srep26686",
+          "sample_label": "LiMn0.75Fe0.25PO4/rGO",
+          "composition": "LiMn0.75Fe0.25PO4/rGO",
+          "evidence_quote": "Material Sample 'LiMn0.75Fe0.25PO4/rGO' (ID: srep26686_LiMn0_75Fe0_25PO4_rGO) in Paper srep26686. Composition: LiMn0.75Fe0.25PO4/rGO. Paper Title: Hierarchical 3D porous LiMn0.75Fe0.25PO4/rGO microspheres. DOI: 10.1038/s",
+          "is_verified": true
+        },
+        {
+          "paper_id": "srep26686",
+          "page_number": 5,
+          "doi": "10.1038/srep26686",
+          "sample_label": "SD_SO4",
+          "composition": "LiMn0.75Fe0.25PO4",
+          "evidence_quote": "Material Sample 'SD_SO4' (ID: srep26686_SD_SO4) in Paper srep26686. Composition: LiMn0.75Fe0.25PO4. Paper Title: Hierarchical 3D porous LiMn0.75Fe0.25PO4/rGO microspheres. DOI: 10.1038/srep26686. Synthesis route: Salt-as",
+          "is_verified": true
+        },
+        {
+          "paper_id": "srep26686",
+          "page_number": 5,
+          "doi": "10.1038/srep26686",
+          "sample_label": "SD_NO3",
+          "composition": "LiMn0.75Fe0.25PO4",
+          "evidence_quote": "Material Sample 'SD_NO3' (ID: srep26686_SD_NO3) in Paper srep26686. Composition: LiMn0.75Fe0.25PO4. Paper Title: Hierarchical 3D porous LiMn0.75Fe0.25PO4/rGO microspheres. DOI: 10.1038/srep26686. Synthesis route: Salt-as",
+          "is_verified": true
+        },
+        {
+          "paper_id": "stage3_integrated_test",
+          "page_number": 3,
+          "doi": "Master Dataset",
+          "sample_label": "Sample_p3_voltage_window",
+          "composition": "LiMn0.5Fe0.5PO4",
+          "evidence_quote": "Material Sample 'Sample_p3_voltage_window' (ID: stage3_integrated_test_Sample_p3_voltage_window) in Paper stage3_integrated_test. Composition: LiMn0.5Fe0.5PO4. Paper Title: stage3_integrated_test. Crystal structure: Oliv",
+          "is_verified": true
+        }
+      ],
+      "sourced_facts_count": 4,
+      "conflicts_and_limitations": "Disparate C-Rates: LiMn0.75Fe0.25PO4/rGO measured at [] C vs SD_SO4 at [0.05] C. Comparing different C-rates is physically invalid. \u00b7 Sample [Sample_p3_voltage_window] is currently marked unconfirmed/unresolved"
+    },
+    "deterministic_fallback": {
+      "duration_seconds": 0.015,
+      "inference_source": "deterministic_synthesis_fallback",
+      "direct_answer": "In paper srep26686 (Scientific Reports 6:26686, 2016), LiMn0.75Fe0.25PO4/rGO microspheres were synthesized via a salt-assisted spray-drying method calcined at 650 \u00b0C for 6 h in Ar/H2. In-situ TR-XRD confirmed an orthorhombic olivine structure with space group Pnma.",
+      "explanation_snippet": "The study demonstrated that precursor salts significantly affect electrochemical performance: the sample prepared from sulfate salts (SD_SO4) delivered 114 mAh/g at 0.05C and retained 93% capacity after 1,000 cycles at 10C, vastly outperforming the n",
+      "citation_count": 4,
+      "citations": [
+        {
+          "paper_id": "srep26686",
+          "page_number": 5,
+          "doi": "10.1038/srep26686",
+          "sample_label": "LiMn0.75Fe0.25PO4/rGO",
+          "composition": "LiMn0.75Fe0.25PO4/rGO",
+          "evidence_quote": "Material Sample 'LiMn0.75Fe0.25PO4/rGO' (ID: srep26686_LiMn0_75Fe0_25PO4_rGO) in Paper srep26686. Composition: LiMn0.75Fe0.25PO4/rGO. Paper Title: Hierarchical 3D porous LiMn0.75Fe0.25PO4/rGO microspheres. DOI: 10.1038/s",
+          "is_verified": true
+        },
+        {
+          "paper_id": "srep26686",
+          "page_number": 5,
+          "doi": "10.1038/srep26686",
+          "sample_label": "SD_SO4",
+          "composition": "LiMn0.75Fe0.25PO4",
+          "evidence_quote": "Material Sample 'SD_SO4' (ID: srep26686_SD_SO4) in Paper srep26686. Composition: LiMn0.75Fe0.25PO4. Paper Title: Hierarchical 3D porous LiMn0.75Fe0.25PO4/rGO microspheres. DOI: 10.1038/srep26686. Synthesis route: Salt-as",
+          "is_verified": true
+        },
+        {
+          "paper_id": "srep26686",
+          "page_number": 5,
+          "doi": "10.1038/srep26686",
+          "sample_label": "SD_NO3",
+          "composition": "LiMn0.75Fe0.25PO4",
+          "evidence_quote": "Material Sample 'SD_NO3' (ID: srep26686_SD_NO3) in Paper srep26686. Composition: LiMn0.75Fe0.25PO4. Paper Title: Hierarchical 3D porous LiMn0.75Fe0.25PO4/rGO microspheres. DOI: 10.1038/srep26686. Synthesis route: Salt-as",
+          "is_verified": true
+        },
+        {
+          "paper_id": "stage3_integrated_test",
+          "page_number": 3,
+          "doi": "Master Dataset",
+          "sample_label": "Sample_p3_voltage_window",
+          "composition": "LiMn0.5Fe0.5PO4",
+          "evidence_quote": "Material Sample 'Sample_p3_voltage_window' (ID: stage3_integrated_test_Sample_p3_voltage_window) in Paper stage3_integrated_test. Composition: LiMn0.5Fe0.5PO4. Paper Title: stage3_integrated_test. Crystal structure: Oliv",
+          "is_verified": true
+        }
+      ],
+      "sourced_facts_count": 4,
+      "conflicts_and_limitations": "Disparate C-Rates: LiMn0.75Fe0.25PO4/rGO measured at [] C vs SD_SO4 at [0.05] C. Comparing different C-rates is physically invalid. \u00b7 Sample [Sample_p3_voltage_window] is currently marked unconfirmed/unresolved"
+    }
+  },
+  {
+    "test_id": "Q5_STATEFUL_FOLLOWUP",
+    "category": "Multi-turn Condition Follow-up",
+    "query": "What is its capacity at 10C and what was the voltage window?",
+    "has_history": true,
+    "expected": {
+      "value": "73",
+      "unit": "mAh/g",
+      "paper": "srep26686",
+      "sample": "SD_SO4"
+    },
+    "qwen": {
+      "duration_seconds": 25.152,
+      "inference_source": "qwen3:4b_grounded",
+      "direct_answer": "We are given the research question: \"What is its capacity at 10C and what was the voltage window? for sample SD_SO4 in srep26686\"",
+      "explanation_snippet": "We are given the research question: \"What is its capacity at 10C and what was the voltage window? for sample SD_SO4 in srep26686\"\n\nFirst, recall the recent conversation history: \nUser previously asked: \"What is the discharge capacity of SD_SO4 in sre",
+      "citation_count": 4,
+      "citations": [
+        {
+          "paper_id": "Lithium_manganese_iron_phosphate_materials__Design__progress__and_challenges",
+          "page_number": 18,
+          "doi": "Master Dataset",
+          "sample_label": "Ref29_LiMn0.8Fe0.2PO4_Ni",
+          "composition": "LiMn0.8Fe0.2PO4",
+          "evidence_quote": "Material Sample 'Ref29_LiMn0.8Fe0.2PO4_Ni' (ID: Lithium_manganese_iron_phosphate_materials__Design__progress__and_challenges_Ref29_LiMn0_8Fe0_2PO4_Ni) in Paper Lithium_manganese_iron_phosphate_materials__Design__progress",
+          "is_verified": true
+        },
+        {
+          "paper_id": "srep26686",
+          "page_number": 5,
+          "doi": "10.1038/srep26686",
+          "sample_label": "SD_SO4",
+          "composition": "LiMn0.75Fe0.25PO4",
+          "evidence_quote": "Material Sample 'SD_SO4' (ID: srep26686_SD_SO4) in Paper srep26686. Composition: LiMn0.75Fe0.25PO4. Paper Title: Hierarchical 3D porous LiMn0.75Fe0.25PO4/rGO microspheres. DOI: 10.1038/srep26686. Synthesis route: Salt-as",
+          "is_verified": true
+        },
+        {
+          "paper_id": "srep26686",
+          "page_number": 5,
+          "doi": "10.1038/srep26686",
+          "sample_label": "LiMn0.75Fe0.25PO4/rGO",
+          "composition": "LiMn0.75Fe0.25PO4/rGO",
+          "evidence_quote": "Material Sample 'LiMn0.75Fe0.25PO4/rGO' (ID: srep26686_LiMn0_75Fe0_25PO4_rGO) in Paper srep26686. Composition: LiMn0.75Fe0.25PO4/rGO. Paper Title: Hierarchical 3D porous LiMn0.75Fe0.25PO4/rGO microspheres. DOI: 10.1038/s",
+          "is_verified": true
+        },
+        {
+          "paper_id": "srep26686",
+          "page_number": 5,
+          "doi": "10.1038/srep26686",
+          "sample_label": "SD_NO3",
+          "composition": "LiMn0.75Fe0.25PO4",
+          "evidence_quote": "Material Sample 'SD_NO3' (ID: srep26686_SD_NO3) in Paper srep26686. Composition: LiMn0.75Fe0.25PO4. Paper Title: Hierarchical 3D porous LiMn0.75Fe0.25PO4/rGO microspheres. DOI: 10.1038/srep26686. Synthesis route: Salt-as",
+          "is_verified": true
+        }
+      ],
+      "sourced_facts_count": 4,
+      "conflicts_and_limitations": "Provenance Divergence: Ref29_LiMn0.8Fe0.2PO4_Ni is from SECONDARY_REVIEW (Lithium_manganese_iron_phosphate_materials__Design__progress__and_challenges), whereas SD_SO4 is from PRIMARY_PAPER (srep26686). Secondary review entries must be validated against primary experimental data. \u00b7 Disparate C-Rates: Ref29_LiMn0.8Fe0.2PO4_Ni measured at [0.1, 10.0] C vs SD_SO4 at [0.05] C. Comparing different C-rates is physically invalid. \u00b7 Secondary review provenance in [Lithium_manganese_iron_phosphate_materials__Design__progress__and_challenges]: verify primary experimental source"
+    },
+    "deterministic_fallback": {
+      "duration_seconds": 0.011,
+      "inference_source": "deterministic_synthesis_fallback",
+      "direct_answer": "In srep26686 (Figure 7a, Page 7), galvanostatic discharge testing at 0.05 C delivered 45 mAh/g for SD_NO3 and 114 mAh/g for SD_SO4, respectively.",
+      "explanation_snippet": "The sample prepared from sulfate precursors (SD_SO4) delivered 114 mAh/g due to superior structural phase purity, whereas the nitrate precursor sample (SD_NO3) delivered only 45 mAh/g at 0.05 C because it retained unreacted Fe2O3 impurities and lacke",
+      "citation_count": 4,
+      "citations": [
+        {
+          "paper_id": "Lithium_manganese_iron_phosphate_materials__Design__progress__and_challenges",
+          "page_number": 18,
+          "doi": "Master Dataset",
+          "sample_label": "Ref29_LiMn0.8Fe0.2PO4_Ni",
+          "composition": "LiMn0.8Fe0.2PO4",
+          "evidence_quote": "Material Sample 'Ref29_LiMn0.8Fe0.2PO4_Ni' (ID: Lithium_manganese_iron_phosphate_materials__Design__progress__and_challenges_Ref29_LiMn0_8Fe0_2PO4_Ni) in Paper Lithium_manganese_iron_phosphate_materials__Design__progress",
+          "is_verified": true
+        },
+        {
+          "paper_id": "srep26686",
+          "page_number": 5,
+          "doi": "10.1038/srep26686",
+          "sample_label": "SD_SO4",
+          "composition": "LiMn0.75Fe0.25PO4",
+          "evidence_quote": "Material Sample 'SD_SO4' (ID: srep26686_SD_SO4) in Paper srep26686. Composition: LiMn0.75Fe0.25PO4. Paper Title: Hierarchical 3D porous LiMn0.75Fe0.25PO4/rGO microspheres. DOI: 10.1038/srep26686. Synthesis route: Salt-as",
+          "is_verified": true
+        },
+        {
+          "paper_id": "srep26686",
+          "page_number": 5,
+          "doi": "10.1038/srep26686",
+          "sample_label": "LiMn0.75Fe0.25PO4/rGO",
+          "composition": "LiMn0.75Fe0.25PO4/rGO",
+          "evidence_quote": "Material Sample 'LiMn0.75Fe0.25PO4/rGO' (ID: srep26686_LiMn0_75Fe0_25PO4_rGO) in Paper srep26686. Composition: LiMn0.75Fe0.25PO4/rGO. Paper Title: Hierarchical 3D porous LiMn0.75Fe0.25PO4/rGO microspheres. DOI: 10.1038/s",
+          "is_verified": true
+        },
+        {
+          "paper_id": "srep26686",
+          "page_number": 5,
+          "doi": "10.1038/srep26686",
+          "sample_label": "SD_NO3",
+          "composition": "LiMn0.75Fe0.25PO4",
+          "evidence_quote": "Material Sample 'SD_NO3' (ID: srep26686_SD_NO3) in Paper srep26686. Composition: LiMn0.75Fe0.25PO4. Paper Title: Hierarchical 3D porous LiMn0.75Fe0.25PO4/rGO microspheres. DOI: 10.1038/srep26686. Synthesis route: Salt-as",
+          "is_verified": true
+        }
+      ],
+      "sourced_facts_count": 4,
+      "conflicts_and_limitations": "Provenance Divergence: Ref29_LiMn0.8Fe0.2PO4_Ni is from SECONDARY_REVIEW (Lithium_manganese_iron_phosphate_materials__Design__progress__and_challenges), whereas SD_SO4 is from PRIMARY_PAPER (srep26686). Secondary review entries must be validated against primary experimental data. \u00b7 Disparate C-Rates: Ref29_LiMn0.8Fe0.2PO4_Ni measured at [0.1, 10.0] C vs SD_SO4 at [0.05] C. Comparing different C-rates is physically invalid. \u00b7 Secondary review provenance in [Lithium_manganese_iron_phosphate_materials__Design__progress__and_challenges]: verify primary experimental source"
+    }
+  },
+  {
+    "test_id": "Q6_OUT_OF_SCOPE",
+    "category": "Abstention Guardrail",
+    "query": "What is the cycling performance of nickel-rich NMC811 synthesized by dry battery electrode technology?",
+    "has_history": false,
+    "expected": {
+      "value": "abstain",
+      "unit": "out_of_scope",
+      "paper": "None",
+      "sample": "NMC811"
+    },
+    "qwen": {
+      "duration_seconds": 17.818,
+      "inference_source": "qwen3:4b_grounded",
+      "direct_answer": "The literature database does not contain experimental evidence for the cycling performance of nickel-rich NMC811 synthesized by dry battery electrode technology.",
+      "explanation_snippet": "The literature database does not contain experimental evidence for the cycling performance of nickel-rich NMC811 synthesized by dry battery electrode technology.",
+      "citation_count": 4,
+      "citations": [
+        {
+          "paper_id": "P10_Row1",
+          "page_number": 1,
+          "doi": "10.1038/s41598-025-12971-y",
+          "sample_label": "P10_Row1_Sample_1",
+          "composition": "LiMn0.85Fe0.075Ni0.075PO4/C-A",
+          "evidence_quote": "Paper P10_Row1 (P10_Row1_Sample_1). Composition: LiMn0.85Fe0.075Ni0.075PO4/C-A. Title: Preparation and improvement electrochemical performance of Ni-Fe doped porous LiMnPO/C materials. Doped with Ni. Synthesis route: Co-",
+          "is_verified": true
+        },
+        {
+          "paper_id": "P10_Row2",
+          "page_number": 1,
+          "doi": "10.1038/s41598-025-12971-y",
+          "sample_label": "P10_Row2_Sample_1",
+          "composition": "LiMn0.85Fe0.075Ni0.075PO4/C-B",
+          "evidence_quote": "Paper P10_Row2 (P10_Row2_Sample_1). Composition: LiMn0.85Fe0.075Ni0.075PO4/C-B. Title: Preparation and improvement electrochemical performance of Ni-Fe doped porous LiMnPO/C materials. Doped with Ni. Synthesis route: Sol",
+          "is_verified": true
+        },
+        {
+          "paper_id": "P10_Row3",
+          "page_number": 1,
+          "doi": "10.1038/s41598-025-12971-y",
+          "sample_label": "P10_Row3_Sample_1",
+          "composition": "LiMn0.85Fe0.075Ni0.075PO4/C-C",
+          "evidence_quote": "Paper P10_Row3 (P10_Row3_Sample_1). Composition: LiMn0.85Fe0.075Ni0.075PO4/C-C. Title: Preparation and improvement electrochemical performance of Ni-Fe doped porous LiMnPO/C materials. Doped with Ni. Synthesis route: Glu",
+          "is_verified": true
+        },
+        {
+          "paper_id": "P27",
+          "page_number": 1,
+          "doi": "10.20517/energymater.2022.12",
+          "sample_label": "P27_Sample_3",
+          "composition": "Ni-doped LiFePO4 (TM-LFP, DFT supercell model)",
+          "evidence_quote": "Paper P27 (P27_Sample_3). Composition: Ni-doped LiFePO4 (TM-LFP, DFT supercell model). Title: Unraveling the doping mechanisms in lithium iron phosphate. Doped with Ni. Configurational entropy S_config = 0.000 R. Evidenc",
+          "is_verified": true
+        }
+      ],
+      "sourced_facts_count": 4,
+      "conflicts_and_limitations": "Note on experimental condition divergence: C-rates reported in literature range from 0.05C to 60C across differing voltage cut-offs (2.0-4.4 V vs 2.5-4.5 V). Direct numeric comparisons are only physically valid when measured under identical C-rate, voltage window, and temperature regimes."
+    },
+    "deterministic_fallback": {
+      "duration_seconds": 0.007,
+      "inference_source": "deterministic_synthesis_fallback",
+      "direct_answer": "In P10_Row1, sample 'P10_Row1_Sample_1' (LiMn0.85Fe0.075Ni0.075PO4/C-A) delivered 45.9 mAh/g discharge capacity at 0.1C.",
+      "explanation_snippet": "Experimental evidence confirms P10_Row1_Sample_1 crystallization with orthorhombic olivine structure (space group Pnma). The material was synthesized via Co-precipitation. Cation doping with Ni stabilizes the M2 octahedral lattice and reduces charge-",
+      "citation_count": 4,
+      "citations": [
+        {
+          "paper_id": "P10_Row1",
+          "page_number": 1,
+          "doi": "10.1038/s41598-025-12971-y",
+          "sample_label": "P10_Row1_Sample_1",
+          "composition": "LiMn0.85Fe0.075Ni0.075PO4/C-A",
+          "evidence_quote": "Paper P10_Row1 (P10_Row1_Sample_1). Composition: LiMn0.85Fe0.075Ni0.075PO4/C-A. Title: Preparation and improvement electrochemical performance of Ni-Fe doped porous LiMnPO/C materials. Doped with Ni. Synthesis route: Co-",
+          "is_verified": true
+        },
+        {
+          "paper_id": "P10_Row2",
+          "page_number": 1,
+          "doi": "10.1038/s41598-025-12971-y",
+          "sample_label": "P10_Row2_Sample_1",
+          "composition": "LiMn0.85Fe0.075Ni0.075PO4/C-B",
+          "evidence_quote": "Paper P10_Row2 (P10_Row2_Sample_1). Composition: LiMn0.85Fe0.075Ni0.075PO4/C-B. Title: Preparation and improvement electrochemical performance of Ni-Fe doped porous LiMnPO/C materials. Doped with Ni. Synthesis route: Sol",
+          "is_verified": true
+        },
+        {
+          "paper_id": "P10_Row3",
+          "page_number": 1,
+          "doi": "10.1038/s41598-025-12971-y",
+          "sample_label": "P10_Row3_Sample_1",
+          "composition": "LiMn0.85Fe0.075Ni0.075PO4/C-C",
+          "evidence_quote": "Paper P10_Row3 (P10_Row3_Sample_1). Composition: LiMn0.85Fe0.075Ni0.075PO4/C-C. Title: Preparation and improvement electrochemical performance of Ni-Fe doped porous LiMnPO/C materials. Doped with Ni. Synthesis route: Glu",
+          "is_verified": true
+        },
+        {
+          "paper_id": "P27",
+          "page_number": 1,
+          "doi": "10.20517/energymater.2022.12",
+          "sample_label": "P27_Sample_3",
+          "composition": "Ni-doped LiFePO4 (TM-LFP, DFT supercell model)",
+          "evidence_quote": "Paper P27 (P27_Sample_3). Composition: Ni-doped LiFePO4 (TM-LFP, DFT supercell model). Title: Unraveling the doping mechanisms in lithium iron phosphate. Doped with Ni. Configurational entropy S_config = 0.000 R. Evidenc",
+          "is_verified": true
+        }
+      ],
+      "sourced_facts_count": 4,
+      "conflicts_and_limitations": "Note on experimental condition divergence: C-rates reported in literature range from 0.05C to 60C across differing voltage cut-offs (2.0-4.4 V vs 2.5-4.5 V). Direct numeric comparisons are only physically valid when measured under identical C-rate, voltage window, and temperature regimes."
+    }
+  }
+]

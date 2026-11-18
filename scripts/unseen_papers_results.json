@@ -1,0 +1,556 @@
+{
+  "total_unseen_papers_tested": 10,
+  "passed_count": 10,
+  "failed_count": 0,
+  "pass_rate_pct": 100.0,
+  "results": [
+    {
+      "paper_id": "P2_Row1",
+      "base_paper": "P2",
+      "title": "Green Phytic Acid-Assisted Synthesis of LiMn1_xFexPO4/C",
+      "question": "What is the capacity retention and synthesis method reported for LiMn0.8Fe0.2PO4/C in Paper P2?",
+      "duration_s": 0.014,
+      "inference_source": "deterministic_synthesis_fallback",
+      "direct_answer": "In P2_Row1, sample 'P2_Row1_Sample_1' (LiMn0.8Fe0.2PO4/C (LMFP/C-0.2)) delivered 83.0 mAh/g discharge capacity at 1.0C with 91.1% retention after 150 cycles.",
+      "explanation": "Experimental evidence confirms P2_Row1_Sample_1 crystallization with orthorhombic olivine structure (space group Pnma). The material was synthesized via Solvothermal at calcination temperature 350.0 \u00b0C. Lithium de/intercalation proceeds along the 1D [010] b-axis tunnels, where surface carbon coating",
+      "retrieved_citations": [
+        {
+          "paper_id": "P2_Row1",
+          "page_number": 1,
+          "doi": "10.3390/nano14161360",
+          "sample_label": "P2_Row1_Sample_1",
+          "composition": "LiMn0.8Fe0.2PO4/C (LMFP/C-0.2)",
+          "evidence_quote": "Paper P2_Row1 (P2_Row1_Sample_1). Composition: LiMn0.8Fe0.2PO4/C (LMFP/C-0.2). Title: Green Phytic Acid-Assisted Synthesis of LiMn1_xFexPO4/C Cathodes for High-Performance Lithium-Ion Batteries. Synthesis route: Solvothe",
+          "is_verified": true
+        },
+        {
+          "paper_id": "P2_Row2",
+          "page_number": 1,
+          "doi": "10.3390/nano14161360",
+          "sample_label": "P2_Row2_Sample_1",
+          "composition": "LiMn0.9Fe0.1PO4/C (LMFP/C-0.1)",
+          "evidence_quote": "Paper P2_Row2 (P2_Row2_Sample_1). Composition: LiMn0.9Fe0.1PO4/C (LMFP/C-0.1). Title: Green Phytic Acid-Assisted Synthesis of LiMn1_xFexPO4/C Cathodes for High-Performance Lithium-Ion Batteries. Synthesis route: Solvothe",
+          "is_verified": true
+        },
+        {
+          "paper_id": "P2_Row3",
+          "page_number": 1,
+          "doi": "10.3390/nano14161360",
+          "sample_label": "P2_Row3_Sample_1",
+          "composition": "LiMn0.6Fe0.4PO4/C (LMFP/C-0.4)",
+          "evidence_quote": "Paper P2_Row3 (P2_Row3_Sample_1). Composition: LiMn0.6Fe0.4PO4/C (LMFP/C-0.4). Title: Green Phytic Acid-Assisted Synthesis of LiMn1_xFexPO4/C Cathodes for High-Performance Lithium-Ion Batteries. Synthesis route: Solvothe",
+          "is_verified": true
+        },
+        {
+          "paper_id": "P2_Row4",
+          "page_number": 1,
+          "doi": "10.3390/nano14161360",
+          "sample_label": "P2_Row4_Sample_1",
+          "composition": "LiMnPO4/C (LMP/C Baseline)",
+          "evidence_quote": "Paper P2_Row4 (P2_Row4_Sample_1). Composition: LiMnPO4/C (LMP/C Baseline). Title: Green Phytic Acid-Assisted Synthesis of LiMn1_xFexPO4/C Cathodes for High-Performance Lithium-Ion Batteries. Synthesis route: Solvothermal",
+          "is_verified": true
+        }
+      ],
+      "checks": {
+        "paper_retrieved": true,
+        "retention_matched": true,
+        "synthesis_matched": true
+      },
+      "passed": true
+    },
+    {
+      "paper_id": "P6_T1_Row1",
+      "base_paper": "P6",
+      "title": "Recent advances of LiFe_yMn_1-yPO4 cathode materials",
+      "question": "What dopant and synthesis method are reported for the Ti-doped sample in Paper P6?",
+      "duration_s": 0.009,
+      "inference_source": "deterministic_synthesis_fallback",
+      "direct_answer": "In P6_T1_Row1, sample 'P6_T1_Row1_Sample_1' (Li(Mn0.85Fe0.15)0.92Ti0.08PO4/C) delivered 99.9 mAh/g discharge capacity at 2.0C with 99.9% retention after 50 cycles.",
+      "explanation": "Experimental evidence confirms P6_T1_Row1_Sample_1 crystallization with orthorhombic olivine structure (space group Pnma). The material was synthesized via Solid-state. Cation doping with Ti stabilizes the M2 octahedral lattice and reduces charge-transfer polarization. Lithium de/intercalation proce",
+      "retrieved_citations": [
+        {
+          "paper_id": "P6_T1_Row1",
+          "page_number": 1,
+          "doi": "10.20517/energymater.2024.37",
+          "sample_label": "P6_T1_Row1_Sample_1",
+          "composition": "Li(Mn0.85Fe0.15)0.92Ti0.08PO4/C",
+          "evidence_quote": "Paper P6_T1_Row1 (P6_T1_Row1_Sample_1). Composition: Li(Mn0.85Fe0.15)0.92Ti0.08PO4/C. Title: Recent advances of LiFe_yMn_1-yPO4 (0 < y < 1) cathode materials on performance optimization and sustainable preparation. Doped",
+          "is_verified": true
+        },
+        {
+          "paper_id": "P6_T1_Row2",
+          "page_number": 1,
+          "doi": "10.20517/energymater.2024.37",
+          "sample_label": "P6_T1_Row2_Sample_1",
+          "composition": "LiMn0.9Fe0.09Mg0.01PO4/C",
+          "evidence_quote": "Paper P6_T1_Row2 (P6_T1_Row2_Sample_1). Composition: LiMn0.9Fe0.09Mg0.01PO4/C. Title: Recent advances of LiFe_yMn_1-yPO4 (0 < y < 1) cathode materials on performance optimization and sustainable preparation. Doped with M",
+          "is_verified": true
+        },
+        {
+          "paper_id": "P6_T1_Row3",
+          "page_number": 1,
+          "doi": "10.20517/energymater.2024.37",
+          "sample_label": "P6_T1_Row3_Sample_1",
+          "composition": "Li0.97Na0.03Mn0.8Fe0.2PO4/C",
+          "evidence_quote": "Paper P6_T1_Row3 (P6_T1_Row3_Sample_1). Composition: Li0.97Na0.03Mn0.8Fe0.2PO4/C. Title: Recent advances of LiFe_yMn_1-yPO4 (0 < y < 1) cathode materials on performance optimization and sustainable preparation. Doped wit",
+          "is_verified": true
+        },
+        {
+          "paper_id": "P6_T1_Row4",
+          "page_number": 1,
+          "doi": "10.20517/energymater.2024.37",
+          "sample_label": "P6_T1_Row4_Sample_1",
+          "composition": "Li0.97Mg0.015Mn0.8Fe0.2PO4/C",
+          "evidence_quote": "Paper P6_T1_Row4 (P6_T1_Row4_Sample_1). Composition: Li0.97Mg0.015Mn0.8Fe0.2PO4/C. Title: Recent advances of LiFe_yMn_1-yPO4 (0 < y < 1) cathode materials on performance optimization and sustainable preparation. Doped wi",
+          "is_verified": true
+        }
+      ],
+      "checks": {
+        "paper_retrieved": true,
+        "synthesis_matched": true,
+        "dopant_matched": true
+      },
+      "passed": true
+    },
+    {
+      "paper_id": "P8_Row1",
+      "base_paper": "P8",
+      "title": "Olivine-Based Blended Compounds as Positive Electrodes",
+      "question": "What is the 0.1C discharge capacity and retention for the core-shell blend in Paper P8?",
+      "duration_s": 0.009,
+      "inference_source": "deterministic_synthesis_fallback",
+      "direct_answer": "In P8_Row1, sample 'P8_Row1_Sample_1' (LiMn0.66Fe0.33PO4/C Core-Shell Layered Blend) delivered 144.0 mAh/g discharge capacity at 0.1C with 98.0% retention after 50 cycles.",
+      "explanation": "Experimental evidence confirms P8_Row1_Sample_1 crystallization with orthorhombic olivine structure (space group Pnma). The material was synthesized via Sol-gel Buffer Deposition at calcination temperature 600.0 \u00b0C. Lithium de/intercalation proceeds along the 1D [010] b-axis tunnels, where surface c",
+      "retrieved_citations": [
+        {
+          "paper_id": "P8_Row1",
+          "page_number": 1,
+          "doi": "10.3390/inorganics4020017",
+          "sample_label": "P8_Row1_Sample_1",
+          "composition": "LiMn0.66Fe0.33PO4/C Core-Shell Layered Blend",
+          "evidence_quote": "Paper P8_Row1 (P8_Row1_Sample_1). Composition: LiMn0.66Fe0.33PO4/C Core-Shell Layered Blend. Title: Olivine-Based Blended Compounds as Positive Electrodes for Lithium Batteries. Synthesis route: Sol-gel Buffer Deposition",
+          "is_verified": true
+        },
+        {
+          "paper_id": "P8_Row2",
+          "page_number": 1,
+          "doi": "10.3390/inorganics4020017",
+          "sample_label": "P8_Row2_Sample_1",
+          "composition": "LiMn0.66Fe0.33PO4/C Solid Solution Control",
+          "evidence_quote": "Paper P8_Row2 (P8_Row2_Sample_1). Composition: LiMn0.66Fe0.33PO4/C Solid Solution Control. Title: Olivine-Based Blended Compounds as Positive Electrodes for Lithium Batteries. Synthesis route: Standard Solid State. Calci",
+          "is_verified": true
+        },
+        {
+          "paper_id": "P81",
+          "page_number": 1,
+          "doi": "10.1016/j.electacta.2016.01.069",
+          "sample_label": "P81_Sample_2",
+          "composition": "LMFP: LiMn0.8Fe0.2PO4 control, conventional glucose-derived carbon only (no CVD)",
+          "evidence_quote": "Paper P81 (P81_Sample_2). Composition: LMFP: LiMn0.8Fe0.2PO4 control, conventional glucose-derived carbon only (no CVD). Title: Constructing durable carbon layer on LiMn0.8Fe0.2PO4 with superior long-term cycling perform",
+          "is_verified": true
+        },
+        {
+          "paper_id": "P81",
+          "page_number": 1,
+          "doi": "10.1016/j.electacta.2016.01.069",
+          "sample_label": "P81_Sample_1",
+          "composition": "C-LMFP: LiMn0.8Fe0.2PO4 with an additional CVD carbon layer (H2/C2H2, 650 C, 8 min)",
+          "evidence_quote": "Paper P81 (P81_Sample_1). Composition: C-LMFP: LiMn0.8Fe0.2PO4 with an additional CVD carbon layer (H2/C2H2, 650 C, 8 min). Title: Constructing durable carbon layer on LiMn0.8Fe0.2PO4 with superior long-term cycling perf",
+          "is_verified": true
+        }
+      ],
+      "checks": {
+        "paper_retrieved": true,
+        "capacity_matched": true,
+        "retention_matched": true,
+        "synthesis_matched": true
+      },
+      "passed": true
+    },
+    {
+      "paper_id": "P9_Row1",
+      "base_paper": "P9",
+      "title": "Toward the Commercialization of Lithium Manganese Iron Phosphate",
+      "question": "What is the 0.1C discharge capacity of LiMn0.1Fe0.9PO4/C in Paper P9?",
+      "duration_s": 0.009,
+      "inference_source": "deterministic_synthesis_fallback",
+      "direct_answer": "In P9_Row1, sample 'P9_Row1_Sample_1' (LiMn0.1Fe0.9PO4/C) delivered 155.0 mAh/g discharge capacity at 0.1C with 95.0% retention after 30 cycles.",
+      "explanation": "Experimental evidence confirms P9_Row1_Sample_1 crystallization with orthorhombic olivine structure (space group Pnma). The material was synthesized via Hydrothermal at calcination temperature 400.0 \u00b0C. Lithium de/intercalation proceeds along the 1D [010] b-axis tunnels, where surface carbon coating",
+      "retrieved_citations": [
+        {
+          "paper_id": "P9_Row1",
+          "page_number": 1,
+          "doi": "10.3390/batteries12030087",
+          "sample_label": "P9_Row1_Sample_1",
+          "composition": "LiMn0.1Fe0.9PO4/C",
+          "evidence_quote": "Paper P9_Row1 (P9_Row1_Sample_1). Composition: LiMn0.1Fe0.9PO4/C. Title: Toward the Commercialization of Lithium Manganese Iron Phosphate for Advanced High-Energy Lithium-Ion Batteries and Beyond. Synthesis route: Hydrot",
+          "is_verified": true
+        },
+        {
+          "paper_id": "P9_Row2",
+          "page_number": 1,
+          "doi": "10.3390/batteries12030087",
+          "sample_label": "P9_Row2_Sample_1",
+          "composition": "LiMn0.2Fe0.8PO4/C",
+          "evidence_quote": "Paper P9_Row2 (P9_Row2_Sample_1). Composition: LiMn0.2Fe0.8PO4/C. Title: Toward the Commercialization of Lithium Manganese Iron Phosphate for Advanced High-Energy Lithium-Ion Batteries and Beyond. Synthesis route: Hydrot",
+          "is_verified": true
+        },
+        {
+          "paper_id": "P9_Row3",
+          "page_number": 1,
+          "doi": "10.3390/batteries12030087",
+          "sample_label": "P9_Row3_Sample_1",
+          "composition": "LiMn0.3Fe0.7PO4/C",
+          "evidence_quote": "Paper P9_Row3 (P9_Row3_Sample_1). Composition: LiMn0.3Fe0.7PO4/C. Title: Toward the Commercialization of Lithium Manganese Iron Phosphate for Advanced High-Energy Lithium-Ion Batteries and Beyond. Synthesis route: Hydrot",
+          "is_verified": true
+        },
+        {
+          "paper_id": "P9_Row4",
+          "page_number": 1,
+          "doi": "10.3390/batteries12030087",
+          "sample_label": "P9_Row4_Sample_1",
+          "composition": "LiMn0.4Fe0.6PO4/C",
+          "evidence_quote": "Paper P9_Row4 (P9_Row4_Sample_1). Composition: LiMn0.4Fe0.6PO4/C. Title: Toward the Commercialization of Lithium Manganese Iron Phosphate for Advanced High-Energy Lithium-Ion Batteries and Beyond. Synthesis route: Hydrot",
+          "is_verified": true
+        }
+      ],
+      "checks": {
+        "paper_retrieved": true,
+        "capacity_matched": true,
+        "retention_matched": true,
+        "synthesis_matched": true
+      },
+      "passed": true
+    },
+    {
+      "paper_id": "P10_Row1",
+      "base_paper": "P10",
+      "title": "Preparation and improvement electrochemical performance of Ni-Fe doped porous LiMnPO/C",
+      "question": "What is the 0.1C discharge capacity and dopant for sample P10_Row1 in Paper P10?",
+      "duration_s": 0.008,
+      "inference_source": "deterministic_synthesis_fallback",
+      "direct_answer": "In P10_Row1, sample 'P10_Row1_Sample_1' (LiMn0.85Fe0.075Ni0.075PO4/C-A) delivered 45.9 mAh/g discharge capacity at 0.1C.",
+      "explanation": "Experimental evidence confirms P10_Row1_Sample_1 crystallization with orthorhombic olivine structure (space group Pnma). The material was synthesized via Co-precipitation. Cation doping with Ni stabilizes the M2 octahedral lattice and reduces charge-transfer polarization. Lithium de/intercalation pr",
+      "retrieved_citations": [
+        {
+          "paper_id": "P10_Row1",
+          "page_number": 1,
+          "doi": "10.1038/s41598-025-12971-y",
+          "sample_label": "P10_Row1_Sample_1",
+          "composition": "LiMn0.85Fe0.075Ni0.075PO4/C-A",
+          "evidence_quote": "Paper P10_Row1 (P10_Row1_Sample_1). Composition: LiMn0.85Fe0.075Ni0.075PO4/C-A. Title: Preparation and improvement electrochemical performance of Ni-Fe doped porous LiMnPO/C materials. Doped with Ni. Synthesis route: Co-",
+          "is_verified": true
+        },
+        {
+          "paper_id": "P10_Row2",
+          "page_number": 1,
+          "doi": "10.1038/s41598-025-12971-y",
+          "sample_label": "P10_Row2_Sample_1",
+          "composition": "LiMn0.85Fe0.075Ni0.075PO4/C-B",
+          "evidence_quote": "Paper P10_Row2 (P10_Row2_Sample_1). Composition: LiMn0.85Fe0.075Ni0.075PO4/C-B. Title: Preparation and improvement electrochemical performance of Ni-Fe doped porous LiMnPO/C materials. Doped with Ni. Synthesis route: Sol",
+          "is_verified": true
+        },
+        {
+          "paper_id": "P10_Row3",
+          "page_number": 1,
+          "doi": "10.1038/s41598-025-12971-y",
+          "sample_label": "P10_Row3_Sample_1",
+          "composition": "LiMn0.85Fe0.075Ni0.075PO4/C-C",
+          "evidence_quote": "Paper P10_Row3 (P10_Row3_Sample_1). Composition: LiMn0.85Fe0.075Ni0.075PO4/C-C. Title: Preparation and improvement electrochemical performance of Ni-Fe doped porous LiMnPO/C materials. Doped with Ni. Synthesis route: Glu",
+          "is_verified": true
+        },
+        {
+          "paper_id": "P1_Row1",
+          "page_number": 1,
+          "doi": "10.1039/d2ra04427g",
+          "sample_label": "P1_Row1_Sample_1",
+          "composition": "LiMn0.8Fe0.2PO4/C (N-LMFP)",
+          "evidence_quote": "Paper P1_Row1 (P1_Row1_Sample_1). Composition: LiMn0.8Fe0.2PO4/C (N-LMFP). Title: Simple synthesis of a hierarchical LiMn0.8Fe0.2PO4/ C cathode by investigation of iron sources for lithium-ion batteries. Synthesis route:",
+          "is_verified": true
+        }
+      ],
+      "checks": {
+        "paper_retrieved": true,
+        "capacity_matched": true,
+        "synthesis_matched": true,
+        "dopant_matched": true
+      },
+      "passed": true
+    },
+    {
+      "paper_id": "P11_Row1",
+      "base_paper": "P11",
+      "title": "Ammonia-free synthesis of lithium manganese iron phosphate cathodes",
+      "question": "What is the 0.1C capacity and retention of the ammonia-free sample in Paper P11?",
+      "duration_s": 0.008,
+      "inference_source": "deterministic_synthesis_fallback",
+      "direct_answer": "In P11_Row1, sample 'P11_Row1_Sample_1' (LiMn0.4Fe0.6PO4/C (Ammonia-free)) delivered 155.0 mAh/g discharge capacity at 0.1C with 95.5% retention after 150 cycles.",
+      "explanation": "Experimental evidence confirms P11_Row1_Sample_1 crystallization with orthorhombic olivine structure (space group Pnma). The material was synthesized via Ammonia-free Co-precipitation at calcination temperature 350.0 \u00b0C. Lithium de/intercalation proceeds along the 1D [010] b-axis tunnels, where surf",
+      "retrieved_citations": [
+        {
+          "paper_id": "P11_Row1",
+          "page_number": 1,
+          "doi": "10.1039/d4su00125g",
+          "sample_label": "P11_Row1_Sample_1",
+          "composition": "LiMn0.4Fe0.6PO4/C (Ammonia-free)",
+          "evidence_quote": "Paper P11_Row1 (P11_Row1_Sample_1). Composition: LiMn0.4Fe0.6PO4/C (Ammonia-free). Title: Ammonia-free synthesis of lithium manganese iron phosphate cathodes via a co-precipitation reaction. Synthesis route: Ammonia-free",
+          "is_verified": true
+        },
+        {
+          "paper_id": "P11_Row2",
+          "page_number": 1,
+          "doi": "10.1039/d4su00125g",
+          "sample_label": "P11_Row2_Sample_1",
+          "composition": "LiMn0.6Fe0.4PO4/C (Ammonia-free)",
+          "evidence_quote": "Paper P11_Row2 (P11_Row2_Sample_1). Composition: LiMn0.6Fe0.4PO4/C (Ammonia-free). Title: Ammonia-free synthesis of lithium manganese iron phosphate cathodes via a co-precipitation reaction. Synthesis route: Ammonia-free",
+          "is_verified": true
+        },
+        {
+          "paper_id": "Lithium_manganese_iron_phosphate_materials__Design__progress__and_challenges",
+          "page_number": 18,
+          "doi": "Master Dataset",
+          "sample_label": "Ref29_LiMn0.8Fe0.2PO4_Ni",
+          "composition": "LiMn0.8Fe0.2PO4",
+          "evidence_quote": "Material Sample 'Ref29_LiMn0.8Fe0.2PO4_Ni' (ID: Lithium_manganese_iron_phosphate_materials__Design__progress__and_challenges_Ref29_LiMn0_8Fe0_2PO4_Ni) in Paper Lithium_manganese_iron_phosphate_materials__Design__progress",
+          "is_verified": true
+        },
+        {
+          "paper_id": "Lithium_manganese_iron_phosphate_materials__Design__progress__and_challenges",
+          "page_number": 18,
+          "doi": "Master Dataset",
+          "sample_label": "Ref79_LiMn0.5Fe0.5PO4_NS",
+          "composition": "LiMn0.5Fe0.5PO4",
+          "evidence_quote": "Material Sample 'Ref79_LiMn0.5Fe0.5PO4_NS' (ID: Lithium_manganese_iron_phosphate_materials__Design__progress__and_challenges_Ref79_LiMn0_5Fe0_5PO4) in Paper Lithium_manganese_iron_phosphate_materials__Design__progress__a",
+          "is_verified": true
+        }
+      ],
+      "checks": {
+        "paper_retrieved": true,
+        "capacity_matched": true,
+        "retention_matched": true,
+        "synthesis_matched": true
+      },
+      "passed": true
+    },
+    {
+      "paper_id": "P14_Row1",
+      "base_paper": "P14",
+      "title": "Hydrothermally synthesized LMFP/C",
+      "question": "What is the 0.1C discharge capacity and synthesis method of the control sample in Paper P14?",
+      "duration_s": 0.008,
+      "inference_source": "deterministic_synthesis_fallback",
+      "direct_answer": "In P14_Row1, sample 'P14_Row1_Sample_1' (LiFePO4/C (Control)) delivered 169.0 mAh/g discharge capacity at 0.1C with 90.0% retention after 50 cycles.",
+      "explanation": "Experimental evidence confirms P14_Row1_Sample_1 crystallization with orthorhombic olivine structure (space group Pnma). The material was synthesized via Hydrothermal. Lithium de/intercalation proceeds along the 1D [010] b-axis tunnels, where surface carbon coating prevents manganese dissolution.",
+      "retrieved_citations": [
+        {
+          "paper_id": "P14_Row1",
+          "page_number": 1,
+          "doi": "10.1038/s41598-021-91881-1",
+          "sample_label": "P14_Row1_Sample_1",
+          "composition": "LiFePO4/C (Control)",
+          "evidence_quote": "Paper P14_Row1 (P14_Row1_Sample_1). Composition: LiFePO4/C (Control). Title: Hydrothermally.... Synthesis route: Hydrothermal. Carbon coating: 3.2 wt% carbon. Discharge capacity at 0.1C: 169 mAh/g. Discharge capacity at",
+          "is_verified": true
+        },
+        {
+          "paper_id": "P14_Row2",
+          "page_number": 1,
+          "doi": "10.1038/s41598-021-91881-1",
+          "sample_label": "P14_Row2_Sample_1",
+          "composition": "LiMn0.1Fe0.9PO4/C (0.1)",
+          "evidence_quote": "Paper P14_Row2 (P14_Row2_Sample_1). Composition: LiMn0.1Fe0.9PO4/C (0.1). Title: Hydrothermally.... Synthesis route: Hydrothermal. Carbon coating: 3.0 wt% carbon. Discharge capacity at 0.1C: 165 mAh/g. Capacity retention",
+          "is_verified": true
+        },
+        {
+          "paper_id": "P14_Row3",
+          "page_number": 1,
+          "doi": "10.1038/s41598-021-91881-1",
+          "sample_label": "P14_Row3_Sample_1",
+          "composition": "LiMn0.2Fe0.8PO4/C (0.2)",
+          "evidence_quote": "Paper P14_Row3 (P14_Row3_Sample_1). Composition: LiMn0.2Fe0.8PO4/C (0.2). Title: Hydrothermally.... Synthesis route: Hydrothermal. Carbon coating: 3.1 wt% carbon. Discharge capacity at 0.1C: 162 mAh/g. Capacity retention",
+          "is_verified": true
+        },
+        {
+          "paper_id": "P14_Row4",
+          "page_number": 1,
+          "doi": "10.1038/s41598-021-91881-1",
+          "sample_label": "P14_Row4_Sample_1",
+          "composition": "LiMn0.3Fe0.7PO4/C (0.3)",
+          "evidence_quote": "Paper P14_Row4 (P14_Row4_Sample_1). Composition: LiMn0.3Fe0.7PO4/C (0.3). Title: Hydrothermally.... Synthesis route: Hydrothermal. Carbon coating: 3.0 wt% carbon. Discharge capacity at 0.1C: 160 mAh/g. Capacity retention",
+          "is_verified": true
+        }
+      ],
+      "checks": {
+        "paper_retrieved": true,
+        "capacity_matched": true,
+        "retention_matched": true,
+        "synthesis_matched": true
+      },
+      "passed": true
+    },
+    {
+      "paper_id": "P15_Row1",
+      "base_paper": "P15",
+      "title": "A phytic acid assisted composite",
+      "question": "What is the 0.1C discharge capacity and retention for sample EC-IC in Paper P15?",
+      "duration_s": 0.008,
+      "inference_source": "deterministic_synthesis_fallback",
+      "direct_answer": "In P15_Row1, sample 'P15_Row1_Sample_1' (LiMn0.5Fe0.5PO4/C (EC-IC)) delivered 193.0 mAh/g discharge capacity at 0.1C with 93.0% retention after 100 cycles.",
+      "explanation": "Experimental evidence confirms P15_Row1_Sample_1 crystallization with orthorhombic olivine structure (space group Pnma). The material was synthesized via Hydrothermal+Sinter. Lithium de/intercalation proceeds along the 1D [010] b-axis tunnels, where surface carbon coating prevents manganese dissolut",
+      "retrieved_citations": [
+        {
+          "paper_id": "P15_Row1",
+          "page_number": 1,
+          "doi": "10.1038/s41598-019-43140-7",
+          "sample_label": "P15_Row1_Sample_1",
+          "composition": "LiMn0.5Fe0.5PO4/C (EC-IC)",
+          "evidence_quote": "Paper P15_Row1 (P15_Row1_Sample_1). Composition: LiMn0.5Fe0.5PO4/C (EC-IC). Title: A phytic acid.... Synthesis route: Hydrothermal+Sinter. Carbon coating: 1.6 wt% carbon. Discharge capacity at 0.1C: 193 mAh/g. Capacity r",
+          "is_verified": true
+        },
+        {
+          "paper_id": "P15_Row2",
+          "page_number": 1,
+          "doi": "10.1038/s41598-019-43140-7",
+          "sample_label": "P15_Row2_Sample_1",
+          "composition": "LiMn0.5Fe0.5PO4/C (EC Only)",
+          "evidence_quote": "Paper P15_Row2 (P15_Row2_Sample_1). Composition: LiMn0.5Fe0.5PO4/C (EC Only). Title: A phytic acid.... Synthesis route: Hydrothermal+Sinter. Carbon coating: 2.1 wt% carbon. Discharge capacity at 0.1C: 142 mAh/g. Capacity",
+          "is_verified": true
+        },
+        {
+          "paper_id": "Lithium_manganese_iron_phosphate_materials__Design__progress__and_challenges",
+          "page_number": 18,
+          "doi": "Master Dataset",
+          "sample_label": "Ref29_LiMn0.8Fe0.2PO4_Ni",
+          "composition": "LiMn0.8Fe0.2PO4",
+          "evidence_quote": "Material Sample 'Ref29_LiMn0.8Fe0.2PO4_Ni' (ID: Lithium_manganese_iron_phosphate_materials__Design__progress__and_challenges_Ref29_LiMn0_8Fe0_2PO4_Ni) in Paper Lithium_manganese_iron_phosphate_materials__Design__progress",
+          "is_verified": true
+        },
+        {
+          "paper_id": "Lithium_manganese_iron_phosphate_materials__Design__progress__and_challenges",
+          "page_number": 18,
+          "doi": "Master Dataset",
+          "sample_label": "Ref79_LiMn0.5Fe0.5PO4_NS",
+          "composition": "LiMn0.5Fe0.5PO4",
+          "evidence_quote": "Material Sample 'Ref79_LiMn0.5Fe0.5PO4_NS' (ID: Lithium_manganese_iron_phosphate_materials__Design__progress__and_challenges_Ref79_LiMn0_5Fe0_5PO4) in Paper Lithium_manganese_iron_phosphate_materials__Design__progress__a",
+          "is_verified": true
+        }
+      ],
+      "checks": {
+        "paper_retrieved": true,
+        "capacity_matched": true,
+        "retention_matched": true,
+        "synthesis_matched": true
+      },
+      "passed": true
+    },
+    {
+      "paper_id": "P17_Row1",
+      "base_paper": "P17",
+      "title": "High performance LiMnPO4 baseline",
+      "question": "What is the 0.1C discharge capacity and retention reported in Paper P17?",
+      "duration_s": 0.008,
+      "inference_source": "deterministic_synthesis_fallback",
+      "direct_answer": "In P17_Row1, sample 'P17_Row1_Sample_1' (LiMnPO4/C Baseline) delivered 110.5 mAh/g discharge capacity at 0.1C with 81.0% retention after 50 cycles.",
+      "explanation": "Experimental evidence confirms P17_Row1_Sample_1 crystallization with orthorhombic olivine structure (space group Pnma). The material was synthesized via Solvothermal at calcination temperature 550.0 \u00b0C. Lithium de/intercalation proceeds along the 1D [010] b-axis tunnels, where surface carbon coatin",
+      "retrieved_citations": [
+        {
+          "paper_id": "P17_Row1",
+          "page_number": 1,
+          "doi": "10.1039/c7ra08993g",
+          "sample_label": "P17_Row1_Sample_1",
+          "composition": "LiMnPO4/C Baseline",
+          "evidence_quote": "Paper P17_Row1 (P17_Row1_Sample_1). Composition: LiMnPO4/C Baseline. Title: High performance.... Synthesis route: Solvothermal. Carbon coating: 7.1 wt% carbon. Calcination temperature: 550.0 \u00b0C for 4.0 h. Discharge capac",
+          "is_verified": true
+        },
+        {
+          "paper_id": "P17_Row3",
+          "page_number": 1,
+          "doi": "10.1039/c7ra08993g",
+          "sample_label": "P17_Row3_Sample_1",
+          "composition": "LiMn0.7Fe0.3PO4/C",
+          "evidence_quote": "Paper P17_Row3 (P17_Row3_Sample_1). Composition: LiMn0.7Fe0.3PO4/C. Title: High performance.... Synthesis route: Solvothermal. Carbon coating: 5.86 wt% carbon. Calcination temperature: 550.0 \u00b0C for 4.0 h. Discharge capac",
+          "is_verified": true
+        },
+        {
+          "paper_id": "P17_Row4",
+          "page_number": 1,
+          "doi": "10.1039/c7ra08993g",
+          "sample_label": "P17_Row4_Sample_1",
+          "composition": "LiMn0.5Fe0.5PO4/C",
+          "evidence_quote": "Paper P17_Row4 (P17_Row4_Sample_1). Composition: LiMn0.5Fe0.5PO4/C. Title: High performance.... Synthesis route: Solvothermal. Carbon coating: 6.2 wt% carbon. Calcination temperature: 550.0 \u00b0C for 4.0 h. Discharge capaci",
+          "is_verified": true
+        },
+        {
+          "paper_id": "P17_Row5",
+          "page_number": 1,
+          "doi": "10.1039/c7ra08993g",
+          "sample_label": "P17_Row5_Sample_1",
+          "composition": "LiMn0.3Fe0.7PO4/C",
+          "evidence_quote": "Paper P17_Row5 (P17_Row5_Sample_1). Composition: LiMn0.3Fe0.7PO4/C. Title: High performance.... Synthesis route: Solvothermal. Carbon coating: 6.1 wt% carbon. Calcination temperature: 550.0 \u00b0C for 4.0 h. Discharge capaci",
+          "is_verified": true
+        }
+      ],
+      "checks": {
+        "paper_retrieved": true,
+        "capacity_matched": true,
+        "retention_matched": true,
+        "synthesis_matched": true
+      },
+      "passed": true
+    },
+    {
+      "paper_id": "P20_Row1",
+      "base_paper": "P20",
+      "title": "LiMn1-xFexPO4/rmGO composites",
+      "question": "What is the 0.1C discharge capacity and retention of LiMn0.75Fe0.25PO4/rmGO in Paper P20?",
+      "duration_s": 0.008,
+      "inference_source": "deterministic_synthesis_fallback",
+      "direct_answer": "In P20_Row1, sample 'P20_Row1_Sample_1' (LiMn0.75Fe0.25PO4/rmGO) delivered 155.0 mAh/g discharge capacity at 0.1C with 98.1% retention after 100 cycles.",
+      "explanation": "Experimental evidence confirms P20_Row1_Sample_1 crystallization with orthorhombic olivine structure (space group Pnma). The material was synthesized via Two-step Hydrolysis + Solvothermal at calcination temperature 180.0 \u00b0C. Lithium de/intercalation proceeds along the 1D [010] b-axis tunnels, where",
+      "retrieved_citations": [
+        {
+          "paper_id": "P20_Row1",
+          "page_number": 1,
+          "doi": "10.1101/1107.0111v1",
+          "sample_label": "P20_Row1_Sample_1",
+          "composition": "LiMn0.75Fe0.25PO4/rmGO",
+          "evidence_quote": "Paper P20_Row1 (P20_Row1_Sample_1). Composition: LiMn0.75Fe0.25PO4/rmGO. Title: LiMn1-xFexPO4.... Synthesis route: Two-step Hydrolysis + Solvothermal. Carbon coating: 26.0 wt% carbon. Calcination temperature: 180.0 \u00b0C fo",
+          "is_verified": true
+        },
+        {
+          "paper_id": "P20_Row2",
+          "page_number": 1,
+          "doi": "10.1101/1107.0111v1",
+          "sample_label": "P20_Row2_Sample_1",
+          "composition": "Free Nanorods Control",
+          "evidence_quote": "Paper P20_Row2 (P20_Row2_Sample_1). Composition: Free Nanorods Control. Title: LiMn1-xFexPO4.... Synthesis route: Standard Solvo. Carbon coating: 8.0 wt% carbon. Calcination temperature: 180.0 \u00b0C for 12.0 h. Discharge ca",
+          "is_verified": true
+        },
+        {
+          "paper_id": "Lithium_manganese_iron_phosphate_materials__Design__progress__and_challenges",
+          "page_number": 18,
+          "doi": "Master Dataset",
+          "sample_label": "Ref29_LiMn0.8Fe0.2PO4_Ni",
+          "composition": "LiMn0.8Fe0.2PO4",
+          "evidence_quote": "Material Sample 'Ref29_LiMn0.8Fe0.2PO4_Ni' (ID: Lithium_manganese_iron_phosphate_materials__Design__progress__and_challenges_Ref29_LiMn0_8Fe0_2PO4_Ni) in Paper Lithium_manganese_iron_phosphate_materials__Design__progress",
+          "is_verified": true
+        },
+        {
+          "paper_id": "P1",
+          "page_number": 1,
+          "doi": "10.1039/d2ra04427g",
+          "sample_label": "P1_N-LMFP",
+          "composition": "LiMn0.8Fe0.2PO4/C (N-LMFP)",
+          "evidence_quote": "Paper P1 (P1_N-LMFP). Composition: LiMn0.8Fe0.2PO4/C (N-LMFP). Title: Simple synthesis of a hierarchical LiMn0.8Fe0.2PO4/C cathode by investigation of iron sources for lithium-ion batteries. Synthesis route: Solid-state",
+          "is_verified": true
+        }
+      ],
+      "checks": {
+        "paper_retrieved": true,
+        "capacity_matched": true,
+        "retention_matched": true,
+        "synthesis_matched": true
+      },
+      "passed": true
+    }
+  ]
+}

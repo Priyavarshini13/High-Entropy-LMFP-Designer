@@ -1,0 +1,504 @@
+[
+  {
+    "question_id": "eval_01",
+    "category": "rate_capability",
+    "question": "How does Mg doping influence rate capability at 5C in LMFP?",
+    "expected_papers": ["p59", "p71", "p6"],
+    "expected_sample_ids": ["p71_sample_17", "p6t1row4sample1"],
+    "expected_measurement": "discharge_capacity_5c",
+    "expected_concepts": ["mg", "5c", "diffusion", "m2", "polarization"],
+    "provenance_type": "DATASET_ROW"
+  },
+  {
+    "question_id": "eval_02",
+    "category": "crystallography",
+    "question": "What crystal structure and space group is confirmed for LiMn0.75Fe0.25PO4 in srep26686?",
+    "expected_papers": ["srep26686"],
+    "expected_sample_id": "srep26686_limn0_75fe0_25po4_rgo",
+    "expected_measurement": "space_group_pnma",
+    "expected_concepts": ["pnma", "olivine", "orthorhombic"],
+    "provenance_type": "PRIMARY_EXPERIMENTAL"
+  },
+  {
+    "question_id": "eval_03",
+    "category": "sample_association_respectively",
+    "question": "What are the discharge capacities of SD_NO3 and SD_SO4 in srep26686 at 0.05 C?",
+    "expected_papers": ["srep26686"],
+    "expected_sample_ids": ["srep26686_sd_no3", "srep26686_sd_so4"],
+    "expected_measurement": "discharge_capacity_0.05c",
+    "expected_concepts": ["sd_no3", "sd_so4", "45", "114"],
+    "provenance_type": "PRIMARY_EXPERIMENTAL"
+  },
+  {
+    "question_id": "eval_04",
+    "category": "condition_preservation",
+    "question": "What is the cycling capacity retention of the spray-dried sample in srep26686 after 1,000 cycles?",
+    "expected_papers": ["srep26686"],
+    "expected_sample_id": "srep26686_limn0_75fe0_25po4_rgo",
+    "expected_measurement": "capacity_retention_1000_cycles_10c",
+    "expected_concepts": ["93%", "1,000", "10 c"],
+    "provenance_type": "PRIMARY_EXPERIMENTAL"
+  },
+  {
+    "question_id": "eval_05",
+    "category": "degradation_mechanisms",
+    "question": "What are the reported mechanisms of Mn dissolution during LMFP cycling?",
+    "expected_papers": ["literature review", "lithium_manganese_iron_phosphate_materials__design__progress__and_challenges", "review"],
+    "expected_measurement": "mn_dissolution_jahn_teller",
+    "expected_concepts": ["jahn-teller", "mn3+", "disproportionation", "hf"],
+    "provenance_type": "SECONDARY_REVIEW"
+  },
+  {
+    "question_id": "eval_06",
+    "category": "policy_and_supervisor_rules",
+    "question": "Can we dope LMFP with Cobalt and Chromium to maximize rate performance?",
+    "expected_papers": ["p4", "supervisor_policy"],
+    "expected_measurement": "co_cr_supervisor_exclusion",
+    "expected_concepts": ["cobalt", "cost", "chromium", "toxicity"],
+    "provenance_type": "DATASET_ROW"
+  },
+  {
+    "question_id": "eval_07",
+    "category": "thermodynamics",
+    "question": "What configurational entropy threshold classifies a material as high-entropy LMFP?",
+    "expected_papers": ["he-lmfp", "specification"],
+    "expected_measurement": "s_config_1.5r",
+    "expected_concepts": ["1.5r", "s_config", "m2 site"],
+    "provenance_type": "SPECIFICATION"
+  },
+  {
+    "question_id": "eval_08",
+    "category": "synthesis_routes",
+    "question": "How do different iron precursor sources compare in Paper P1?",
+    "expected_papers": ["p1"],
+    "expected_measurement": "fe_no3_136_vs_fec2o4_126_vs_fe2o3_120",
+    "expected_concepts": ["fe(no3)3", "136", "fec2o4", "fe2o3"],
+    "provenance_type": "DATASET_ROW"
+  },
+  {
+    "question_id": "eval_09",
+    "category": "appropriate_abstention",
+    "question": "What is the sodium-ion diffusion coefficient of LMFP in propylene carbonate electrolyte?",
+    "expected_papers": ["none"],
+    "expected_measurement": "not_reported_abstain",
+    "expected_concepts": ["does not contain", "insufficient evidence", "not reported"],
+    "provenance_type": "NEGATIVE_CONTROL"
+  },
+  {
+    "question_id": "eval_10",
+    "category": "conversational_context",
+    "question": "What about its effect at 5C?",
+    "turn_1_question": "How does Mg doping influence rate capability in LMFP?",
+    "expected_papers": ["p71", "p59", "p6"],
+    "expected_sample_ids": ["p71_sample_17", "p6t1row4sample1"],
+    "expected_measurement": "discharge_capacity_5c_mg",
+    "expected_concepts": ["mg", "5c", "rate"],
+    "provenance_type": "DATASET_ROW"
+  },
+  {
+    "question_id": "eval_11",
+    "category": "multi_paper_dopant_comparison",
+    "question": "How does N/S co-doping in Reference [79] compare to Ni doping in Reference [29] at 0.1C and high rates?",
+    "expected_papers": ["lithium_manganese_iron_phosphate_materials__design__progress__and_challenges"],
+    "expected_sample_ids": [
+      "lithium_manganese_iron_phosphate_materials__design__progress__and_challenges_ref79_limn0_5fe0_5po4",
+      "lithium_manganese_iron_phosphate_materials__design__progress__and_challenges_ref29_limn0_8fe0_2po4_ni"
+    ],
+    "expected_measurement": "comparison_0.1c_5c_10c",
+    "expected_concepts": ["166.8", "144.0", "ref", "79", "29"],
+    "provenance_type": "SECONDARY_REVIEW"
+  },
+  {
+    "question_id": "eval_12",
+    "category": "voltage_window_preservation",
+    "question": "What is the operating voltage window reported for the Ni-doped sample in Reference [29]?",
+    "expected_papers": ["lithium_manganese_iron_phosphate_materials__design__progress__and_challenges"],
+    "expected_sample_id": "lithium_manganese_iron_phosphate_materials__design__progress__and_challenges_ref29_limn0_8fe0_2po4_ni",
+    "expected_measurement": "voltage_window_2.5_4.5v",
+    "expected_concepts": ["2.5", "4.5", "voltage", "29"],
+    "provenance_type": "SECONDARY_REVIEW"
+  },
+  {
+    "question_id": "eval_13",
+    "category": "carbon_composites",
+    "question": "What role does reduced graphene oxide (rGO) play in the LiMn0.75Fe0.25PO4 composite synthesized in srep26686?",
+    "expected_papers": ["srep26686"],
+    "expected_sample_id": "srep26686_limn0_75fe0_25po4_rgo",
+    "expected_measurement": "3d_conductive_wrapping",
+    "expected_concepts": ["rgo", "network", "conductive", "3d"],
+    "provenance_type": "PRIMARY_EXPERIMENTAL"
+  },
+  {
+    "question_id": "eval_14",
+    "category": "synthesis_conditions",
+    "question": "What calcination temperature and atmosphere were utilized for the spray-dried LiMn0.75Fe0.25PO4 in srep26686?",
+    "expected_papers": ["srep26686"],
+    "expected_sample_id": "srep26686_limn0_75fe0_25po4_rgo",
+    "expected_measurement": "calcination_650c_6h_ar_h2",
+    "expected_concepts": ["650", "ar/h2", "atmosphere", "calcined"],
+    "provenance_type": "PRIMARY_EXPERIMENTAL"
+  },
+  {
+    "question_id": "eval_15",
+    "category": "impurity_phases",
+    "question": "Why did the nitrate precursor sample SD_NO3 show inferior electrochemical capacity in srep26686?",
+    "expected_papers": ["srep26686"],
+    "expected_sample_id": "srep26686_sd_no3",
+    "expected_measurement": "fe2o3_dead_impurity",
+    "expected_concepts": ["fe2o3", "impurity", "nitrate", "sd_no3"],
+    "provenance_type": "PRIMARY_EXPERIMENTAL"
+  },
+  {
+    "question_id": "eval_16",
+    "category": "dopant_strategies_ti",
+    "question": "What are the reported effects of Ti4+ doping on the structural and electrochemical properties of LMFP?",
+    "expected_papers": ["p6", "p7", "p8", "master_dataset"],
+    "expected_measurement": "ti4_m2_pillar_li_vacancies",
+    "expected_concepts": ["ti", "pillar", "vacancies", "polarization"],
+    "provenance_type": "DATASET_ROW"
+  },
+  {
+    "question_id": "eval_17",
+    "category": "supervisor_policy_vs_literature",
+    "question": "Does academic literature report electrochemical improvements from Cobalt doping in LMFP, and why is it restricted in this project?",
+    "expected_papers": ["p4", "supervisor_policy"],
+    "expected_measurement": "co_high_rate_vs_supervisor_exclusion",
+    "expected_concepts": ["cobalt", "cost", "literature", "excluded"],
+    "provenance_type": "DATASET_ROW"
+  },
+  {
+    "question_id": "eval_18",
+    "category": "high_rate_capability",
+    "question": "What discharge capacity or retention is achieved at 10C rate in the optimized LMFP literature samples?",
+    "expected_papers": ["srep26686", "lithium_manganese_iron_phosphate_materials__design__progress__and_challenges"],
+    "expected_sample_ids": [
+      "srep26686_limn0_75fe0_25po4_rgo",
+      "lithium_manganese_iron_phosphate_materials__design__progress__and_challenges_ref29_limn0_8fe0_2po4_ni"
+    ],
+    "expected_measurement": "10c_retention_93_or_105.5mah_g",
+    "expected_concepts": ["10c", "retention", "93%", "105.5"],
+    "provenance_type": "PRIMARY_EXPERIMENTAL"
+  },
+  {
+    "question_id": "eval_19",
+    "category": "stoichiometry_tradeoffs",
+    "question": "What is the scientific trade-off between higher manganese content (e.g. Mn0.8Fe0.2) versus equimolar composition (Mn0.5Fe0.5) in LMFP?",
+    "expected_papers": ["literature review", "lithium_manganese_iron_phosphate_materials__design__progress__and_challenges", "master_dataset"],
+    "expected_measurement": "voltage_plateau_vs_jahn_teller_dissolution",
+    "expected_concepts": ["voltage", "4.1 v", "jahn-teller", "conductivity"],
+    "provenance_type": "SECONDARY_REVIEW"
+  },
+  {
+    "question_id": "eval_20",
+    "category": "synthesis_comparison",
+    "question": "How does solvothermal synthesis compare to solid-state reaction in terms of particle morphology and kinetics for LMFP?",
+    "expected_papers": ["literature review", "lithium_manganese_iron_phosphate_materials__design__progress__and_challenges", "master_dataset"],
+    "expected_measurement": "nanocrystals_50_100nm_vs_microns",
+    "expected_concepts": ["solvothermal", "solid-state", "diffusion", "nanoscale"],
+    "provenance_type": "SECONDARY_REVIEW"
+  },
+  {
+    "question_id": "eval_21",
+    "category": "coulombic_efficiency",
+    "question": "What initial Coulombic efficiency or capacity loss mechanisms are typically observed in first cycle LMFP?",
+    "expected_papers": ["literature review", "srep26686", "master_dataset"],
+    "expected_measurement": "ice_85_92_sei_formation",
+    "expected_concepts": ["sei", "coulombic", "irreversible", "loss"],
+    "provenance_type": "PRIMARY_EXPERIMENTAL"
+  },
+  {
+    "question_id": "eval_22",
+    "category": "condition_preservation_mass_loading",
+    "question": "What active mass loading was reported for the solvothermal Ni-doped LMFP cathode in Reference [29]?",
+    "expected_papers": ["lithium_manganese_iron_phosphate_materials__design__progress__and_challenges"],
+    "expected_sample_id": "lithium_manganese_iron_phosphate_materials__design__progress__and_challenges_ref29_limn0_8fe0_2po4_ni",
+    "expected_measurement": "mass_loading_2.0_mg_cm2",
+    "expected_concepts": ["2.0", "mg/cm2", "loading", "29"],
+    "provenance_type": "SECONDARY_REVIEW"
+  },
+  {
+    "question_id": "eval_23",
+    "category": "crystallography_kinetics",
+    "question": "Along which crystallographic axis of the Pnma space group does 1D lithium-ion diffusion occur in olivine LMFP?",
+    "expected_papers": ["srep26686", "domain"],
+    "expected_measurement": "b_axis_010_1d_channel",
+    "expected_concepts": ["b-axis", "010", "1d", "pnma"],
+    "provenance_type": "PRIMARY_EXPERIMENTAL"
+  },
+  {
+    "question_id": "eval_24",
+    "category": "carbon_tradeoffs",
+    "question": "What is the technical trade-off of excessive carbon coating (> 5 wt%) on LMFP cathode performance?",
+    "expected_papers": ["literature review", "lithium_manganese_iron_phosphate_materials__design__progress__and_challenges", "domain"],
+    "expected_measurement": "tap_density_loss_volumetric_penalty",
+    "expected_concepts": ["tap density", "volumetric", "carbon", "trade-off"],
+    "provenance_type": "SECONDARY_REVIEW"
+  },
+  {
+    "question_id": "eval_25",
+    "category": "research_gaps",
+    "question": "What are the major unaddressed research gaps regarding high-temperature (55 °C) cycling of LMFP?",
+    "expected_papers": ["literature review", "lithium_manganese_iron_phosphate_materials__design__progress__and_challenges", "domain"],
+    "expected_measurement": "mn_dissolution_55c_hf_attack",
+    "expected_concepts": ["55", "dissolution", "electrolyte", "gap"],
+    "provenance_type": "SECONDARY_REVIEW"
+  },
+  {
+    "question_id": "eval_26",
+    "category": "appropriate_abstention_solid_electrolyte",
+    "question": "What is the room temperature ionic conductivity of PEO solid polymer electrolyte with LiMn0.7Fe0.3PO4 in the dataset?",
+    "expected_papers": ["none"],
+    "expected_measurement": "not_reported_abstain",
+    "expected_concepts": ["does not contain", "insufficient evidence", "not reported"],
+    "provenance_type": "NEGATIVE_CONTROL"
+  },
+  {
+    "question_id": "eval_27",
+    "category": "appropriate_abstention_safety_testing",
+    "question": "What are the nail penetration safety test results for 50 Ah LMFP pouch cells in the local literature database?",
+    "expected_papers": ["none"],
+    "expected_measurement": "not_reported_abstain",
+    "expected_concepts": ["does not contain", "insufficient evidence", "not reported"],
+    "provenance_type": "NEGATIVE_CONTROL"
+  },
+  {
+    "question_id": "eval_28",
+    "category": "conversational_context_ti",
+    "question": "What is its structural role in the olivine lattice?",
+    "turn_1_question": "What are the reported effects of Ti4+ doping in LMFP?",
+    "expected_papers": ["literature review", "p6", "p7", "p8", "master_dataset"],
+    "expected_measurement": "ti4_m2_pillar_role",
+    "expected_concepts": ["ti", "pillar", "m2", "lattice"],
+    "provenance_type": "DATASET_ROW"
+  },
+  {
+    "question_id": "eval_29",
+    "category": "multi_paper_capacity_comparison",
+    "question": "Compare the 0.1C discharge capacity of freeze-dried Fe(NO3)3 LMFP in Paper P1 with the solvothermal N/S co-doped LMFP in Reference [79].",
+    "expected_papers": ["p1", "lithium_manganese_iron_phosphate_materials__design__progress__and_challenges"],
+    "expected_sample_id": "lithium_manganese_iron_phosphate_materials__design__progress__and_challenges_ref79_limn0_5fe0_5po4",
+    "expected_measurement": "p1_136_vs_ref79_166.8",
+    "expected_concepts": ["136", "166.8", "p1", "79"],
+    "provenance_type": "DATASET_ROW"
+  },
+  {
+    "question_id": "eval_30",
+    "category": "conflicting_evidence_precursors",
+    "question": "Do different synthesis precursors yield conflicting electrochemical results for LMFP, and what evidence supports this?",
+    "expected_papers": ["srep26686"],
+    "expected_sample_ids": ["srep26686_sd_no3", "srep26686_sd_so4"],
+    "expected_measurement": "fe_no3_45_impurity_vs_fe_so4_114_pure",
+    "expected_concepts": ["sd_no3", "sd_so4", "nitrate", "sulfate", "impurity"],
+    "provenance_type": "PRIMARY_EXPERIMENTAL"
+  },
+  {
+    "question_id": "eval_31",
+    "category": "cycling_retention_high_c_rate",
+    "question": "What capacity retention does solvothermal N/S co-doped LiMn0.5Fe0.5PO4 achieve after 1000 cycles at 5C in Reference [79]?",
+    "expected_papers": ["lithium_manganese_iron_phosphate_materials__design__progress__and_challenges"],
+    "expected_sample_id": "lithium_manganese_iron_phosphate_materials__design__progress__and_challenges_ref79_limn0_5fe0_5po4",
+    "expected_measurement": "retention_92_1000_cycles_5c",
+    "expected_concepts": ["92.0%", "1,000", "5c", "79"],
+    "provenance_type": "SECONDARY_REVIEW"
+  },
+  {
+    "question_id": "eval_32",
+    "category": "configurational_entropy_calculation",
+    "question": "How is the configurational entropy S_config calculated for a multi-element substituted LMFP material?",
+    "expected_papers": ["he-lmfp", "specification"],
+    "expected_measurement": "s_config_formula",
+    "expected_concepts": ["s_config", "-r", "m2 site", "entropy"],
+    "provenance_type": "SPECIFICATION"
+  },
+  {
+    "question_id": "eval_33",
+    "category": "multi_dopant_comparison",
+    "question": "How does Ni doping in Reference [29] compare to Mg doping in LMFP?",
+    "expected_papers": ["lithium_manganese_iron_phosphate_materials__design__progress__and_challenges", "p6", "p71"],
+    "expected_sample_id": "lithium_manganese_iron_phosphate_materials__design__progress__and_challenges_ref29_limn0_8fe0_2po4_ni",
+    "expected_measurement": "ni_144_vs_mg_performance",
+    "expected_concepts": ["144.0", "ni", "mg", "m2"],
+    "provenance_type": "SECONDARY_REVIEW"
+  },
+  {
+    "question_id": "eval_34",
+    "category": "multi_turn_plural_pronoun_continuity",
+    "question": "What about their performance at 5C?",
+    "turn_1_question": "How does Ni doping in Reference [29] compare to Mg doping in LMFP?",
+    "expected_papers": ["lithium_manganese_iron_phosphate_materials__design__progress__and_challenges", "p71"],
+    "expected_sample_ids": ["lithium_manganese_iron_phosphate_materials__design__progress__and_challenges_ref29_limn0_8fe0_2po4_ni", "p71_sample_17"],
+    "expected_measurement": "discharge_capacity_5c",
+    "expected_concepts": ["ni", "mg", "5c"],
+    "provenance_type": "SECONDARY_REVIEW"
+  },
+  {
+    "question_id": "eval_35",
+    "category": "multi_turn_condition_persistence",
+    "question": "What about after 500 cycles?",
+    "turn_1_question": "What about their performance at 5C?",
+    "expected_papers": ["lithium_manganese_iron_phosphate_materials__design__progress__and_challenges"],
+    "expected_sample_id": "lithium_manganese_iron_phosphate_materials__design__progress__and_challenges_ref29_limn0_8fe0_2po4_ni",
+    "expected_measurement": "capacity_retention_500_cycles",
+    "expected_concepts": ["500", "retention", "88.68%"],
+    "provenance_type": "SECONDARY_REVIEW"
+  },
+  {
+    "question_id": "eval_36",
+    "category": "multi_turn_pronoun_ambiguity_disambiguation",
+    "question": "What is its capacity?",
+    "turn_1_question": "How does Ni doping compare to Mg doping in LMFP?",
+    "expected_papers": ["clarification"],
+    "expected_measurement": "clarification_prompt",
+    "expected_concepts": ["clarification", "ni", "mg"],
+    "provenance_type": "CONVERSATIONAL_STATE"
+  },
+  {
+    "question_id": "eval_37",
+    "category": "composite_query_decomposition",
+    "question": "Compare discharge capacity of SD_NO3 and SD_SO4 at 0.1C and 1C, and explain the difference in EIS Rct impedance.",
+    "expected_papers": ["srep26686"],
+    "expected_sample_ids": ["srep26686_sd_no3", "srep26686_sd_so4"],
+    "expected_measurement": "eis_rct_and_capacity",
+    "expected_concepts": ["sd_no3", "sd_so4", "rct", "fe2o3"],
+    "provenance_type": "PRIMARY_EXPERIMENTAL"
+  },
+  {
+    "question_id": "eval_38",
+    "category": "in_scope_cell_testing_pouch_cell",
+    "question": "How does pouch cell cycling stability compare for carbon-coated LMFP cathodes?",
+    "expected_papers": ["cell_knowledge_base", "literature review", "lithium_manganese_iron_phosphate_materials__design__progress__and_challenges"],
+    "expected_measurement": "pouch_cell_retention",
+    "expected_concepts": ["pouch", "cycling", "carbon"],
+    "provenance_type": "SPECIFICATION"
+  },
+  {
+    "question_id": "eval_39",
+    "category": "in_scope_electrolyte_additives",
+    "question": "What electrolyte additives help suppress Mn dissolution during high-temperature LMFP cycling?",
+    "expected_papers": ["literature review"],
+    "expected_measurement": "electrolyte_additives_cei",
+    "expected_concepts": ["fec", "vc", "dissolution"],
+    "provenance_type": "SECONDARY_REVIEW"
+  },
+  {
+    "question_id": "eval_40",
+    "category": "supervisor_policy_vs_literature_separation",
+    "question": "Why does the supervisor rule exclude Cobalt doping despite literature showing high rate capacity in Paper P4?",
+    "expected_papers": ["p4", "supervisor_policy"],
+    "expected_sample_ids": ["p4row4sample1", "p4_sample_4", "p4row1sample1"],
+    "expected_measurement": "co_cr_supervisor_exclusion",
+    "expected_concepts": ["cobalt", "cost", "143.6"],
+    "provenance_type": "DATASET_ROW"
+  },
+  {
+    "question_id": "eval_41",
+    "category": "synthesis_route_comparison",
+    "question": "How does solvothermal synthesis compare to solid-state ball-milling for LMFP particle size and rate capability?",
+    "expected_papers": ["literature review"],
+    "expected_measurement": "synthesis_route_comparison",
+    "expected_concepts": ["solvothermal", "solid-state", "diffusion"],
+    "provenance_type": "SECONDARY_REVIEW"
+  },
+  {
+    "question_id": "eval_42",
+    "category": "precursor_divergence_phase_purity",
+    "question": "How do Fe(NO3)3 and FeSO4 precursors affect phase purity and Fe2O3 impurity formation in spray-dried LMFP?",
+    "expected_papers": ["srep26686"],
+    "expected_sample_ids": ["srep26686_sd_no3", "srep26686_sd_so4"],
+    "expected_measurement": "fe_no3_45_impurity_vs_fe_so4_114_pure",
+    "expected_concepts": ["fe(no3)3", "feso4", "impurity", "fe2o3"],
+    "provenance_type": "PRIMARY_EXPERIMENTAL"
+  },
+  {
+    "question_id": "eval_43",
+    "category": "condition_parity_voltage_cutoff",
+    "question": "Why cannot a 2.0-4.2V cycling test be directly compared to a 2.5-4.5V test for LMFP capacity?",
+    "expected_papers": ["literature review", "lithium_manganese_iron_phosphate_materials__design__progress__and_challenges"],
+    "expected_measurement": "voltage_window_parity",
+    "expected_concepts": ["4.1", "4.2", "4.5", "plateau"],
+    "provenance_type": "SECONDARY_REVIEW"
+  },
+  {
+    "question_id": "eval_44",
+    "category": "high_rate_capacity_10c",
+    "question": "What is the 10C discharge capacity reported for spray-dried LiMn0.75Fe0.25PO4/rGO in srep26686?",
+    "expected_papers": ["srep26686"],
+    "expected_sample_id": "srep26686_limn0_75fe0_25po4_rgo",
+    "expected_measurement": "discharge_capacity_10c",
+    "expected_concepts": ["86", "10c", "srep26686"],
+    "provenance_type": "PRIMARY_EXPERIMENTAL"
+  },
+  {
+    "question_id": "eval_45",
+    "category": "eis_impedance_characterization",
+    "question": "What charge transfer resistance Rct was observed for SD_NO3 compared to SD_SO4 in srep26686?",
+    "expected_papers": ["srep26686"],
+    "expected_sample_ids": ["srep26686_sd_no3", "srep26686_sd_so4"],
+    "expected_measurement": "charge_transfer_resistance_rct",
+    "expected_concepts": ["rct", "sd_so4", "sd_no3"],
+    "provenance_type": "PRIMARY_EXPERIMENTAL"
+  },
+  {
+    "question_id": "eval_46",
+    "category": "appropriate_abstention_sodium_ion",
+    "question": "What is the sodium-ion storage capacity of pure hard carbon anodes in propylene carbonate?",
+    "expected_papers": ["none"],
+    "expected_measurement": "abstention_negative_control",
+    "expected_concepts": ["does not contain", "insufficient evidence"],
+    "provenance_type": "NEGATIVE_CONTROL"
+  },
+  {
+    "question_id": "eval_47",
+    "category": "appropriate_abstention_non_lmfp",
+    "question": "What are the thermal runaway nail penetration results for commercial pure NCM811 pouch cells without LMFP?",
+    "expected_papers": ["none"],
+    "expected_measurement": "abstention_negative_control",
+    "expected_concepts": ["does not contain", "insufficient evidence"],
+    "provenance_type": "NEGATIVE_CONTROL"
+  },
+  {
+    "question_id": "eval_48",
+    "category": "composition_stoichiometry_tradeoff",
+    "question": "How does increasing the Mn/Fe ratio from Mn0.5Fe0.5 to Mn0.8Fe0.2 affect the discharge voltage plateau and electronic conductivity?",
+    "expected_papers": ["literature review"],
+    "expected_measurement": "mn_fe_stoichiometry_tradeoff",
+    "expected_concepts": ["4.1", "conductivity", "jahn-teller"],
+    "provenance_type": "SECONDARY_REVIEW"
+  },
+  {
+    "question_id": "eval_49",
+    "category": "crystallography_1d_channel",
+    "question": "Which crystallographic axis corresponds to the 1D lithium-ion diffusion channel in Pnma olivine LMFP?",
+    "expected_papers": ["specification", "srep26686"],
+    "expected_measurement": "1d_diffusion_channel_010",
+    "expected_concepts": ["[010]", "b-axis", "1d"],
+    "provenance_type": "SPECIFICATION"
+  },
+  {
+    "question_id": "eval_50",
+    "category": "provenance_classification_secondary_review",
+    "question": "Why is data from Reference [29] categorized as secondary review provenance in the literature review?",
+    "expected_papers": ["lithium_manganese_iron_phosphate_materials__design__progress__and_challenges"],
+    "expected_measurement": "secondary_review_provenance_audit",
+    "expected_concepts": ["secondary", "review", "[29]"],
+    "provenance_type": "SECONDARY_REVIEW"
+  },
+  {
+    "question_id": "eval_51",
+    "category": "research_gap_high_temperature",
+    "question": "What is the major research gap regarding 55°C high-temperature calendar life and cycling of high-Mn LMFP?",
+    "expected_papers": ["literature review"],
+    "expected_measurement": "55c_high_temperature_gap",
+    "expected_concepts": ["55", "dissolution", "gap"],
+    "provenance_type": "SECONDARY_REVIEW"
+  },
+  {
+    "question_id": "eval_52",
+    "category": "hypothesis_recommendation",
+    "question": "What dopant combination would you recommend to stabilize the M2 site while respecting supervisor zero-Co/Cr rules?",
+    "expected_papers": ["recommendation_engine", "p4", "supervisor_policy"],
+    "expected_measurement": "m2_doping_hypothesis",
+    "expected_concepts": ["mg", "ti", "pillar"],
+    "provenance_type": "SPECIFICATION"
+  }
+]

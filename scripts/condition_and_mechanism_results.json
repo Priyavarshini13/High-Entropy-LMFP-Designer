@@ -1,0 +1,80 @@
+{
+  "condition_parity_evaluation": {
+    "passed": true,
+    "c_rate_aligned": false,
+    "voltage_window_aligned": false,
+    "cycle_count_aligned": false,
+    "divergence_notes": [
+      "Disparate C-Rates: Sample_A measured at [0.1] C vs Sample_B at [10.0] C. Comparing different C-rates is physically invalid.",
+      "Voltage Window Divergence: Sample_A tested in 2.5-4.5 V vs Sample_B in 2.0-4.2 V. Narrower voltage windows truncate Mn2+/Mn3+ capacity (4.1 V).",
+      "Cycle Count Divergence: Sample_A tested at [100] cycles vs Sample_B at [1000] cycles."
+    ]
+  },
+  "unsupported_number_detection": {
+    "passed": true,
+    "warnings_count": 2,
+    "detected_178_5": true,
+    "detected_99_8": true,
+    "warnings": [
+      "Numerical Claim Warning: 178.5 mAh/g was cited but not found in retrieved experimental profiles.",
+      "Numerical Claim Warning: 99.8% retention was cited but not found in retrieved experimental profiles."
+    ]
+  },
+  "mechanism_grounding": {
+    "passed": true,
+    "queries": [
+      {
+        "id": "1D_DIFFUSION_TUNNELS",
+        "query": "Along which crystallographic axis does lithium diffusion occur in olivine LMFP?",
+        "matched_concepts": [
+          "[010]",
+          "b-axis",
+          "pnma",
+          "1d"
+        ],
+        "expected_concepts": [
+          "[010]",
+          "b-axis",
+          "pnma",
+          "1d"
+        ],
+        "direct_answer_snippet": "LMFP adopts the orthorhombic olivine crystal structure with space group Pnma, where lithium ions diffuse via one-dimensi",
+        "passed": true
+      },
+      {
+        "id": "JAHN_TELLER_DISTORTION",
+        "query": "What causes manganese dissolution during high-potential cycling of LMFP?",
+        "matched_concepts": [
+          "jahn-teller",
+          "mn3+",
+          "disproportionation",
+          "dissolution"
+        ],
+        "expected_concepts": [
+          "jahn-teller",
+          "mn3+",
+          "disproportionation",
+          "dissolution"
+        ],
+        "direct_answer_snippet": "Manganese dissolution is driven by the Jahn-Teller distortion of high-spin Mn3+ ions (t2g^3 eg^1) at high potentials, wh",
+        "passed": true
+      },
+      {
+        "id": "M2_SITE_STABILIZATION",
+        "query": "Which crystallographic site do Ni, Mg, and Ti substitute into in LMFP, and how does this affect structural stability?",
+        "matched_concepts": [
+          "m2",
+          "site",
+          "diffusion"
+        ],
+        "expected_concepts": [
+          "m2",
+          "site",
+          "diffusion"
+        ],
+        "direct_answer_snippet": "In Reference [29], Ni-doped LiMn0.8Fe0.2PO4 delivered 144.0 mAh/g at 0.1C and 105.5 mAh/g at 10C. In comparison, Mg-dope",
+        "passed": true
+      }
+    ]
+  }
+}

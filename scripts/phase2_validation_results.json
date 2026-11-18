@@ -1,0 +1,450 @@
+{
+  "pdf_ingestion": {
+    "jacs_6c05295_spin_state.pdf": {
+      "status": "partial_extraction",
+      "total_pages": 11,
+      "candidate_pages": 11,
+      "records_extracted": 6,
+      "staged_review_ids": [
+        100000,
+        100001,
+        100002,
+        100003,
+        100043,
+        100005
+      ],
+      "sample_compositions": [
+        "LixMn0.7Fe0.3PO4",
+        "LiMn0.5Fe0.5PO4",
+        "LiMn0.6Fe0.4PO4",
+        "LiMn0.75Fe0.25PO4",
+        "LiMn0.8Fe0.2PO4"
+      ],
+      "measurements_count": 24
+    },
+    "rsc_adv_c7ra08993g_nanosized.pdf": {
+      "status": "partial_extraction",
+      "total_pages": 8,
+      "candidate_pages": 7,
+      "records_extracted": 23,
+      "staged_review_ids": [
+        100006,
+        100007,
+        100008,
+        100009,
+        100010,
+        100011,
+        100012,
+        100013,
+        100014,
+        100015,
+        100016,
+        100017,
+        100018,
+        100019,
+        100020,
+        100021,
+        100022,
+        100023,
+        100024,
+        100025,
+        100026,
+        100027,
+        100028
+      ],
+      "sample_compositions": [
+        "LiMn0.7Fe0.3PO4/C",
+        "LiMn0.75Fe0.25PO4/C",
+        "LiMn0.7Fe0.3PO4/C",
+        "LiMn0.7Fe0.3PO4",
+        "LiMn0.70Fe0.30PO4"
+      ],
+      "measurements_count": 3
+    },
+    "molecules_26_07641_solgel.pdf": {
+      "status": "partial_extraction",
+      "total_pages": 12,
+      "candidate_pages": 12,
+      "records_extracted": 19,
+      "staged_review_ids": [
+        100029,
+        100030,
+        100031,
+        100032,
+        100033,
+        100030,
+        100031,
+        100032,
+        100033,
+        100034,
+        100035,
+        100036,
+        100036,
+        100037,
+        100038,
+        100039,
+        100040,
+        100041,
+        100042
+      ],
+      "sample_compositions": [
+        "LiMn0.8Fe0.2PO4",
+        "LiMn0.9Fe0.1PO4/C",
+        "LiMn0.8Fe0.2PO4/C",
+        "LiMn0.7Fe0.3PO4/C",
+        "LiMn0.6Fe0.4PO4/C"
+      ],
+      "measurements_count": 4
+    },
+    "adv_sustain_syst_2022_minnetti.pdf": {
+      "status": "no_records_found",
+      "total_pages": 13,
+      "candidate_pages": 12,
+      "records_extracted": 0,
+      "staged_review_ids": [],
+      "sample_compositions": [],
+      "measurements_count": 19
+    },
+    "sust_energy_d4su00125g_ammonia_free.pdf": {
+      "status": "no_records_found",
+      "total_pages": 10,
+      "candidate_pages": 9,
+      "records_extracted": 0,
+      "staged_review_ids": [],
+      "sample_compositions": [],
+      "measurements_count": 3
+    }
+  },
+  "scientific_evidence_verification": {
+    "jacs_6c05295_spin_state.pdf": {
+      "expected_composition": "LiMn0.8Fe0.2PO4",
+      "has_expected_comp": true,
+      "expected_synthesis": "Hydrothermal / Sol-gel with spin-state engineering",
+      "expected_rates": "64.7 mAh/g at 50C, 96.2% retention after 10000 cycles at 10C",
+      "expected_structure": "Orthorhombic olivine Pnma",
+      "extraction_fidelity": "HIGH",
+      "notes": "Extracted stoichiometry ladder matches published tables."
+    },
+    "rsc_adv_c7ra08993g_nanosized.pdf": {
+      "expected_composition": "LiMn0.7Fe0.3PO4/C (x=0.15, 0.20, 0.25, 0.30)",
+      "has_expected_comp": true,
+      "expected_synthesis": "Solvothermal (ethylene glycol) + carbon coating",
+      "expected_rates": "150.3 mAh/g at 0.1C, 139.1 mAh/g at 1C, voltage 2.5-4.5 V",
+      "expected_structure": "Orthorhombic olivine, uniform nanorods (50-80 nm)",
+      "extraction_fidelity": "HIGH",
+      "notes": "Extracted stoichiometry ladder matches published tables."
+    },
+    "molecules_26_07641_solgel.pdf": {
+      "expected_composition": "LiMn0.8Fe0.2PO4/C (ladder x=0 to 0.4)",
+      "has_expected_comp": true,
+      "expected_synthesis": "Citric acid sol-gel process, calcination 650 C 6h in Ar",
+      "expected_rates": "152.5 mAh/g at 0.1C, 95.7 mAh/g at 5C",
+      "expected_structure": "Refined lattice a=10.425, b=6.081, c=4.737 A, V=300.7 A3",
+      "extraction_fidelity": "HIGH",
+      "notes": "Extracted stoichiometry ladder matches published tables."
+    },
+    "adv_sustain_syst_2022_minnetti.pdf": {
+      "expected_composition": "LiFe0.6Mn0.4PO4 (written Fe first)",
+      "has_expected_comp": false,
+      "expected_synthesis": "Sol-gel method with glucose/sucrose carbon coating",
+      "expected_rates": "120-130 mAh/g",
+      "expected_structure": "Pnma space group, XRD refined",
+      "extraction_fidelity": "PARTIAL",
+      "notes": "Regex formula parser requires Mn-first notation (LiMn...Fe...); papers writing Fe-first or generalized LiMnxFe1-x require reviewer normalization."
+    },
+    "sust_energy_d4su00125g_ammonia_free.pdf": {
+      "expected_composition": "LiMnxFe1-xPO4 (ammonia-free continuous co-precipitation)",
+      "has_expected_comp": false,
+      "expected_synthesis": "Continuous tank reactor co-precipitation without NH4OH",
+      "expected_rates": "155.0 mAh/g discharge capacity, 95.0% retention",
+      "expected_structure": "Dense spherical secondary particles (tap density 1.4 g/cm3)",
+      "extraction_fidelity": "PARTIAL",
+      "notes": "Regex formula parser requires Mn-first notation (LiMn...Fe...); papers writing Fe-first or generalized LiMnxFe1-x require reviewer normalization."
+    }
+  },
+  "copilot_scenarios": {
+    "scenario_1_single_paper": {
+      "title": "Single-Paper Grounded Lookup",
+      "query": "What is the 0.1C discharge capacity and spin-state engineering mechanism of LiMn0.8Fe0.2PO4 in jacs_6c05295?",
+      "deterministic_mode": {
+        "inference_source": "deterministic_synthesis_fallback",
+        "direct_answer": "In Reference [29], solvothermal Ni-doped LiMn0.8Fe0.2PO4 delivered a discharge capacity of 144.0 mAh/g at 0.1C (and 119.5 mAh/g at 2C).",
+        "citations_count": 4,
+        "citations": [
+          "jacs_6c05295_spin_state",
+          "Lithium_manganese_iron_phosphate_materials__Design__progress__and_challenges",
+          "P1",
+          "Lithium_manganese_iron_phosphate_materials__Design__progress__and_challenges"
+        ],
+        "conflicts_and_limitations": "Provenance Divergence: Sample_p5_discharge_capacity is from BACKGROUND_MENTION (jacs_6c05295_spin_state), whereas Ref29_LiMn0.8Fe0.2PO4_Ni is from SECONDARY_REVIEW (Lithium_manganese_iron_phosphate_materials__Design__progress__and_challenges). Secondary review entries must be validated against primary experimental data. · Sample [Sample_p5_discharge_capacity] is currently marked unconfirmed/unresolved · Secondary review provenance in [Lithium_manganese_iron_phosphate_materials__Design__progress__and_challenges]: verify primary experimental source",
+        "disclaimer": "AI-assisted scientific research · Strictly evidence-grounded · Verify against original publications"
+      },
+      "qwen_mode": {
+        "inference_source": "qwen3:4b_grounded",
+        "direct_answer": "We are given a research question: \"What is the 0.1C discharge capacity and spin-state engineering mechanism of LiMn0.8Fe0.2PO4 in jacs_6c05295?\"",
+        "citations_count": 4,
+        "citations": [
+          "jacs_6c05295_spin_state",
+          "Lithium_manganese_iron_phosphate_materials__Design__progress__and_challenges",
+          "P1",
+          "Lithium_manganese_iron_phosphate_materials__Design__progress__and_challenges"
+        ],
+        "conflicts_and_limitations": "Provenance Divergence: Sample_p5_discharge_capacity is from BACKGROUND_MENTION (jacs_6c05295_spin_state), whereas Ref29_LiMn0.8Fe0.2PO4_Ni is from SECONDARY_REVIEW (Lithium_manganese_iron_phosphate_materials__Design__progress__and_challenges). Secondary review entries must be validated against primary experimental data. · Sample [Sample_p5_discharge_capacity] is currently marked unconfirmed/unresolved · Secondary review provenance in [Lithium_manganese_iron_phosphate_materials__Design__progress__and_challenges]: verify primary experimental source",
+        "disclaimer": "AI-assisted scientific research · Strictly evidence-grounded · Verify against original publications"
+      }
+    },
+    "scenario_2_multi_paper": {
+      "title": "Multi-Paper Synthesis Comparison",
+      "query": "Compare the solvothermal synthesis route in rsc_adv_c7ra08993g with the sol-gel route in molecules_26_07641 for LiMn0.7Fe0.3PO4.",
+      "deterministic_mode": {
+        "inference_source": "deterministic_synthesis_fallback",
+        "direct_answer": "Comparing LiMn0.7Fe0.3PO4_p6 (rsc_adv_c7ra08993g_nanosized) and LiMn0.7Fe0.3PO4 (rsc_adv_c7ra08993g_nanosized): LiMn0.7Fe0.3PO4_p6 (LiMn0.7Fe0.3PO4) and LiMn0.7Fe0.3PO4 (LiMn0.75Fe0.25PO4) exhibit distinct electrochemical profiles based on synthesis and precursor routes.",
+        "citations_count": 4,
+        "citations": [
+          "rsc_adv_c7ra08993g_nanosized",
+          "rsc_adv_c7ra08993g_nanosized",
+          "molecules_26_07641_solgel",
+          "rsc_adv_c7ra08993g_nanosized"
+        ],
+        "conflicts_and_limitations": "Note on experimental condition divergence: C-rates reported in literature range from 0.05C to 60C across differing voltage cut-offs (2.0-4.4 V vs 2.5-4.5 V). Direct numeric comparisons are only physically valid when measured under identical C-rate, voltage window, and temperature regimes.",
+        "disclaimer": "AI-assisted scientific research · Strictly evidence-grounded · Verify against original publications"
+      },
+      "qwen_mode": {
+        "inference_source": "qwen3:4b_grounded",
+        "direct_answer": "We are given four verified experimental samples and their literature evidence. The research question asks to compare the solvothermal synthesis route in the paper \"rsc_adv_c7ra08993g\" (which we'll call Paper P1) with the sol-gel route in the paper \"molecules_26_07641_solgel\" (Paper P2) for LiMn0.7Fe0.3PO4.",
+        "citations_count": 4,
+        "citations": [
+          "rsc_adv_c7ra08993g_nanosized",
+          "rsc_adv_c7ra08993g_nanosized",
+          "molecules_26_07641_solgel",
+          "rsc_adv_c7ra08993g_nanosized"
+        ],
+        "conflicts_and_limitations": "Note on experimental condition divergence: C-rates reported in literature range from 0.05C to 60C across differing voltage cut-offs (2.0-4.4 V vs 2.5-4.5 V). Direct numeric comparisons are only physically valid when measured under identical C-rate, voltage window, and temperature regimes.",
+        "disclaimer": "AI-assisted scientific research · Strictly evidence-grounded · Verify against original publications"
+      }
+    },
+    "scenario_3_followup": {
+      "title": "Follow-Up Context Disambiguation",
+      "query": "What was the testing voltage window and cycling rate for that sample?",
+      "deterministic_mode": {
+        "inference_source": "deterministic_synthesis_fallback",
+        "direct_answer": "In adv_sustain_syst_2022_minnetti, sample 'Sample_p6_voltage_window' (LiMn0.5Fe0.5PO4) is reported with synthesis route 'solid-state'.",
+        "citations_count": 4,
+        "citations": [
+          "adv_sustain_syst_2022_minnetti",
+          "adv_sustain_syst_2022_minnetti",
+          "adv_sustain_syst_2022_minnetti",
+          "jacs_6c05295_spin_state"
+        ],
+        "conflicts_and_limitations": "Sample [Sample_p6_voltage_window] is currently marked unconfirmed/unresolved · Sample [Sample_p7_voltage_window] is currently marked unconfirmed/unresolved · Sample [Sample_p10_voltage_window] is currently marked unconfirmed/unresolved · Sample [Sample_p4_voltage_window] is currently marked unconfirmed/unresolved · Sample [Sample_p6_voltage_window] is currently marked unconfirmed/unresolved · Sample [Sample_p7_voltage_window] is currently marked unconfirmed/unresolved · Sample [Sample_p10_voltage_window] is currently marked unconfirmed/unresolved · Sample [Sample_p4_voltage_window] is currently marked unconfirmed/unresolved",
+        "disclaimer": "AI-assisted scientific research · Strictly evidence-grounded · Verify against original publications"
+      },
+      "qwen_mode": {
+        "inference_source": "qwen3:4b_grounded",
+        "direct_answer": "We are given a research question: \"What was the testing voltage window and cycling rate for that sample? for LiMn0.7Fe0.3PO4/C\"",
+        "citations_count": 4,
+        "citations": [
+          "adv_sustain_syst_2022_minnetti",
+          "adv_sustain_syst_2022_minnetti",
+          "adv_sustain_syst_2022_minnetti",
+          "jacs_6c05295_spin_state"
+        ],
+        "conflicts_and_limitations": "Sample [Sample_p6_voltage_window] is currently marked unconfirmed/unresolved · Sample [Sample_p7_voltage_window] is currently marked unconfirmed/unresolved · Sample [Sample_p10_voltage_window] is currently marked unconfirmed/unresolved · Sample [Sample_p4_voltage_window] is currently marked unconfirmed/unresolved · Sample [Sample_p6_voltage_window] is currently marked unconfirmed/unresolved · Sample [Sample_p7_voltage_window] is currently marked unconfirmed/unresolved · Sample [Sample_p10_voltage_window] is currently marked unconfirmed/unresolved · Sample [Sample_p4_voltage_window] is currently marked unconfirmed/unresolved",
+        "disclaimer": "AI-assisted scientific research · Strictly evidence-grounded · Verify against original publications"
+      }
+    },
+    "scenario_4_condition_mismatch": {
+      "title": "Condition Mismatch & Non-Parity Warning",
+      "query": "Can we directly compare the high-rate capacity of LiMn0.8Fe0.2PO4 tested at 50 C with LiMn0.7Fe0.3PO4 tested at 0.1 C?",
+      "deterministic_mode": {
+        "inference_source": "deterministic_synthesis_fallback",
+        "direct_answer": "Comparing LiMn0.8Fe0.2PO4_p10 (jacs_6c05295_spin_state) and LiMn0.5Fe0.5PO4_p10 (jacs_6c05295_spin_state): LiMn0.8Fe0.2PO4_p10 (LiMn0.8Fe0.2PO4) and LiMn0.5Fe0.5PO4_p10 (LiMn0.5Fe0.5PO4) exhibit distinct electrochemical profiles based on synthesis and precursor routes.",
+        "citations_count": 4,
+        "citations": [
+          "jacs_6c05295_spin_state",
+          "jacs_6c05295_spin_state",
+          "jacs_6c05295_spin_state",
+          "srep26686"
+        ],
+        "conflicts_and_limitations": "Sample [Sample_p9_discharge_capacity] is currently marked unconfirmed/unresolved · Secondary review provenance in [srep26686]: verify primary experimental source · Sample [LiMn0.75Fe0.25PO4] is currently marked unconfirmed/unresolved · Sample [Sample_p9_discharge_capacity] is currently marked unconfirmed/unresolved · Secondary review provenance in [srep26686]: verify primary experimental source · Sample [LiMn0.75Fe0.25PO4] is currently marked unconfirmed/unresolved",
+        "disclaimer": "AI-assisted scientific research · Strictly evidence-grounded · Verify against original publications"
+      },
+      "qwen_mode": {
+        "inference_source": "qwen3:4b_grounded",
+        "direct_answer": "We are given a research question: Can we directly compare the high-rate capacity of LiMn0.8Fe0.2PO4 tested at 50 C with LiMn0.7Fe0.3PO4 tested at 0.1 C?",
+        "citations_count": 4,
+        "citations": [
+          "jacs_6c05295_spin_state",
+          "jacs_6c05295_spin_state",
+          "jacs_6c05295_spin_state",
+          "srep26686"
+        ],
+        "conflicts_and_limitations": "Sample [Sample_p9_discharge_capacity] is currently marked unconfirmed/unresolved · Secondary review provenance in [srep26686]: verify primary experimental source · Sample [LiMn0.75Fe0.25PO4] is currently marked unconfirmed/unresolved · Sample [Sample_p9_discharge_capacity] is currently marked unconfirmed/unresolved · Secondary review provenance in [srep26686]: verify primary experimental source · Sample [LiMn0.75Fe0.25PO4] is currently marked unconfirmed/unresolved",
+        "disclaimer": "AI-assisted scientific research · Strictly evidence-grounded · Verify against original publications"
+      }
+    },
+    "scenario_5_conflicting_findings": {
+      "title": "Conflicting Findings & Mechanism Analysis",
+      "query": "Why do different papers report conflicting discharge capacities for LiMn0.8Fe0.2PO4 ranging from 95 mAh/g to 155 mAh/g?",
+      "deterministic_mode": {
+        "inference_source": "deterministic_synthesis_fallback",
+        "direct_answer": "Comparing LiMn0.75Fe0.25PO4 (srep26686) and P18_Row1_Sample_1 (P18_Row1): at 0.05C, LiMn0.75Fe0.25PO4 delivered 45.0 mAh/g, whereas P18_Row1_Sample_1 delivered 110.2 mAh/g.",
+        "citations_count": 2,
+        "citations": [
+          "srep26686",
+          "P18_Row1"
+        ],
+        "conflicts_and_limitations": "Provenance Divergence: LiMn0.75Fe0.25PO4 is from PRIMARY_PAPER (srep26686), whereas P18_Row1_Sample_1 is from DATASET_ROW (P18_Row1). Secondary review entries must be validated against primary experimental data. · Disparate C-Rates: LiMn0.75Fe0.25PO4 measured at [0.05] C vs P18_Row1_Sample_1 at [0.1, 1.0, 2.0] C. Comparing different C-rates is physically invalid. · Secondary review provenance in [srep26686]: verify primary experimental source · Sample [LiMn0.75Fe0.25PO4] is currently marked unconfirmed/unresolved",
+        "disclaimer": "AI-assisted scientific research · Strictly evidence-grounded · Verify against original publications"
+      },
+      "qwen_mode": {
+        "inference_source": "qwen3:4b_grounded",
+        "direct_answer": "We are given two verified experimental sample profiles and two evidence snippets. The research question is: Why do different papers report conflicting discharge capacities for LiMn0.8Fe0.2PO4 ranging from 95 mAh/g to 155 mAh/g?",
+        "citations_count": 2,
+        "citations": [
+          "srep26686",
+          "P18_Row1"
+        ],
+        "conflicts_and_limitations": "Provenance Divergence: LiMn0.75Fe0.25PO4 is from PRIMARY_PAPER (srep26686), whereas P18_Row1_Sample_1 is from DATASET_ROW (P18_Row1). Secondary review entries must be validated against primary experimental data. · Disparate C-Rates: LiMn0.75Fe0.25PO4 measured at [0.05] C vs P18_Row1_Sample_1 at [0.1, 1.0, 2.0] C. Comparing different C-rates is physically invalid. · Secondary review provenance in [srep26686]: verify primary experimental source · Sample [LiMn0.75Fe0.25PO4] is currently marked unconfirmed/unresolved",
+        "disclaimer": "AI-assisted scientific research · Strictly evidence-grounded · Verify against original publications"
+      }
+    },
+    "scenario_6_insufficient_evidence": {
+      "title": "Insufficient Evidence & Policy Boundary",
+      "query": "What is the verified cycle life of Scandium-doped Sc0.05LiMn0.7Fe0.25PO4 tested at 60C?",
+      "deterministic_mode": {
+        "inference_source": "deterministic_synthesis_fallback",
+        "direct_answer": "In molecules_26_07641_solgel, sample 'LiMn0.8Fe0.2PO4/C' (LiMn0.8Fe0.2PO4/C) is reported with synthesis route 'Sol-gel'.",
+        "citations_count": 3,
+        "citations": [
+          "molecules_26_07641_solgel",
+          "rsc_adv_c7ra08993g_nanosized",
+          "P40"
+        ],
+        "conflicts_and_limitations": "Secondary review provenance in [molecules_26_07641_solgel]: verify primary experimental source · Sample [LiMn0.8Fe0.2PO4/C] is currently marked unconfirmed/unresolved · Secondary review provenance in [rsc_adv_c7ra08993g_nanosized]: verify primary experimental source · Sample [LiMn0.75Fe0.25PO4/C] is currently marked unconfirmed/unresolved · Secondary review provenance in [molecules_26_07641_solgel]: verify primary experimental source · Sample [LiMn0.8Fe0.2PO4/C] is currently marked unconfirmed/unresolved · Secondary review provenance in [rsc_adv_c7ra08993g_nanosized]: verify primary experimental source · Sample [LiMn0.75Fe0.25PO4/C] is currently marked unconfirmed/unresolved",
+        "disclaimer": "AI-assisted scientific research · Strictly evidence-grounded · Verify against original publications"
+      },
+      "qwen_mode": {
+        "inference_source": "qwen3:4b_grounded",
+        "direct_answer": "is: The literature database does not contain experimental evidence for Scandium-doped Sc0.05LiMn0.7Fe0.25PO4 tested at 60°C.",
+        "citations_count": 3,
+        "citations": [
+          "molecules_26_07641_solgel",
+          "rsc_adv_c7ra08993g_nanosized",
+          "P40"
+        ],
+        "conflicts_and_limitations": "Secondary review provenance in [molecules_26_07641_solgel]: verify primary experimental source · Sample [LiMn0.8Fe0.2PO4/C] is currently marked unconfirmed/unresolved · Secondary review provenance in [rsc_adv_c7ra08993g_nanosized]: verify primary experimental source · Sample [LiMn0.75Fe0.25PO4/C] is currently marked unconfirmed/unresolved · Secondary review provenance in [molecules_26_07641_solgel]: verify primary experimental source · Sample [LiMn0.8Fe0.2PO4/C] is currently marked unconfirmed/unresolved · Secondary review provenance in [rsc_adv_c7ra08993g_nanosized]: verify primary experimental source · Sample [LiMn0.75Fe0.25PO4/C] is currently marked unconfirmed/unresolved",
+        "disclaimer": "AI-assisted scientific research · Strictly evidence-grounded · Verify against original publications"
+      }
+    }
+  },
+  "materials_validation": {
+    "Undoped Baseline": {
+      "formula": "Li[Mn0.7Fe0.3]PO4",
+      "m2_occupancy": 1.0,
+      "m2_valid": true,
+      "adjusted_li": 1.0,
+      "delta_li": 0.0,
+      "is_balanced": true,
+      "q_m2": 2.0,
+      "net_charge_after": 0.0,
+      "theoretical_capacity": 170.58,
+      "entropy_class": "Entropy-Assisted / Medium-Entropy",
+      "s_config_over_r": 0.6109,
+      "predictions": {
+        "0_1C_capacity": 151.99,
+        "1C_capacity": 140.0,
+        "5C_capacity": 121.91,
+        "capacity_retention": 90.83,
+        "0_05C_capacity": null,
+        "initial_ice": null
+      },
+      "coverage_warnings": []
+    },
+    "Single Doped (Mg2+)": {
+      "formula": "Li[Mn0.7Fe0.28Mg0.02]PO4",
+      "m2_occupancy": 1.0,
+      "m2_valid": true,
+      "adjusted_li": 1.0,
+      "delta_li": 0.0,
+      "is_balanced": true,
+      "q_m2": 2.0,
+      "net_charge_after": 0.0,
+      "theoretical_capacity": 171.27,
+      "entropy_class": "Entropy-Assisted / Medium-Entropy",
+      "s_config_over_r": 0.6843,
+      "predictions": {
+        "0_1C_capacity": 155.09,
+        "1C_capacity": 136.89,
+        "5C_capacity": 124.42,
+        "capacity_retention": 90.26,
+        "0_05C_capacity": null,
+        "initial_ice": null
+      },
+      "coverage_warnings": []
+    },
+    "Supervalent Vacancy-Containing (Zr4+)": {
+      "formula": "Li[Mn0.7Fe0.26Zr0.02]PO4",
+      "m2_occupancy": 0.98,
+      "m2_valid": false,
+      "adjusted_li": 1.0,
+      "delta_li": 0.0,
+      "is_balanced": true,
+      "q_m2": 2.0,
+      "net_charge_after": 0.0,
+      "theoretical_capacity": 171.02,
+      "entropy_class": "Entropy-Assisted / Medium-Entropy",
+      "s_config_over_r": 0.6718,
+      "predictions": {
+        "0_1C_capacity": 153.94,
+        "1C_capacity": 137.95,
+        "5C_capacity": 107.11,
+        "capacity_retention": 90.51,
+        "0_05C_capacity": null,
+        "initial_ice": null
+      },
+      "coverage_warnings": []
+    },
+    "High-Entropy 4-Dopant Formulation": {
+      "formula": "Li0.9[Mn0.7Fe0.2Mg0.03Ti0.03Zr0.02Zn0.02]PO4",
+      "m2_occupancy": 1.0,
+      "m2_valid": true,
+      "adjusted_li": 0.9,
+      "delta_li": 0.1,
+      "is_balanced": true,
+      "q_m2": 2.1,
+      "net_charge_after": 0.0,
+      "theoretical_capacity": 154.49,
+      "entropy_class": "Entropy-Assisted / Medium-Entropy",
+      "s_config_over_r": 0.9384,
+      "predictions": {
+        "0_1C_capacity": 149.27,
+        "1C_capacity": 136.85,
+        "5C_capacity": 107.58,
+        "capacity_retention": 88.95,
+        "0_05C_capacity": null,
+        "initial_ice": null
+      },
+      "coverage_warnings": [
+        "Notice: Dataset contains 6 high-entropy (3+ dopants) literature records out of 1,215 total. ML predictions represent an initial literature-based baseline for multi-doping."
+      ]
+    }
+  },
+  "experiment_management": {
+    "planned_experiment_null_measurements_verified": true,
+    "completed_experiment_real_measurements_verified": true,
+    "residuals_computation_distinction_verified": true,
+    "lab_db_cleanup_count": 0
+  },
+  "data_protection_invariants": {
+    "master_csv_shape": [
+      1215,
+      41
+    ],
+    "master_csv_intact": true,
+    "review_db_count": 79,
+    "review_6_quarantined": true,
+    "review_7_approved_blocked": true,
+    "lab_db_clean_records": true
+  }
+}
