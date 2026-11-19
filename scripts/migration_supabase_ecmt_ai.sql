@@ -21,14 +21,6 @@ CREATE TABLE IF NOT EXISTS public.lab_experiments (
     json_data TEXT NOT NULL
 );
 
--- Ensure json_data column exists if table was created with older schema
-DO $$
-BEGIN
-    IF NOT EXISTS (SELECT 1 FROM information_schema.columns WHERE table_schema='public' AND table_name='lab_experiments' AND column_name='json_data') THEN
-        ALTER TABLE public.lab_experiments ADD COLUMN json_data TEXT NOT NULL DEFAULT '{}';
-    END IF;
-END $$;
-
 -- ----------------------------------------------------------------------------
 -- 2. Table: extraction_reviews (Schema creation, constraints & indexes)
 -- ----------------------------------------------------------------------------
@@ -55,6 +47,15 @@ CREATE INDEX IF NOT EXISTS idx_extraction_reviews_composition ON public.extracti
 -- ----------------------------------------------------------------------------
 ALTER TABLE public.lab_experiments ENABLE ROW LEVEL SECURITY;
 ALTER TABLE public.extraction_reviews ENABLE ROW LEVEL SECURITY;
+
+-- Explicitly revoke all access from unauthenticated anonymous users
+REVOKE ALL ON TABLE public.lab_experiments FROM anon;
+REVOKE ALL ON TABLE public.extraction_reviews FROM anon;
+
+-- Grant permissions to authenticated team members and backend service role
+GRANT ALL ON TABLE public.lab_experiments TO authenticated, service_role;
+GRANT ALL ON TABLE public.extraction_reviews TO authenticated, service_role;
+GRANT USAGE, SELECT ON ALL SEQUENCES IN SCHEMA public TO authenticated, service_role;
 
 -- Drop existing policies safely if re-running
 DROP POLICY IF EXISTS "Team read lab_experiments" ON public.lab_experiments;
