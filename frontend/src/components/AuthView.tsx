@@ -12,6 +12,7 @@ export interface AuthUser {
   account: string;
   avatarLetter: string;
   provider: "email" | "google" | "guest";
+  role?: "public_user" | "researcher" | "admin";
   sub?: string;
 }
 
@@ -37,6 +38,12 @@ export const AuthView: React.FC<AuthViewProps> = ({ onAuthSuccess }) => {
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
 
+  // Helper to generate cryptographically strong CSRF nonce
+  const generateNonce = () =>
+    typeof crypto !== "undefined" && crypto.randomUUID
+      ? crypto.randomUUID()
+      : Math.random().toString(36).substring(2) + Date.now().toString(36);
+
   // Check URL hash for OAuth redirect token
   useEffect(() => {
     if (typeof window === "undefined") return;
@@ -47,8 +54,15 @@ export const AuthView: React.FC<AuthViewProps> = ({ onAuthSuccess }) => {
       if (idToken) {
         setLoading(true);
         history.replaceState(null, "", window.location.pathname);
+        const storedNonce = sessionStorage.getItem("ecmt_auth_nonce");
+        sessionStorage.removeItem("ecmt_auth_nonce");
+        if (!storedNonce) {
+          setErrorMsg("Authentication session expired or security nonce missing. Please try signing in again.");
+          setLoading(false);
+          return;
+        }
         api
-          .verifyGoogleToken(idToken)
+          .verifyGoogleToken(idToken, storedNonce)
           .then((res) => {
             if (res.session_token) {
               localStorage.setItem("ecmt_session_token", res.session_token);
@@ -58,6 +72,7 @@ export const AuthView: React.FC<AuthViewProps> = ({ onAuthSuccess }) => {
               account: res.user.email,
               avatarLetter: res.user.avatarLetter,
               provider: "google",
+              role: res.user.role,
               sub: res.user.sub,
             });
           })
@@ -75,14 +90,24 @@ export const AuthView: React.FC<AuthViewProps> = ({ onAuthSuccess }) => {
     if (!clientId || typeof window === "undefined" || !window.google?.accounts?.id) return;
 
     try {
+      const gisNonce = generateNonce();
+      sessionStorage.setItem("ecmt_auth_nonce", gisNonce);
       window.google.accounts.id.initialize({
         client_id: clientId,
+        nonce: gisNonce,
         callback: async (response: any) => {
           if (response.credential) {
             setLoading(true);
             setErrorMsg(null);
             try {
-              const authRes = await api.verifyGoogleToken(response.credential);
+              const storedNonce = sessionStorage.getItem("ecmt_auth_nonce");
+              sessionStorage.removeItem("ecmt_auth_nonce");
+              if (!storedNonce) {
+                setErrorMsg("Authentication session expired or security nonce missing. Please try signing in again.");
+                setLoading(false);
+                return;
+              }
+              const authRes = await api.verifyGoogleToken(response.credential, storedNonce);
               if (authRes.session_token) {
                 localStorage.setItem("ecmt_session_token", authRes.session_token);
               }
@@ -91,6 +116,7 @@ export const AuthView: React.FC<AuthViewProps> = ({ onAuthSuccess }) => {
                 account: authRes.user.email,
                 avatarLetter: authRes.user.avatarLetter,
                 provider: "google",
+                role: authRes.user.role,
                 sub: authRes.user.sub,
               });
             } catch (err: any) {
@@ -143,6 +169,7 @@ export const AuthView: React.FC<AuthViewProps> = ({ onAuthSuccess }) => {
         account: res.user.account,
         avatarLetter: res.user.avatarLetter,
         provider: "email",
+        role: res.user.role,
         sub: res.user.sub,
       });
     } catch (err: any) {
@@ -181,6 +208,7 @@ export const AuthView: React.FC<AuthViewProps> = ({ onAuthSuccess }) => {
         account: res.user.account,
         avatarLetter: res.user.avatarLetter,
         provider: "email",
+        role: res.user.role,
         sub: res.user.sub,
       });
     } catch (err: any) {
@@ -193,12 +221,14 @@ export const AuthView: React.FC<AuthViewProps> = ({ onAuthSuccess }) => {
   const initiateOAuthFlow = (clientId: string) => {
     const redirectUri = window.location.origin;
     const oauthUrl = new URL("https://accounts.google.com/o/oauth2/v2/auth");
+    const nonce = generateNonce();
+    sessionStorage.setItem("ecmt_auth_nonce", nonce);
     oauthUrl.searchParams.set("client_id", clientId);
     oauthUrl.searchParams.set("redirect_uri", redirectUri);
     oauthUrl.searchParams.set("response_type", "id_token");
     oauthUrl.searchParams.set("scope", "openid email profile");
     oauthUrl.searchParams.set("prompt", "select_account"); // Guarantees account selection screen
-    oauthUrl.searchParams.set("nonce", Math.random().toString(36).substring(2));
+    oauthUrl.searchParams.set("nonce", nonce);
 
     window.location.href = oauthUrl.toString();
   };

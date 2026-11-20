@@ -18,10 +18,24 @@ import shutil
 from typing import Dict, Any, List, Optional
 from pathlib import Path
 from datetime import datetime
+import time
 
 # Add project root to sys.path
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(PROJECT_ROOT))
+
+# Lightweight .env loader for local development
+_env_file = PROJECT_ROOT / ".env"
+if _env_file.is_file():
+    try:
+        with open(_env_file, "r", encoding="utf-8") as _f:
+            for _line in _f:
+                _line = _line.strip()
+                if _line and not _line.startswith("#") and "=" in _line:
+                    _k, _v = _line.split("=", 1)
+                    os.environ.setdefault(_k.strip(), _v.strip())
+    except Exception:
+        pass
 
 import pandas as pd
 import numpy as np
@@ -117,8 +131,8 @@ LITERATURE_UPLOAD_DIR = UPLOAD_DIR / "literature"
 for _dir in (IMAGES_UPLOAD_DIR, EXPERIMENTS_UPLOAD_DIR, LITERATURE_UPLOAD_DIR):
     _dir.mkdir(parents=True, exist_ok=True)
 
-# Mount /uploads to serve stored research images and documents over HTTP/HTTPS
-app.mount("/uploads", StaticFiles(directory=str(UPLOAD_DIR)), name="uploads")
+# Note: Direct unauthenticated /uploads mount removed to prevent anonymous access
+# to proprietary research images and PDFs. Secured authenticated endpoint is mounted below.
 
 ALLOWED_IMAGE_EXTS = {".png", ".jpg", ".jpeg", ".webp", ".tiff", ".tif"}
 ALLOWED_LIT_EXTS = {".pdf", ".png", ".jpg", ".jpeg", ".webp", ".tiff", ".tif"}
@@ -136,7 +150,25 @@ def sanitize_filename(filename: str) -> str:
 # Google Identity & JWT Authentication Configuration
 # ---------------------------------------------------------------------------
 GOOGLE_CLIENT_ID = os.environ.get("GOOGLE_CLIENT_ID", "")
-JWT_SECRET = os.environ.get("JWT_SECRET", "ecmt-ai-secret-key-production-2026")
+
+# Fail-safe JWT Secret validation: require configured secret, reject insecure fallbacks
+JWT_SECRET = os.environ.get("JWT_SECRET")
+if not JWT_SECRET:
+    raise RuntimeError(
+        "CRITICAL SECURITY CONFIGURATION ERROR: 'JWT_SECRET' environment variable is not configured. "
+        "A secure 256-bit secret must be provided via environment variables (e.g., Render Blueprint generateValue)."
+    )
+if len(JWT_SECRET) < 32:
+    raise RuntimeError(
+        f"CRITICAL SECURITY CONFIGURATION ERROR: 'JWT_SECRET' is too short ({len(JWT_SECRET)} characters). "
+        "It must be at least 32 characters (256 bits) for HMAC-SHA256 cryptographic security."
+    )
+
+ADMIN_EMAILS = [
+    e.strip().lower()
+    for e in os.environ.get("ADMIN_EMAILS", "").split(",")
+    if e.strip()
+]
 APPROVED_TEAM_EMAILS = [
     e.strip().lower()
     for e in os.environ.get("APPROVED_TEAM_EMAILS", "").split(",")
@@ -148,9 +180,33 @@ APPROVED_DOMAINS = [
     if d.strip()
 ]
 
+# Deployment environment flags
+ENVIRONMENT = os.environ.get("ENVIRONMENT", "development").strip().lower()
+ALLOW_LEGACY_AUTH = os.environ.get("ALLOW_LEGACY_AUTH", "false").strip().lower() in ("true", "1", "yes")
+
+# Persistent and atomic OAuth nonce replay protection
+from backend.nonce_store import consume_nonce
+
+
+def determine_user_role(email: str) -> str:
+    """
+    Determine user authorization role strictly based on verified email and server allowlists.
+    - 'admin': system administrators with export, deletion, and user management capabilities (explicit ADMIN_EMAILS required).
+    - 'researcher': verified ECMT team members authorized for experiments, uploads, and literature edits (explicit allowlist required).
+    - 'public_user': default least-privileged role for any public Google registration.
+    """
+    email_clean = (email or "").strip().lower()
+    domain = email_clean.split("@")[-1] if "@" in email_clean else ""
+    if email_clean and email_clean in ADMIN_EMAILS:
+        return "admin"
+    if (email_clean and email_clean in APPROVED_TEAM_EMAILS) or (domain and domain in APPROVED_DOMAINS):
+        return "researcher"
+    return "public_user"
+
 
 class GoogleVerifyRequest(BaseModel):
     credential: str  # Verified Google ID Token from Google Identity Services
+    nonce: Optional[str] = None  # Expected nonce for application-level CSRF validation
 
 
 class EmailAuthRequest(BaseModel):
@@ -170,6 +226,58 @@ def get_current_user(authorization: Optional[str] = Header(None)) -> Optional[Di
         return payload
     except Exception:
         return None
+
+
+def require_authenticated_user(
+    current_user: Optional[Dict[str, Any]] = Depends(get_current_user),
+) -> Dict[str, Any]:
+    """Strictly require authenticated session token."""
+    if not current_user:
+        raise HTTPException(
+            status_code=401,
+            detail="Authentication required. Please sign in with a valid Google or research account.",
+        )
+    return current_user
+
+
+def require_researcher_user(
+    current_user: Optional[Dict[str, Any]] = Depends(require_authenticated_user),
+) -> Dict[str, Any]:
+    """Require researcher or admin role for research operations."""
+    if not current_user:
+        raise HTTPException(
+            status_code=401,
+            detail="Authentication required. Please sign in with an authorized Google or research account.",
+        )
+    role = current_user.get("role", "public_user")
+    if role not in ("researcher", "admin"):
+        raise HTTPException(
+            status_code=403,
+            detail="Insufficient permissions: Researcher access required for this operation.",
+        )
+    return current_user
+
+
+def require_admin_user(
+    current_user: Optional[Dict[str, Any]] = Depends(require_authenticated_user),
+) -> Dict[str, Any]:
+    """Require admin role for administrative and destructive operations."""
+    if not current_user:
+        raise HTTPException(
+            status_code=401,
+            detail="Authentication required. Please sign in with an administrator account.",
+        )
+    role = current_user.get("role", "public_user")
+    if role != "admin":
+        raise HTTPException(
+            status_code=403,
+            detail="Insufficient permissions: Administrative access required for this operation.",
+        )
+    return current_user
+
+
+# Backward-compatible alias for existing endpoints
+require_authorized_user = require_researcher_user
 
 
 # ---------------------------------------------------------------------------
@@ -329,11 +437,44 @@ def get_private_storage_file(
             detail="Unauthorized: Research characterization micrographs and PDFs require an authenticated session.",
         )
 
+    role = user.get("role", "public_user")
+    if role not in ("researcher", "admin"):
+        raise HTTPException(
+            status_code=403,
+            detail="Insufficient permissions: Researcher access required for private research documents.",
+        )
+
+    # Path traversal protection: disallow .. and directory escape attempts
+    from urllib.parse import unquote
+    clean_path_norm = unquote(file_path).replace("\\", "/").lstrip("/")
+    parts = clean_path_norm.split("/")
+    if ".." in parts or any(p.startswith("..") for p in parts) or ".." in file_path:
+        raise HTTPException(
+            status_code=400,
+            detail="Invalid storage file path: Directory traversal attempts ('..') are strictly prohibited.",
+        )
+
     content, media_type = fetch_file_bytes(file_path)
     if not content:
         raise HTTPException(status_code=404, detail=f"File '{file_path}' not found in storage.")
 
     return Response(content=content, media_type=media_type)
+
+
+@app.get("/uploads/{file_path:path}")
+def get_legacy_uploads_file(
+    file_path: str,
+    token: Optional[str] = None,
+    current_user: Optional[Dict[str, Any]] = Depends(get_current_user),
+):
+    """
+    Secured access to /uploads files.
+    Enforces authentication and authorization:
+    - Anonymous access: HTTP 401 Unauthorized
+    - Public user access: HTTP 403 Forbidden
+    - Researcher / Admin access: HTTP 200 with file bytes and path traversal protection
+    """
+    return get_private_storage_file(file_path=file_path, token=token, current_user=current_user)
 
 
 @app.on_event("startup")
@@ -372,11 +513,17 @@ def verify_environment_and_models_on_startup():
 def verify_google_identity(req: GoogleVerifyRequest):
     """
     Cryptographically verify Google ID Token with Google Identity Services.
-    Extracts verified Google Subject ID (sub), email, name, and profile picture.
-    Enforces team member allowlist if configured and issues signed JWT session token.
+    Supports public Google registration: extracts verified Google Subject ID (sub),
+    email, name, profile picture, validates application-level CSRF nonce, and enforces
+    replay attack prevention. Issues a signed 7-day JWT with server-assigned RBAC role.
     """
-    if not req.credential:
+    if not req.credential or not req.credential.strip():
         raise HTTPException(status_code=400, detail="Missing Google credential ID token.")
+
+    if not req.nonce or not str(req.nonce).strip():
+        raise HTTPException(status_code=400, detail="Missing OAuth client authentication nonce.")
+
+    client_nonce = str(req.nonce).strip()
 
     try:
         # Verify cryptographically with Google public certificates
@@ -391,7 +538,7 @@ def verify_google_identity(req: GoogleVerifyRequest):
         google_sub = id_info.get("sub")
         email = id_info.get("email", "").lower()
         email_verified = id_info.get("email_verified", False)
-        name = id_info.get("name") or (email.split("@")[0].capitalize() if email else "Team Member")
+        name = id_info.get("name") or (email.split("@")[0].capitalize() if email else "Researcher")
         picture = id_info.get("picture", "")
 
         if not google_sub:
@@ -400,25 +547,38 @@ def verify_google_identity(req: GoogleVerifyRequest):
         if not email_verified:
             raise HTTPException(status_code=400, detail="Google email address is not verified by Google.")
 
-        # Check team allowlist
-        if APPROVED_TEAM_EMAILS or APPROVED_DOMAINS:
-            domain = email.split("@")[-1] if "@" in email else ""
-            email_allowed = email in APPROVED_TEAM_EMAILS
-            domain_allowed = domain in APPROVED_DOMAINS
-            if not email_allowed and not domain_allowed:
-                raise HTTPException(
-                    status_code=403,
-                    detail=f"Access denied: '{email}' is not on the ECMT AI approved team allowlist. Contact the project administrator.",
-                )
+        # Application-level CSRF Nonce Validation: Token MUST contain nonce and match client nonce
+        token_nonce = id_info.get("nonce")
+        if not token_nonce or not str(token_nonce).strip():
+            raise HTTPException(
+                status_code=400,
+                detail="Google ID token missing nonce claim.",
+            )
 
-        # Issue cryptographically signed application session token
-        now_ts = int(datetime.utcnow().timestamp())
+        if str(token_nonce).strip() != client_nonce:
+            raise HTTPException(
+                status_code=400,
+                detail="OAuth CSRF validation failed: token nonce does not match client session nonce.",
+            )
+
+        # Persistent atomic replay protection: verify nonce has not been consumed and mark as used
+        now_ts = int(time.time())
+        is_fresh = consume_nonce(client_nonce)
+        if not is_fresh:
+            raise HTTPException(
+                status_code=400,
+                detail="OAuth nonce has already been consumed (replay attack detected).",
+            )
+
+        # Server-side Role Assignment (Never trusted from client)
+        role = determine_user_role(email)
         exp_ts = now_ts + (7 * 24 * 3600)  # 7-day session validity
 
         payload = {
             "sub": google_sub,
             "email": email,
             "name": name,
+            "role": role,
             "picture": picture,
             "provider": "google",
             "iat": now_ts,
@@ -435,6 +595,7 @@ def verify_google_identity(req: GoogleVerifyRequest):
                 "email": email,
                 "fullName": name,
                 "account": email,
+                "role": role,
                 "avatarLetter": name[0].upper() if name else "G",
                 "picture": picture,
                 "provider": "google",
@@ -463,6 +624,7 @@ def get_current_user_profile(authorization: Optional[str] = Header(None)):
                 "email": payload.get("email"),
                 "fullName": payload.get("name"),
                 "account": payload.get("email") or payload.get("sub"),
+                "role": payload.get("role", "public_user"),
                 "avatarLetter": (payload.get("name") or "U")[0].upper(),
                 "picture": payload.get("picture"),
                 "provider": payload.get("provider", "jwt"),
@@ -477,16 +639,25 @@ def get_current_user_profile(authorization: Optional[str] = Header(None)):
 @app.post("/api/auth/login")
 def authenticate_with_credentials(req: EmailAuthRequest):
     """Authenticate or register researcher with account identifier and password."""
+    # Production hardening: Disable insecure legacy credentials login in production
+    if ENVIRONMENT in ("production", "prod") and not ALLOW_LEGACY_AUTH:
+        raise HTTPException(
+            status_code=403,
+            detail="Legacy password authentication is disabled in production environments. Please sign in with Google OAuth.",
+        )
+
     acc = req.account.strip().lower()
     if not acc:
         raise HTTPException(status_code=400, detail="Account is required.")
     if not req.password:
         raise HTTPException(status_code=400, detail="Password is required.")
 
-    # Check allowlist if configured
+    # Determine server-side role
+    role = determine_user_role(acc)
+
+    # Check allowlist if configured (only allowlisted accounts can login with credentials)
     if APPROVED_TEAM_EMAILS or APPROVED_DOMAINS:
-        domain = acc.split("@")[-1] if "@" in acc else ""
-        if acc not in APPROVED_TEAM_EMAILS and domain not in APPROVED_DOMAINS:
+        if role == "public_user":
             raise HTTPException(
                 status_code=403,
                 detail=f"Access denied: '{acc}' is not on the ECMT AI approved team allowlist.",
@@ -494,7 +665,32 @@ def authenticate_with_credentials(req: EmailAuthRequest):
 
     name = req.full_name or (acc.split("@")[0].capitalize() if "@" in acc else acc.capitalize())
     sub_id = f"usr_{uuid.uuid5(uuid.NAMESPACE_DNS, acc).hex[:12]}"
-    now_ts = int(datetime.utcnow().timestamp())
+    now_ts = int(time.time())
+    exp_ts = now_ts + (7 * 24 * 3600)
+
+    payload = {
+        "sub": sub_id,
+        "email": acc,
+        "name": name,
+        "role": role,
+        "provider": "credentials",
+        "iat": now_ts,
+        "exp": exp_ts,
+    }
+    session_token = jwt.encode(payload, JWT_SECRET, algorithm="HS256")
+    return {
+        "status": "success",
+        "session_token": session_token,
+        "user": {
+            "sub": sub_id,
+            "email": acc,
+            "fullName": name,
+            "account": acc,
+            "role": role,
+            "avatarLetter": name[0].upper() if name else "U",
+            "provider": "credentials",
+        },
+    }
 
     payload = {
         "sub": sub_id,
@@ -828,8 +1024,11 @@ def get_prediction_evaluation():
 # 4. Literature Intelligence Endpoints
 # ---------------------------------------------------------------------------
 @app.get("/api/literature/reviews")
-def get_literature_reviews(status: Optional[str] = None):
-    """List reviewed or pending extraction records."""
+def get_literature_reviews(
+    status: Optional[str] = None,
+    current_user: Dict[str, Any] = Depends(require_researcher_user),
+):
+    """List reviewed or pending extraction records (researchers and admins only)."""
     try:
         return list_reviews(status=status)
     except Exception as exc:
@@ -837,8 +1036,11 @@ def get_literature_reviews(status: Optional[str] = None):
 
 
 @app.get("/api/literature/reviews/{review_id}")
-def get_single_review(review_id: int):
-    """Get single review by ID."""
+def get_single_review(
+    review_id: int,
+    current_user: Dict[str, Any] = Depends(require_researcher_user),
+):
+    """Get single review by ID (researchers and admins only)."""
     rev = get_review(review_id)
     if rev is None:
         raise HTTPException(status_code=404, detail=f"Review ID {review_id} not found.")
@@ -846,8 +1048,12 @@ def get_single_review(review_id: int):
 
 
 @app.post("/api/literature/reviews/{review_id}")
-def update_literature_review(review_id: int, req: ReviewUpdateRequest):
-    """Update review data, verified fields, or status decision."""
+def update_literature_review(
+    review_id: int,
+    req: ReviewUpdateRequest,
+    current_user: Dict[str, Any] = Depends(require_authorized_user),
+):
+    """Update review data, verified fields, or status decision (authenticated researchers only)."""
     try:
         update_review(review_id=review_id, record=req.record, status=req.status)
         try:
@@ -863,7 +1069,10 @@ def update_literature_review(review_id: int, req: ReviewUpdateRequest):
 
 
 @app.post("/api/literature/extract-pdf")
-def extract_pdf(file: UploadFile = File(...)):
+def extract_pdf(
+    file: UploadFile = File(...),
+    current_user: Dict[str, Any] = Depends(require_authorized_user),
+):
     """Upload a research paper PDF, extract text pages, parse LMFP candidate records, and stage to review queue."""
     if not file.filename.lower().endswith(".pdf"):
         raise HTTPException(status_code=400, detail="Only PDF files are supported.")
@@ -967,8 +1176,9 @@ def get_material_samples_endpoint(
     paper_id: Optional[str] = None,
     dopant: Optional[str] = None,
     min_crate: Optional[float] = None,
+    current_user: Dict[str, Any] = Depends(require_researcher_user),
 ):
-    """Stage 4: Query resolved MaterialSample entity graphs."""
+    """Stage 4: Query resolved MaterialSample entity graphs (researchers and admins only)."""
     try:
         from literature.entity_store import list_material_samples
         return list_material_samples(paper_id=paper_id, dopant=dopant, min_crate=min_crate)
@@ -977,8 +1187,11 @@ def get_material_samples_endpoint(
 
 
 @app.get("/api/literature/samples/{sample_id}")
-def get_single_material_sample_endpoint(sample_id: str):
-    """Stage 4: Get full entity graph for a specific MaterialSample."""
+def get_single_material_sample_endpoint(
+    sample_id: str,
+    current_user: Dict[str, Any] = Depends(require_researcher_user),
+):
+    """Stage 4: Get full entity graph for a specific MaterialSample (researchers and admins only)."""
     try:
         from literature.entity_store import get_material_sample_graph
         sample = get_material_sample_graph(sample_id)
@@ -992,7 +1205,11 @@ def get_single_material_sample_endpoint(sample_id: str):
 
 
 @app.post("/api/literature/samples/{sample_id}/resolve")
-def resolve_material_sample_endpoint(sample_id: str, req: SampleResolveRequest):
+def resolve_material_sample_endpoint(
+    sample_id: str,
+    req: SampleResolveRequest,
+    current_user: Dict[str, Any] = Depends(require_authorized_user),
+):
     """Stage 4: Reviewer resolution and disambiguation update for a MaterialSample."""
     try:
         from literature.entity_store import update_material_sample
@@ -1013,13 +1230,18 @@ def resolve_material_sample_endpoint(sample_id: str, req: SampleResolveRequest):
 
 
 @app.get("/api/literature/export/preview")
-def preview_dataset_export():
-    """Non-destructive preview of approved reviews for export to master CSV."""
+def preview_dataset_export(
+    current_user: Dict[str, Any] = Depends(require_researcher_user),
+):
+    """Non-destructive preview of approved reviews for export to master CSV (researchers and admins only)."""
     return preview_approved_exports()
 
 
 @app.post("/api/literature/export")
-def execute_dataset_export(dry_run: bool = True):
+def execute_dataset_export(
+    dry_run: bool = True,
+    current_user: Dict[str, Any] = Depends(require_admin_user),
+):
     """Export eligible approved reviews to master CSV with automated backup creation."""
     return export_approved_reviews(dry_run=dry_run)
 
@@ -1296,8 +1518,10 @@ def generate_verification_matrix(req: MatrixGenerateRequest):
 # 6. Experiment Management Endpoints
 # ---------------------------------------------------------------------------
 @app.get("/api/experiments")
-def get_all_experiments():
-    """List recorded laboratory experiments."""
+def get_all_experiments(
+    current_user: Dict[str, Any] = Depends(require_researcher_user),
+):
+    """List recorded laboratory experiments (researchers and admins only)."""
     try:
         exps = list_experiments()
         return [e.to_dict() for e in exps]
@@ -1306,8 +1530,10 @@ def get_all_experiments():
 
 
 @app.get("/api/experiments/database-info")
-def get_experiments_database_info():
-    """Return database file path, storage mode, and total recorded experiments count."""
+def get_experiments_database_info(
+    current_user: Dict[str, Any] = Depends(require_researcher_user),
+):
+    """Return database file path, storage mode, and total recorded experiments count (researchers and admins only)."""
     info = get_database_mode_info()
     exps = list_experiments()
     return {
@@ -1320,8 +1546,11 @@ def get_experiments_database_info():
 
 
 @app.get("/api/experiments/{experiment_id}")
-def get_single_experiment(experiment_id: str):
-    """Retrieve single lab experiment record."""
+def get_single_experiment(
+    experiment_id: str,
+    current_user: Dict[str, Any] = Depends(require_researcher_user),
+):
+    """Retrieve single lab experiment record (researchers and admins only)."""
     exp = load_experiment(experiment_id)
     if not exp:
         raise HTTPException(status_code=404, detail=f"Experiment '{experiment_id}' not found.")
@@ -1329,8 +1558,16 @@ def get_single_experiment(experiment_id: str):
 
 
 @app.delete("/api/experiments/{experiment_id}")
-def delete_single_experiment(experiment_id: str):
-    """Delete a laboratory experiment from the database."""
+def delete_single_experiment(
+    experiment_id: str,
+    current_user: Dict[str, Any] = Depends(require_admin_user),
+):
+    """Delete a laboratory experiment from the database (administrators only)."""
+    if experiment_id == "EXP-9260F00A":
+        raise HTTPException(
+            status_code=403,
+            detail="Protected baseline experiment EXP-9260F00A cannot be deleted.",
+        )
     deleted = delete_experiment(experiment_id)
     if not deleted:
         raise HTTPException(status_code=404, detail=f"Experiment '{experiment_id}' not found.")
@@ -1338,7 +1575,10 @@ def delete_single_experiment(experiment_id: str):
 
 
 @app.post("/api/experiments")
-def create_or_update_experiment(req: ExperimentCreateRequest):
+def create_or_update_experiment(
+    req: ExperimentCreateRequest,
+    current_user: Dict[str, Any] = Depends(require_authorized_user),
+):
     """Record or update a laboratory experiment with synthesis parameters and measurements."""
     import uuid
     from datetime import datetime
@@ -1473,10 +1713,12 @@ def create_or_update_experiment(req: ExperimentCreateRequest):
 async def upload_research_image(
     file: UploadFile = File(...),
     category: str = Form("copilot"),
+    current_user: Dict[str, Any] = Depends(require_authorized_user),
 ):
     """
     Upload and persistently store a characterization image (XRD pattern, SEM, TEM, morphology, etc.).
     Validates file extension, enforces 25MB size limit, generates safe filename, and returns URL.
+    Requires authenticated user session.
     """
     if not file.filename:
         raise HTTPException(status_code=400, detail="No filename provided.")
@@ -1522,10 +1764,12 @@ async def upload_experiment_characterization_image(
     experiment_id: str = Form(...),
     image_type: str = Form("SEM Micrograph"),
     notes: Optional[str] = Form(""),
+    current_user: Dict[str, Any] = Depends(require_authorized_user),
 ):
     """
     Upload an XRD image, SEM/TEM micrograph, or electrode photo, associate it with
     a specific experiment record, and persist the reference in SQLite/Postgres.
+    Requires authenticated user session.
     """
     if not file.filename:
         raise HTTPException(status_code=400, detail="No filename provided.")
@@ -1586,8 +1830,11 @@ class DeleteExperimentImageRequest(BaseModel):
 
 
 @app.delete("/api/upload/experiment-image")
-def delete_experiment_characterization_image(req: DeleteExperimentImageRequest):
-    """Remove a characterization image association from an experiment record."""
+def delete_experiment_characterization_image(
+    req: DeleteExperimentImageRequest,
+    current_user: Dict[str, Any] = Depends(require_authorized_user),
+):
+    """Remove a characterization image association from an experiment record (authenticated researchers only)."""
     exp = load_experiment(req.experiment_id)
     if not exp:
         raise HTTPException(status_code=404, detail=f"Experiment '{req.experiment_id}' not found.")
@@ -1611,8 +1858,9 @@ async def upload_literature_supporting_document(
     file: UploadFile = File(...),
     paper_id: Optional[str] = Form(""),
     doc_type: str = Form("Supporting Characterization / XRD / SEM"),
+    current_user: Dict[str, Any] = Depends(require_authorized_user),
 ):
-    """Upload supporting characterization image or document for literature intelligence."""
+    """Upload supporting characterization image or document for literature intelligence (authenticated researchers only)."""
     if not file.filename:
         raise HTTPException(status_code=400, detail="No filename provided.")
 
@@ -1631,19 +1879,20 @@ async def upload_literature_supporting_document(
 
     clean_base = sanitize_filename(Path(file.filename).stem)
     unique_name = f"lit_{clean_base}_{uuid.uuid4().hex[:8]}{ext}"
-    target_path = LITERATURE_UPLOAD_DIR / unique_name
+    rel_path = f"literature/{unique_name}"
 
-    with open(target_path, "wb") as f:
-        f.write(content)
+    storage_res = save_file(content, rel_path, file.content_type)
 
     return {
         "status": "success",
-        "url": f"/uploads/literature/{unique_name}",
+        "url": storage_res["url"],
         "filename": unique_name,
         "original_filename": file.filename,
         "paper_id": paper_id or "",
         "doc_type": doc_type,
         "size_bytes": len(content),
+        "storage_mode": storage_res.get("storage_mode", "local"),
+        "persistent_cloud": storage_res.get("persistent_cloud", False),
     }
 
 

@@ -42,5 +42,6 @@ Thumbs.db
 scratch/
 cloudflared.exe
 .edge_temp/
-data/backups/temp_*
+data/backups/
+data/supabase_inspection_report.json
 frontend/node_modules/

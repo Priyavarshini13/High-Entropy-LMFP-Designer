@@ -461,7 +461,7 @@ function App() {
               <div style={{ flex: 1, minWidth: 0 }}>
                 <div className="profile-name">{authUser.fullName}</div>
                 <div className="profile-sub" style={{ textOverflow: "ellipsis", overflow: "hidden", whiteSpace: "nowrap" }}>
-                  {authUser.account} <span style={{ fontSize: "9px" }}>⌄</span>
+                  {authUser.account} {authUser.role ? `(${authUser.role})` : ""} <span style={{ fontSize: "9px" }}>⌄</span>
                 </div>
               </div>
             </div>

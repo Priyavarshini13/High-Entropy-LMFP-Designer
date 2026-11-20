@@ -38,7 +38,8 @@ from chemistry.capacity import calculate_capacity_metrics
 
 
 @pytest.fixture
-def temp_db():
+def temp_db(monkeypatch):
+    monkeypatch.delenv("DATABASE_URL", raising=False)
     with tempfile.NamedTemporaryFile(suffix=".db", delete=False) as f:
         db_path = f.name
     yield db_path

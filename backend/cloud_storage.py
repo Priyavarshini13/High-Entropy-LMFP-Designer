@@ -119,11 +119,28 @@ def fetch_file_bytes(clean_path: str) -> Tuple[Optional[bytes], Optional[str]]:
     """
     Retrieve file binary content and content-type, checking local storage first,
     then downloading from private Supabase bucket via authenticated API.
+    Strictly prevents path traversal outside the designated storage root.
     """
+    if not clean_path:
+        return None, None
+
     clean_path = clean_path.replace("\\", "/").lstrip("/")
 
-    # Check local disk first
-    local_target = LOCAL_UPLOAD_DIR / clean_path
+    # Disallow explicit traversal segments
+    parts = clean_path.split("/")
+    if ".." in parts or any(p.startswith("..") for p in parts):
+        return None, None
+
+    # Check local disk with strict canonical root verification
+    base_dir = LOCAL_UPLOAD_DIR.resolve()
+    local_target = (LOCAL_UPLOAD_DIR / clean_path).resolve()
+
+    try:
+        local_target.relative_to(base_dir)
+    except ValueError:
+        # Traversal detected outside LOCAL_UPLOAD_DIR
+        return None, None
+
     if local_target.exists() and local_target.is_file():
         try:
             content = local_target.read_bytes()

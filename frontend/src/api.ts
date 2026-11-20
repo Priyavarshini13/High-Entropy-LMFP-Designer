@@ -694,8 +694,11 @@ export const api = {
   uploadPdf: async (file: File): Promise<PdfExtractionResponse> => {
     const formData = new FormData();
     formData.append("file", file);
+    const token = typeof window !== "undefined" ? localStorage.getItem("ecmt_session_token") : null;
+    const authHeaders = token ? { Authorization: `Bearer ${token}` } : {};
     const response = await fetch(`${API_BASE_URL}/api/literature/extract-pdf`, {
       method: "POST",
+      headers: authHeaders,
       body: formData,
     });
     if (!response.ok) {
@@ -783,8 +786,11 @@ export const api = {
     const formData = new FormData();
     formData.append("file", file);
     formData.append("category", category);
+    const token = typeof window !== "undefined" ? localStorage.getItem("ecmt_session_token") : null;
+    const authHeaders = token ? { Authorization: `Bearer ${token}` } : {};
     const res = await fetch(`${API_BASE_URL}/api/upload/image`, {
       method: "POST",
+      headers: authHeaders,
       body: formData,
     });
     if (!res.ok) {
@@ -810,8 +816,11 @@ export const api = {
     formData.append("experiment_id", experimentId);
     formData.append("image_type", imageType);
     formData.append("notes", notes);
+    const token = typeof window !== "undefined" ? localStorage.getItem("ecmt_session_token") : null;
+    const authHeaders = token ? { Authorization: `Bearer ${token}` } : {};
     const res = await fetch(`${API_BASE_URL}/api/upload/experiment-image`, {
       method: "POST",
+      headers: authHeaders,
       body: formData,
     });
     if (!res.ok) {
@@ -847,8 +856,11 @@ export const api = {
     formData.append("file", file);
     formData.append("paper_id", paperId);
     formData.append("doc_type", docType);
+    const token = typeof window !== "undefined" ? localStorage.getItem("ecmt_session_token") : null;
+    const authHeaders = token ? { Authorization: `Bearer ${token}` } : {};
     const res = await fetch(`${API_BASE_URL}/api/upload/literature-supporting`, {
       method: "POST",
+      headers: authHeaders,
       body: formData,
     });
     if (!res.ok) {
@@ -975,7 +987,7 @@ export const api = {
     }),
 
   // Authentication & Identity Verification APIs
-  verifyGoogleToken: (credential: string) =>
+  verifyGoogleToken: (credential: string, nonce?: string) =>
     request<{
       status: string;
       session_token: string;
@@ -984,13 +996,14 @@ export const api = {
         email: string;
         fullName: string;
         account: string;
+        role?: "public_user" | "researcher" | "admin";
         avatarLetter: string;
         picture?: string;
         provider: string;
       };
     }>("/api/auth/google/verify", {
       method: "POST",
-      body: JSON.stringify({ credential }),
+      body: JSON.stringify({ credential, nonce }),
     }),
 
   getCurrentUser: () =>
@@ -1001,6 +1014,7 @@ export const api = {
         email: string;
         fullName: string;
         account: string;
+        role?: "public_user" | "researcher" | "admin";
         avatarLetter: string;
         picture?: string;
         provider: string;
@@ -1016,6 +1030,7 @@ export const api = {
         email: string;
         fullName: string;
         account: string;
+        role?: "public_user" | "researcher" | "admin";
         avatarLetter: string;
         provider: string;
       };

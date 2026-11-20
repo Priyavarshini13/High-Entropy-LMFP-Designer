@@ -43,14 +43,27 @@ CREATE INDEX IF NOT EXISTS idx_extraction_reviews_source_pdf ON public.extractio
 CREATE INDEX IF NOT EXISTS idx_extraction_reviews_composition ON public.extraction_reviews(composition);
 
 -- ----------------------------------------------------------------------------
+-- 2b. Table: oauth_consumed_nonces (Persistent OAuth Replay Attack Protection)
+-- ----------------------------------------------------------------------------
+CREATE TABLE IF NOT EXISTS public.oauth_consumed_nonces (
+    nonce VARCHAR(128) PRIMARY KEY,
+    consumed_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    expires_at TIMESTAMPTZ NOT NULL
+);
+
+CREATE INDEX IF NOT EXISTS idx_oauth_consumed_nonces_expires ON public.oauth_consumed_nonces (expires_at);
+
+-- ----------------------------------------------------------------------------
 -- 3. Row Level Security (RLS) & Access Control (No public exposure)
 -- ----------------------------------------------------------------------------
 ALTER TABLE public.lab_experiments ENABLE ROW LEVEL SECURITY;
 ALTER TABLE public.extraction_reviews ENABLE ROW LEVEL SECURITY;
+ALTER TABLE public.oauth_consumed_nonces ENABLE ROW LEVEL SECURITY;
 
 -- Explicitly revoke all access from unauthenticated anonymous users
 REVOKE ALL ON TABLE public.lab_experiments FROM anon;
 REVOKE ALL ON TABLE public.extraction_reviews FROM anon;
+REVOKE ALL ON TABLE public.oauth_consumed_nonces FROM anon;
 
 -- Grant permissions to authenticated team members and backend service role
 GRANT ALL ON TABLE public.lab_experiments TO authenticated, service_role;
